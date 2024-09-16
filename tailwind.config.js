@@ -6,7 +6,13 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // 'NOMBRE PARA LA FUENTE ' : ['FUENTE IMPORTADA']
+        'inter': ["Pixelify Sans", 'sans-serif'],
+        'press' : ["Press Start 2P", 'system-ui'],
+      },
+    },
   },
   plugins: [],
 }
