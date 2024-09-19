@@ -29,43 +29,65 @@
     @yield('content')
 
         {{-- Footer --}}
-    <footer  class="h-56 w-full bg-[#282424] border-black">
-        <div class="flex flex-cols-2 w-full h-4/5">
-            <div class="w-1/2 h-full  flex flex-col items-start justify-center p-8">
-                <!-- Título con línea debajo -->
-                <div class="relative flex items-center">
-                    <h1 class="text-3xl text-transparent relative ml-10" style="font-family: 'Press Start 2P';">
-                        <!-- Texto con gradiente vertical encima -->
-                        <span class="absolute -top-1 -left-1 bg-gradient-to-b from-[#F7CD55] to-[#FCA142] bg-clip-text text-transparent">
-                            WOOPERLAND
-                        </span>
-                        <!-- Sombra 3D debajo -->
-                        <span class="text-[#F2446B]">WOOPERLAND</span>
-                    </h1>
-                    <!-- Línea debajo del texto -->
-                    <div class="absolute bottom-0 left-0 w-full flex justify-center ml-6">
-                        <div class="w-full border border-[#FFFFFF]"></div>
+        <footer class="h-56 w-full bg-[#282424] border-black">
+            {{-- Div Arriba --}}
+            <div class="flex flex-cols-2 w-full h-4/5">
+                {{-- Div Izquierda --}}
+                <div class="w-1/2 h-full flex flex-col items-start justify-center p-8 border-b">
+                    <!-- Título con línea debajo -->
+                    <div class="relative flex items-center">
+                        <h1 class="text-3xl text-transparent relative ml-10" style="font-family: 'Press Start 2P';">
+                            <!-- Texto con gradiente vertical encima -->
+                            <span class="absolute -top-1 -left-1 bg-gradient-to-b from-[#F7CD55] to-[#FCA142] bg-clip-text text-transparent">
+                                WOOPERLAND
+                            </span>
+                            <!-- Sombra 3D debajo -->
+                            <span class="text-[#F2446B]">WOOPERLAND</span>
+                        </h1>
+                        <!-- Línea debajo del texto -->
+                        <div class="absolute bottom-0 left-0 w-full flex justify-center ml-6">
+                            <div class="w-full border border-[#FFFFFF]"></div>
+                        </div>
+                    </div>
+                
+                    <!-- Iconos de redes sociales -->
+                    <div class="flex space-x-6 mt-6 ml-24">
+                        <a href="" target="_blank" class="text-pink-500 text-5xl hover:text-pink-700">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="" target="_blank" class="text-red-600 text-5xl hover:text-red-800">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="" target="_blank" class="text-blue-500 text-5xl hover:text-blue-700">
+                            <i class="fab fa-facebook"></i>
+                        </a>
                     </div>
                 </div>
-            
-                <!-- Iconos de redes sociales -->
-                <div class="flex space-x-6 mt-6 ml-24">
-                    
-                    <a href="" target="_blank" class="text-pink-500 text-5xl hover:text-pink-700">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" target="_blank" class="text-red-600 text-5xl hover:text-red-800 ">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="" target="_blank" class="text-blue-500 text-5xl hover:text-blue-700">
-                        <i class="fab fa-facebook"></i>
-                    </a>
+        
+                {{-- Div Derecha --}}
+                <div class="w-1/2 h-full border-b">    
+                    <div class="w-1/2"></div>        
+                    <!-- Sección Legal -->
+                    <div class="w-[60%] flex flex-col items-start justify-center p-2 ml-auto" style="font-family: Happy Monkey">
+                        <!-- Título "Legal" con línea debajo -->
+                        <h1 class="text-2xl text-white">Legal</h1>
+                        <div class="w-1/6 border-b-2 border-white mb-4"></div>                    
+                        <!-- Enlaces de términos y políticas -->
+                        <a href="#" class="text-white text-lg mb-2 hover:underline">Términos de uso</a>
+                        <a href="#" class="text-white text-lg mb-2 hover:underline">Política de Cookies</a>
+                        <a href="#" class="text-white text-lg mb-2 hover:underline">Política de privacidad</a>
+                    </div>
                 </div>
             </div>
-            <div class="w-1/2 h-full ">Cont 2</div>            
-        </div>
-            <div class="w-full h-1/5 bg-red-500">Con 3</div>
-    </footer>
+        
+            {{-- Línea horizontal y texto abajo --}}
+            <div class="relative w-full h-1/5 flex items-center" style="font-family: Happy Monkey">
+                <div class="text-center text-white w-full">
+                    @ 2024 wooperland - Todos los derechos reservados
+                </div>
+            </div>
+        </footer>
+        
 
 </body>
 </html>
