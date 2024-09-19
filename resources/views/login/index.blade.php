@@ -27,7 +27,7 @@
                 </form>
                 <div>
                     <p class="text-white text-2xl text-center mt-12">¿No tienes cuenta?
-                        <a href="" class="text-[#FFD166] text-2xl border-b-2 border-transparent hover:border-[#FFD166] transition duration-100 ease-in-out">
+                        <a href="{{ route('registro') }}" class="text-[#FFD166] text-2xl border-b-2 border-transparent hover:border-[#FFD166] transition duration-100 ease-in-out">
                             Regístrate
                         </a>
                         
