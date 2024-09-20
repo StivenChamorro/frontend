@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class AddChildController extends Controller
 {
-    //
+    public function store()
+    {
+        return view('add.index');
+    }
 }
