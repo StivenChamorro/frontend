@@ -2,10 +2,10 @@
 @section('content')
 {{-- Content --}}
 <main class="h-full w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
-    <div class="h-full flex flex-col mobile:flex-row tablet:ml-28 justify-center items-center">
-        <div class="w-full mobile:w-3/4 tablet:w-3/4 h-[90%] bg-gradient-to-b from-[#EF476F] to-[#892940] rounded-2xl mobile:p-8">
+    <div class="h-full flex flex-col mobile:flex-row justify-center items-center px-4 tablet:px-0">
+        <div class="w-full max-w-lg tablet:max-w-2xl h-[90%] bg-gradient-to-b from-[#EF476F] to-[#892940] rounded-2xl p-6 mobile:p-8">
             <h1 class="text-center text-white text-2xl mobile:text-4xl tablet:text-4xl p-2">Crear Nuevo Perfil</h1>
-            <form action="" class="w-full grid mobile:gap-6 px-4 tablet:px-4">
+            <form action="" class="w-full grid gap-6 px-4 tablet:px-6">
                 <!-- Foto de Perfil con ícono de añadir -->
                 <div class="flex flex-col items-center">
                     <div class="relative w-20 h-20 mobile:w-28 mobile:h-28 tablet:w-28 tablet:h-28 rounded-full border-4 border-white overflow-hidden">
