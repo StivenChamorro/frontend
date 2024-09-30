@@ -13,14 +13,14 @@
 </head>
 <body>
     {{-- Header --}}
-    <header class="h-24 w-full bg-[#B43654] flex items-center justify-center">
+    <header class="h-24 w-full bg-[#B43654] flex items-center justify-start pl-12">
         <h1 class="text-4xl tablet:text-5xl mobile:text-4xl text-transparent font-bold relative" style="font-family: 'Press Start 2P' ">
             <span class="absolute -top-1 -left-1 bg-gradient-to-b from-[#F7CD55] to-[#FCA142] bg-clip-text text-transparent">
                 WOOPERLAND
             </span>
             <span class="text-[#F2446B]">WOOPERLAND</span>
         </h1>
-    </header>        
+    </header>
 
     {{-- Content --}}
     @yield('content')
@@ -29,7 +29,7 @@
     <footer class="h-auto w-full bg-[#282424] border-black py-8">
         <div class="flex flex-col tablet:flex-row w-full max-w-7xl mx-auto">
             {{-- Div Izquierda --}}
-            <div class="w-full tablet:w-1/2 flex flex-col items-start justify-center p-8 tablet:border-b" style="font-family: 'Press Start 2P'">
+            <div class="w-full tablet:w-1/2 flex flex-col items-start justify-center p-8" style="font-family: 'Press Start 2P'">
                 <div class="relative flex items-center mb-4">
                     <h1 class="text-3xl mobile:text-2xl tablet:text-3xl text-transparent relative">
                         <span class="absolute -top-1 -left-1 bg-gradient-to-b from-[#F7CD55] to-[#FCA142] bg-clip-text text-transparent">
@@ -55,9 +55,9 @@
                     </a>
                 </div>
             </div>
-        
+
             {{-- Div Derecha --}}
-            <div class="w-full tablet:w-1/2 flex flex-col items-start justify-center p-8 mobile:border-b">    
+            <div class="w-full tablet:w-1/2 flex flex-col items-start justify-center p-8">    
                 <h1 class="text-lg mobile:text-xl tablet:text-2xl text-white">Legal</h1>
                 <div class="w-1/6 border-b-2 border-white mb-4"></div>                    
                 <a href="#" class="text-white text-sm mobile:text-base tablet:text-lg mb-2 hover:underline">Términos de uso</a>
@@ -65,7 +65,9 @@
                 <a href="#" class="text-white text-sm mobile:text-base tablet:text-lg mb-2 hover:underline">Política de privacidad</a>
             </div>
         </div>
-    
+
+        {{-- Línea horizontal completa y texto abajo --}}
+        <div class="w-full border-t border-white mt-8"></div>
         <div class="text-center text-white w-full mt-4" style="font-family: 'Happy Monkey'">
             @ 2024 wooperland - Todos los derechos reservados
         </div>
