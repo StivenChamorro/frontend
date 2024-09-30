@@ -12,6 +12,10 @@ export default {
         'inter': ["Pixelify Sans", 'sans-serif'],
         'press' : ["Press Start 2P", 'system-ui'],
       },
+      screens: {
+        'mobile': '480px',
+        'tablet': '768px',
+      },
     },
   },
   plugins: [],
