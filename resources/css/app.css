@@ -1,6 +1,379 @@
+
+/* Estilos generales */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Happy monkey', sans-serif;
+    margin: 0;
+    /* margin-left: 5%;
+    margin-right: 5%; */
+}
+
+.wooperland-title {
+    font-family: 'Press start 2p', cursive;
+    font-size: 2vw;
+    color: #ffd166;
+    text-shadow: 4px 4px #ef476f;
+    text-align: center;
+}
+
+/* Sección de bienvenida */
+.welcome-content {
+    background-color: #ffd166;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.welcome-text h1 {
+    font-family: 'Press start 2p', cursive;
+    color: #EF476F;
+    text-shadow: 4px 0 #000;
+    font-size: 3vw;
+}
+
+.welcome-text p {
+    font-size: 1.5vw;
+}
+
+.character-group {
+    max-width: 500px;
+    width: 100%;
+}
+
+.characters-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sección de aprendizaje */
+.learn-wooperland {
+    font-family: 'Press start 2p', cursive;
+    color: #EF476F;
+    text-shadow: 4px 0 #000;
+    text-align: center;
+    font-size: 1.5vw;
+    padding: 1%;
+}
+
+/* Sección de matemáticas */
+.carousel-section{
+    padding-left: 550px;
+    margin-bottom: 100px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 1000px;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    width: 100%;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Sección de tarjetas de navegación */
+.nav-cards-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    margin: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    max-width: 350px;
+    width: 100%;
+}
+
+.footer-card h1{
+    text-align: center;
+}
+
+.image-content {
+    background-color: #EF476F;
+    height: 300px;
+    border-radius: 20px 20px 0px 0px;
+    overflow: hidden;
+}
+
+.image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sección CTA */
+.cta-container {
+    background: linear-gradient(90deg, #FFD166 0%, #FF9655 96%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 3vw;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-text h1 {
+    font-family: 'Press start 2p', cursive;
+    color: #EF476F;
+    text-shadow: 4px 0 #000;
+    font-size: 2vw;
+}
+
+.cta-button button {
+    background-color: #EF476F;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    padding: 10px;
+    font-family: 'happy monkey', cursive;
+    font-size: 30px;
+    color: white;
+}
+
+.cta-button a{
+    text-decoration: none;
+}
+
+.cta-button button img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+/* Sección de descarga de la app */
+.app-downloand-container {
+    background-color: #F78C6B;
+    padding: 50px 5%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vw;
+}
+
+.download-box {
+    background-color: #F36A6D;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.left-text, .right-text {
+    flex: 1;
+    font-size: 1vw;
+    min-width: 250px;
+    text-align: center;
+}
+
+.right-text a{
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #282424;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.logo h2 {
+    font-family: 'Press start 2p', cursive;
+    color: #FFD166;
+    text-shadow: 4px 4px #ef476f;
+}
+
+.copyright {
+    background-color: #282424;
+    text-align: center;
+    padding: 10px;
+}
+
+.copyright p {
+    color: white;
+    margin: 0;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.social-text {
+    color: white;
+    font-size: 1vw;
+}
+
+.social-icons img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .wooperland-title {
+        font-size: 5vw;
+        text-shadow: 3px 3px #EF476F;
+    }
+
+    .welcome-content {
+        flex-direction: column;
+    }
+
+    .welcome-text h1 {
+        font-size: 5vw;
+    }
+
+    .welcome-text p {
+        font-size: 3vw;
+    }
+
+    .learn-wooperland {
+        font-size: 3vw;
+    }
+
+    .math-section {
+        flex-direction: column;
+    }
+
+    .cta-text h1 {
+        font-size: 3vw;
+    }
+
+    .cta-button button {
+        font-size: 20px;
+    }
+
+    .download-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-text, .right-text {
+        margin: 10px 0;
+    }
+
+    .left-text h2 {
+        font-size: 4vw;
+    }
+
+    .left-text p, .right-text p, .right-text a {
+        font-size: 2.5vw;
+    }
+
+    .social-text {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .wooperland-title {
+        font-size: 7vw;
+        text-shadow: 2px 2px #EF476F;
+    }
+
+    .welcome-text h1 {
+        font-size: 7vw;
+    }
+
+    .welcome-text p {
+        font-size: 4vw;
+    }
+
+    .learn-wooperland {
+        font-size: 4vw;
+    }
+
+    .cta-text h1 {
+        font-size: 3vw;
+    }
+
+    .cta-button button {
+        font-size: 16px;
+    }
+
+    .left-text h2 {
+        font-size: 5vw;
+    }
+
+    .left-text p, .right-text p, .right-text a {
+        font-size: 3.5vw;
+    }
+
+    .social-text {
+        font-size: 3vw;
+    }
+
+    .social-icons img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
