@@ -1,0 +1,502 @@
+body {
+    background: linear-gradient( 180deg, #FFD166 50.13% , #F78D6B 90%); 
+    font-family: 'Happy monkey', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #B43654;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    font-family: 'Press start 2p', cursive;
+    font-size: 1vw;
+    color: #ffd166;
+    text-shadow: 4px 4px #ef476f;
+}
+
+.nav-container {
+    background-color: #E87080;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+    font-family: 'Happy monkey', cursive;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+}
+
+.separator {
+    width: 1px;
+    height: 30px;
+    background-color: white;
+    margin: 0 5px;
+}
+
+/* boton de perfil */
+.button-profile {
+    background-color: #E87080;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 5px 10px 5px 5px; 
+    cursor: pointer; /* Añadido para indicar que es clickeable */
+    transition: background-color 0.3s ease; /
+}
+
+.button-profile:hover {
+    background-color: #D5596A; /* Color ligeramente más oscuro al hacer hover */
+}
+
+.profile-img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 10px; /* Espacio entre la imagen y la flecha */
+}
+
+.arrow-profile {
+    width: 12px; 
+    height: auto; 
+}
+
+.hero-content{
+    background-color: #333;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-hero{
+    width: 100%;
+    height: 100%;
+}
+
+.cta-title-content{
+    position: absolute;
+    left: 50%;
+    background-color: #ef476f;
+    box-shadow: 1px 8px 1px #E87080;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.cta-title{
+    font-family: 'Press start 2p', cursive;
+    color: white;
+}
+
+main{
+    margin: 200px;
+}
+
+.wpland-content{
+    align-items: center;
+}
+
+.wpland-content h2{
+    color: #ef476f;
+    text-align: center;
+}
+
+.line{
+    padding: 30px;
+    border-top: 1px solid #000;  /* Borde superior */
+    border-bottom: 1px solid #000;  /* Borde inferior */
+}
+
+p{
+    font-size: 20px;
+}
+
+.topics-learn{
+    text-align: center;
+    margin-top: 10vw;
+}
+
+/* carrusel */
+
+
+/* carrusel */
+
+
+.description-container{
+    border-top: 1px solid #000;  /* Borde superior */
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.description{
+    display: grid;            /* Activa Grid */
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    gap: 200px;  
+    padding-top: 150px;
+    padding-bottom: 20px;
+}
+
+h2{
+    color: #ef476f;
+}
+
+.img-container{
+   height: 350px;
+}
+
+.kids-learning{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.wooperland-footer {
+  background-color: #282424;
+  color: #ffffff;
+  padding: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+  color: #ffd166;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px #ef476f;
+}
+
+.logo2{
+    border-bottom: white solid 1px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.instagram { background: url('imgs/imagenes_home/.instagram.svg') no-repeat center center / cover; }
+.youtube { background: url('imgs/imagenes_home/youtube.svg') no-repeat center center / cover; }
+.facebook { background: url('imgs/imagenes_home/facebook.svg') no-repeat center center / cover; }
+
+.footer-right h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.legal{
+    border-bottom: white solid 1px;
+}
+
+.footer-right ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 5px;
+}
+
+.footer-right ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-right ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff;
+  justify-content: center
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+
+.modal-options img{
+    margin-right: 5px;
+    width: 20px;
+}
+
+.modal-container{
+    background-color: #B43654;
+    border-radius: 10px;
+    padding: 10px;
+    width: 210px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.head-modal{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.head-modal img{
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+}
+
+.modal-options a{
+    text-decoration: none;
+    color: white;
+}
+
+.foot-modal a{
+    text-decoration: none;
+    color: white;
+}
+
+.modal-options ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    border-top: white solid .5px;
+    gap: 8px;
+}
+
+.foot-modal{
+    margin: 0;
+    padding: 8px;
+    border-top: white solid 0.5px;
+}
+
+.modal{
+    position: absolute;
+    top: 100px;
+    right: 1%;
+    color: white;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left, .footer-right {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+    .nav-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+/* Estilos para pantallas de hasta 768px */
+@media (max-width: 768px) {
+
+  header{
+    display: grid;            /* Activa Grid */
+    grid-template-columns: 1fr 1fr 1fr; /* 2 columnas iguales */
+    gap: 50px;
+  }
+
+  .logo {
+      font-size: 3vw;
+  }
+
+  .nav-container {
+      flex-direction: column;
+      width: 100%;
+      border-radius: 20px;
+  }
+
+  .nav-button {
+      width: 100%;
+      padding: 5px 0;
+  }
+
+  .separator {
+      width: 80%;
+      height: 1px;
+      margin: 5px 0;
+  }
+
+  .button-profile {
+      width: 50%;
+      justify-content: center;
+      margin-top: 10px;
+      margin-left: 50px;
+  }
+
+  main {
+      margin: 100px 20px;
+  }
+
+  .cta-title-content {
+      left: 40%;
+      width: 50%;
+  }
+
+  .description {
+      grid-template-columns: 1fr;
+      gap: 50px;
+  }
+
+  .img-container {
+      height: auto;
+  }
+
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-left, .footer-right {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+}
+
+/* Estilos para pantallas de hasta 480px */
+@media (max-width: 480px) {
+  header{
+    display: grid;            /* Activa Grid */
+    grid-template-columns: 1fr 1fr 1fr; /* 2 columnas iguales */
+    gap: 20px;
+  }
+
+  .logo {
+      font-size: 3vw;
+      margin-right: 20px;
+  }
+
+  .nav-container {
+      width: 90%;
+  }
+
+  .nav-button {
+      font-size: 14px;
+  }
+
+  .button-profile {
+      padding: 5px;
+  }
+
+  .profile-img {
+      width: 30px;
+      height: 30px;
+      margin-left: 8px;
+  }
+
+  .arrow-profile {
+      width: 10px;
+      margin-right: 10px;
+  }
+
+  .hero-content {
+      height: 200px;
+  }
+
+  .cta-title-content {
+      padding: 10px;
+  }
+
+  .cta-title {
+      font-size: 16px;
+      text-align: center;
+  }
+
+  main {
+      margin: 50px 10px;
+  }
+
+  .wpland-content h2 {
+      font-size: 20px;
+  }
+
+  p {
+      font-size: 16px;
+  }
+
+  .img-container {
+      height: 200px;
+  }
+
+  .footer-logo {
+      font-size: 18px;
+  }
+
+  .social-icons{
+    justify-content: center;
+  }
+
+  .social-icon {
+      width: 30px;
+      height: 30px;
+  }
+
+  .footer-right h3 {
+      font-size: 16px;
+  }
+
+  .footer-bottom p {
+      font-size: 12px;
+  }
+}
+
+
