@@ -1,0 +1,715 @@
+body {
+    position: relative;
+    width: 1445px;
+    height: 3000px;
+    background: linear-gradient(180deg, #FFD166 50.13%, #F78D6B 90%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* CONTENIDO DEL HEADER */
+
+.contenedor_header-store {
+    position: absolute;
+    background-color: #B43654;
+    width: 1900px;
+    height: 100px;
+    padding: 3px;
+    left: -8px;
+    top: -8px;
+}
+
+.logo_header .logo {
+    width: 20%;
+    height: 20%;
+    padding-top: 2%;
+    padding-left: 1%;
+    width: 15%;
+}
+
+.tienda_avatares {
+    position: absolute;
+    width: 330px;
+    height: 55.61px;
+    left: 38%;
+    top: 20px;
+    font-family: Happy Monkey;
+    font-weight: bold;
+    background: #E87080;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.tienda_avatares .boton-tienda,
+.boton-avatares {
+    position: sticky;
+    width: 100px;
+    height: 45px;
+    left: -65%;
+    top: 10px;
+    background: #E87080;
+    border-radius: 20px;
+    border: none;
+    align-items: center;
+    font-family: 'Happy Monkey';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: solid;
+    color: #FFFFFF;
+}
+
+.tienda_avatares .boton-tienda {
+    position: relative;
+    top: 3px;
+    left: 40px;
+}
+
+.tienda_avatares .boton-avatares {
+    position: absolute;
+    top: 3px;
+    left: 55%;
+}
+
+.barra_tienda_avatares {
+    position: relative;
+    margin-left: 40%;
+    margin-right: 20px;
+    width: 30px;
+    height: 39px;
+    border-right: 2px solid white;
+    top: -37px;
+    opacity: 0.6;
+}
+
+.contenedor_desplegable_header {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #E87080;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    left: 90%;
+    top: 20%;
+}
+
+.img_perfil_header {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 9%;
+}
+
+.img_perfil_header img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.flecha_header {
+    margin-left: auto;
+    margin-right: 20px;
+    width: 9px;
+    height: 9px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+}
+
+/* DESPLEGABLE PERFIL HEADER */
+
+.contenedor_desplegable_header .menu_perfil_desplegable {
+    position: absolute;
+    top: 85.3px;
+    left: -190%;
+    width: 300px;
+    height: 320px;
+    border-radius: 0% 0% 20% 20%;
+    font-family: Happy Monkey;
+    color: white;
+    background-color: #B43654;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s;
+}
+
+.menu_perfil_desplegable.open-menu {
+    max-height: 600px;
+}
+
+
+.nombre_usuario_desplegable .img_perfil_desplegable {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    width: 80px;
+}
+
+.nombre_usuario_desplegable .texto_nombre_usuario_desplegable {
+    position: relative;
+    top: 45px;
+    left: 100px;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.barra_1_desplegable {
+    position: absolute;
+    top: -50px;
+    left: -8%;
+    width: 39px;
+    height: 300px;
+    margin-left: 52%;
+    margin-right: 20px;
+    border-right: 1px solid white;
+    transform: rotate(90deg);
+}
+
+.container_perfil_desplegable_li img {
+    position: relative;
+    top: 18px;
+    width: 40px;
+}
+
+.container_perfil_desplegable_li ol {
+    position: absolute;
+    top: 90px;
+    list-style: none;
+}
+
+.barra_2_desplegable {
+    position: absolute;
+    top: 85px;
+    left: -8%;
+    width: 39px;
+    height: 300px;
+    margin-left: 52%;
+    margin-right: 20px;
+    border-right: 1px solid white;
+    transform: rotate(90deg);
+}
+
+.cerrar_sesion_desplegable .img_cerrar_sesion_despleglable {
+    position: relative;
+    top: 204px;
+    left: 44px;
+    width: 35px;
+}
+
+.cerrar_sesion_desplegable .texto_cerrar_sesion_desplegable {
+    position: absolute;
+    top: 263px;
+    left: 85px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.container_perfil_desplegable_li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* CONTENEDOR DE CAMBIAR FOTO DE PERFIL */
+
+.tienda_avatares .contenedor_cambiar_imagen {
+    position: absolute;
+    left: -10%;
+    top: 100px;
+    font-family: Happy Monkey;
+    width: 135%;
+    height: 1200%;
+    background: linear-gradient(180deg, #FFD166 0%, #F78D6B 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    z-index: 20;
+    max-height: 0;
+    overflow:hidden;
+    transition: max-height 0.8s;
+}
+
+.contenedor_cambiar_imagen.open-menu {
+    max-height: 1000px;
+}
+
+.contenedor_cambiar_imagen .titulo_cambiar_imagen {
+    position: relative;
+    left: 87px;
+    font-size: 23px;
+}
+
+.contenedor_cambiar_imagen .foto_actual {
+    position: absolute;
+    left: 150px;
+    width: 125px;
+}
+
+.active{
+    opacity: 1 !important;
+    box-shadow: 0 5px 5px rgb(248, 251, 247);
+    border-radius: 50%;
+}
+
+.catalogo_fotos {
+    position: relative;
+    top: 140px;
+    left: 20px;
+    display: block;
+    flex-wrap: wrap;
+    background-color: #B43654;
+    width: 85%;
+    height: 58%;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.foto_disponible {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    transition: .3s;
+}
+
+.foto_disponible:hover{
+    opacity: 0.1;
+}
+
+.boton_aceptar {
+    position: absolute;
+    top: 93%;
+    left: 4%;
+    width: 40%;
+    height: 35px;
+    background: #EF476F;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    color: white;
+    font-family: Happy Monkey;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.boton_cancelar {
+    position: relative;
+    top: 21.8%;
+    left: 56%;
+    width: 40%;
+    background: #EF476F;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    height: 35px;
+    color: white;
+    font-family: Happy Monkey;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.boton_aceptar a,
+.boton_cancelar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* CONTAINER DE LOS LOGROS */
+
+.container_logros {
+    position: relative;
+    top: 100px;
+    left: 30%;
+    width: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-family: Happy Monkey;
+}
+
+.product-card {
+    border-radius: 10px;
+    width: 280px;
+    height: 240px;
+    text-align: center;
+    background-color: #DFAA30;
+}
+
+.product-card img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: auto;
+}
+
+.product-card .descripcion {
+    position: relative;
+    font-family: 'Happy Monkey';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000000;
+    width: 270px;
+    top: 55px;
+    left: 4px;
+    text-align: left;
+}
+
+.product-card .logro {
+    font-family: Happy Monkey;
+    position: relative;
+    top: 10px;
+    left: -25%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+
+}
+
+.product-card .diamante_logro {
+    position: relative;
+    left: 50px;
+    top: -110px;
+    height: auto;
+    width: 6%;
+
+}
+
+.product-card .diamante_logro_wooper {
+    position: relative;
+    left: 80px;
+    top: -60px;
+    height: auto;
+    width: 6%;
+}
+
+.product-card .diamante_logro_franchesco {
+    position: relative;
+    left: 80px;
+    top: -60px;
+    height: auto;
+    width: 6%;
+}
+
+.product-card .candado_bloqueo {
+    position: relative;
+    top: -170px;
+    right: -10px;
+    width: 50px;
+    height: auto;
+}
+
+.product-card .logro_wooper {
+    position: absolute;
+    width: 130px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.product-card .logro_franchesco {
+    position: absolute;
+    width: 180px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.product-card .descripcion_wooper {
+    position: relative;
+    top: 35px;
+    left: 5px;
+    text-align: left;
+}
+
+.product-card .descripcion_franchesco {
+    position: relative;
+    top: 35px;
+    left: 5px;
+    text-align: left;
+}
+
+.product-card .numero_diamantes {
+    position: relative;
+    top: -49px;
+    left: 230px;
+    width: 15px;
+    font-size: 15px;
+}
+
+.product-card .numero_diamantes_wooper {
+    position: relative;
+    top: 6px;
+    left: 230px;
+    width: 15px;
+    font-size: 15px;
+}
+
+.product-card .numero_diamantes_franchesco {
+    position: relative;
+    top: 6px;
+    left: 230px;
+    width: 15px;
+    font-size: 15px;
+}
+
+/* CONTENEDOR ESTILOS, EJEMPLO (Matematicas) */
+
+.container_info_matematicas {
+    position: relative;
+    top: 200px;
+    left: 410px;
+    width: 50%;
+    font-family: Happy Monkey;
+}
+
+.titulo_matematicas a {
+    color: #000000;
+}
+
+.matematicas .titulo_matematicas {
+    position: absolute;
+    width: 290px;
+    height: 43px;
+    left: 350px;
+    top: 110px;
+    font-family: 'Happy Monkey';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    color: #000000;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.matematicas .img_matematicas {
+    width: 45%;
+}
+
+.diamantes_jugador {
+    width: 200px;
+}
+
+.logros_completados {
+    position: relative;
+    top: -90px;
+    left: 300px;
+    width: 200px;
+}
+
+.diamantes_jugador {
+    position: relative;
+    top: 24px;
+    left: 35px;
+}
+
+.diamantes_jugador .diamantes {
+    position: relative;
+    top: -41px;
+    left: 35px;
+    width: 80px;
+    font-size: large;
+    font-weight: 400;
+}
+
+.logros_completados .logros {
+    position: relative;
+    top: -43px;
+    left: 37px;
+    width: 80px;
+    font-size: large;
+    font-weight: 400;
+}
+
+.diamantes_jugador .img_diamante {
+    width: 25px;
+}
+
+.logros_completados .img_copa {
+    width: 30px;
+}
+
+/* DESPLEGABLE ELIGE TEMA */
+
+.matematicas .desplegable_tema {
+    position: absolute;
+    top: 34%;
+    left: 47%;
+    width: 300%;
+    z-index: 10;
+}
+
+.matematicas .menu {
+    background-color: #DFAA30;
+    width: 310px;
+    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.menu.open-menu {
+    max-height: 1000px;
+}
+
+.menu .elige_tema {
+    position: relative;
+    left: 20px;
+    font-size: 22px;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.tema {
+    position: relative;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.img_tema {
+    width: 110px;
+    height: auto;
+}
+
+.tema .titulo_tema {
+    position: relative;
+    top: -20px;
+    left: 30px;
+    font-size: 20px;
+}
+
+.img_diamante_tema,
+.img_copa_tema {
+    position: relative;
+    top: 14px;
+    left: -113px;
+    width: 15px;
+    margin-left: 10px;
+    height: auto;
+
+}
+
+.numero_diamantes_tema,
+.numero_copas_tema {
+    position: relative;
+    top: 14px;
+    left: -113px;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.numero_diamantes_tema {
+    margin-right: 20px;
+}
+
+/* CONTENIDO DEL FOOTER */
+
+footer {
+    position: relative;
+    width: 1470px;
+    height: -0px;
+    left: -8px;
+    top: 1680px;
+    color: white;
+    text-align: center;
+    padding: 15%;
+    background-color: #333;
+}
+
+.logos_footer {
+    position: absolute;
+    display: inline;
+    left: 100px;
+    top: 10%;
+}
+
+.logos_footer .wooperland_footer {
+    position: relative;
+    top: -20px;
+}
+
+.logos_footer .barra_1_footer {
+    margin-top: -10%;
+    top: 100%;
+    opacity: 0.2;
+}
+
+.logos_footer .icono_instagran,
+.icono_youtube,
+.icono_facebook {
+    position: sticky;
+    margin: 10px;
+    width: 60px;
+}
+
+.barra_texto-footer .barra_2_footer {
+    margin-left: -7%;
+    margin-top: 7%;
+    opacity: 0.2;
+}
+
+.barra_texto-footer .copyright_footer {
+    color: #D6D6D6;
+    font-family: Happy Monkey;
+    font-size: 30;
+    font-weight: 400;
+}
+
+.texto_footer {
+    position: absolute;
+    margin-top: -21%;
+    margin-left: 60%;
+}
+
+.texto_footer .barra_3_footer {
+    margin-top: -20%;
+    margin-left: -4%;
+    opacity: 0.2;
+}
+
+.texto_footer .text_footer-1 {
+    font-family: Happy Monkey;
+    font-weight: 300;
+    color: #D6D6D6;
+    font-size: 25px;
+    font-style: normal;
+    margin-left: -14%;
+}
+
+.texto_footer .lista_footer {
+    list-style-type: none;
+    margin-top: -4%;
+    font-size: 16px;
+    font-family: Happy Monkey;
+    color: #D6D6D6;
+}
+
+.texto_footer .lista_footer .text2 {
+    margin-left: 12%;
+}
+
+.texto_footer .lista_footer .text3 {
+    width: 200%;
+    margin-left: -37%;
+}
