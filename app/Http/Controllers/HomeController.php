@@ -9,4 +9,10 @@ class HomeController extends Controller
     function Home(){
         return view('home');
     }
+
+    function Header(){
+        return view('layouts.header');
+    }
 }
+
+

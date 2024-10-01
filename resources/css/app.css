@@ -237,7 +237,8 @@ body {
 .logo h2 {
     font-family: 'Press start 2p', cursive;
     color: #FFD166;
-    text-shadow: 4px 4px #ef476f;
+    text-shadow: 4px 0px #ef476f;
+    font-size:x-large;
 }
 
 .copyright {
@@ -261,6 +262,11 @@ body {
 .social-text {
     color: white;
     font-size: 1vw;
+}
+
+.social-icons{
+    display: flex;
+    gap: 10px;
 }
 
 .social-icons img {

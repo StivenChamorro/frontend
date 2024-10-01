@@ -94,7 +94,7 @@
                   <h1>JUEGA Y PRUEBA WOOPERLAND YA</h1>
               </div>
               <div class="cta-button">
-                  <a href="#"><button>JUGAR
+                  <a href="{{route('iniciarsesion')}}"><button>JUGAR
                       <!-- <span class="arrow">➤</span> -->
                        <span><img src="imagenes_index/arrowPlay.png" alt="" class="arrow-play"></span>
                   </button></a>

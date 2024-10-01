@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 
 Route::get('home',[HomeController::class,'Home']);
-
+Route::get('header',[HomeController::class,'Header']);
 
 Route::get('iniciar_sesion',[LoginController::class,'store'])->name('iniciarsesion');
 Route::get('register',[RegisterController::class,'store'])->name('registro');
