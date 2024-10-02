@@ -1,8 +1,4 @@
 <?php
-
-
-use App\Http\Controllers\HomeController;
-
 use App\Http\Controllers\AddChildController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
@@ -11,17 +7,11 @@ use App\Http\Controllers\TermsController;
 
 use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\StoreController;
-
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-Route::get('home',[HomeController::class,'Home']);
-Route::get('header',[HomeController::class,'Header']);
-
 Route::get('iniciar_sesion',[LoginController::class,'store'])->name('iniciarsesion');
 Route::get('register',[RegisterController::class,'store'])->name('registro');
 Route::get('add_child',[AddChildController::class,'store']);
