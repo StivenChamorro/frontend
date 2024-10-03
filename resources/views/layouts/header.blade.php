@@ -51,32 +51,8 @@
     </header>
 
     <!-- Sección para el contenido de la vista -->
-    <main>
+    
         @yield('content') <!-- Aquí se inyectará el contenido de las vistas -->
-    </main>
-
-    <footer class="wooperland-footer">
-        <div class="footer-content">
-          <div class="footer-left">
-            <div class="logo2"><h2 class="footer-logo">WOOPERLAND</h2></div>
-            <div class="social-icons">
-              <a href="#" class="social-icon instagram"></a>
-              <a href="#" class="social-icon youtube"></a>
-              <a href="#" class="social-icon facebook"></a>
-            </div>
-          </div>
-          <div class="footer-right">
-            <div class="legal"><h3>Legal</h3></div>
-            <ul>
-              <li><a href="#">Términos de uso</a></li>
-              <li><a href="#">Política de Cookies</a></li>
-              <li><a href="#">Política de privacidad</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2024 Wooperland - Todos los derechos reservados</p>
-        </div>
-      </footer>
+    
 </body>
 </html>
