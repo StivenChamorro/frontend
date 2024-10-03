@@ -154,99 +154,15 @@ header {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* footer */
 
-.wooperland-footer {
-    background-color: #282424;
-    color: #ffffff;
-    padding: 50px;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .footer-logo {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 24px;
-    color: #ffd166;
-    margin-bottom: 20px;
-    text-shadow: 4px 4px #ef476f;
-  }
-  
-  .logo2{
-      border-bottom: white solid 1px;
-      margin-bottom: 20px;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  .instagram { background: url('img-layouts/instagram.svg') no-repeat center center / cover; }
-  .youtube { background: url('img-layouts/youtube.svg') no-repeat center center / cover; }
-  .facebook { background: url('img-layouts/facebook.svg') no-repeat center center / cover; }
-  
-  .footer-right h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .legal{
-      border-bottom: white solid 1px;
-  }
-  
-  .footer-right ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .footer-right ul li {
-    margin-bottom: 5px;
-  }
-  
-  .footer-right ul li a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .footer-right ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #ffffff;
-    justify-content: center
-  }
-  
-  .footer-bottom p {
-    font-size: 14px;
-    color: #ffffff;
-    margin: 0;
-  }
 
 /* responsive */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
     header{
-      display: grid;            /* Activa Grid */
-      grid-template-columns: 1fr 1fr 1fr; /* 2 columnas iguales */
+      display: grid;            
+      grid-template-columns: 1fr 1fr 1fr; 
       gap: 50px;
     }
   
@@ -278,21 +194,13 @@ header {
         margin-left: 50px;
     }
 
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    .footer-left, .footer-right {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+    
 }
 
 @media (max-width: 480px) {
     header{
-      display: grid;            /* Activa Grid */
-      grid-template-columns: 1fr 1fr 1fr; /* 2 columnas iguales */
+      display: grid;            
+      grid-template-columns: 1fr 1fr 1fr; 
       gap: 20px;
     }
   
@@ -324,24 +232,117 @@ header {
         margin-right: 10px;
     }
 
-    .footer-logo {
-        font-size: 18px;
+} */
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    .logo {
+        font-size: 4vw; /* Aumentamos el tamaño de la fuente en móviles */
     }
-  
-    .social-icons{
-      justify-content: center;
+
+    .nav-button {
+        font-size: 14px; /* Reducimos el tamaño de los botones */
+        padding: 8px 15px; /* Ajustamos el espacio interno de los botones */
     }
-  
-    .social-icon {
+
+    .nav-container {
+        padding: 3px; /* Menos padding en la navegación para pantallas más pequeñas */
+    }
+
+    .button-profile {
+        padding: 5px; /* Reducimos el padding del botón de perfil */
+    }
+
+    .profile-img {
         width: 30px;
-        height: 30px;
+        height: 30px; /* Reducimos el tamaño de la imagen de perfil */
     }
-  
-    .footer-right h3 {
+
+    .arrow-profile {
+        width: 10px; /* Reducimos el tamaño de la flecha */
+    }
+
+    .modal {
+        top: 120px; /* Ajustamos la posición del modal */
+        right: 5%;
+        width: 90%; /* El modal ocupa más espacio en pantallas pequeñas */
+    }
+
+    .modal-container {
+        width: 100%;
+    }
+}
+
+/* Estilos para tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .logo {
+        font-size: 2.5vw; /* Ajuste intermedio del logo */
+    }
+
+    .nav-button {
         font-size: 16px;
     }
-  
-    .footer-bottom p {
-        font-size: 12px;
+
+    .nav-container {
+        padding: 5px;
+    }
+
+    .button-profile {
+        padding: 5px 8px;
+    }
+
+    .profile-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .arrow-profile {
+        width: 11px;
+    }
+
+    .modal {
+        top: 100px;
+        right: 5%;
+        width: 75%;
+    }
+}
+
+/* Estilos para pantallas grandes (laptops y desktops) */
+@media only screen and (min-width: 1025px) {
+    .logo {
+        font-size: 1.5vw; /* Ajustamos el tamaño del logo para pantallas más grandes */
+    }
+
+    .nav-button {
+        font-size: 20px; /* Aumentamos el tamaño del texto en los botones de navegación */
+        padding: 15px 30px; /* Más espacio interno para los botones */
+    }
+
+    .nav-container {
+        padding: 10px; /* Aumentamos el padding del contenedor de la navegación */
+        border-radius: 60px; /* Suavizamos las esquinas */
+    }
+
+    .button-profile {
+        padding: 8px 15px; /* Aumentamos el espacio interno del botón de perfil */
+    }
+
+    .profile-img {
+        width: 50px; /* Incrementamos el tamaño de la imagen de perfil */
+        height: 50px;
+    }
+
+    .arrow-profile {
+        width: 15px; /* Hacemos la flecha más visible */
+    }
+
+    .modal {
+        top: 150px; /* Ajustamos la posición del modal */
+        right: 2%; /* Reducimos el margen derecho en pantallas grandes */
+        width: 300px; /* El modal ocupa menos espacio en pantallas grandes */
+    }
+
+    .modal-container {
+        width: 100%;
     }
 }
