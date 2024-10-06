@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/homestyle/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/homestyle/style.css')}}">
 </head>
 <body>
    
     <section class="hero">
         <div class="hero-content">
-            <img src="{{ asset('imgs/imagenes_home/hero.svg') }}" alt="Wooper Character" class="img-hero">
+            <img src="{{ asset('imgs/imagenes_home/hero.svg'),  }}" alt="Wooper Character" class="img-hero">
             <div class="cta-title-content"><h2 class="cta-title">Bienvenidos a Wooperland!!</h2></div>
         </div>
     </section>
@@ -32,6 +32,93 @@
                 </div>
             </div>
         </section>
+
+        {{-- carrusel --}}
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <h2 class="title-carrusel">ASTRONOMIA</h2>
+                    <img src="{{asset('imgs/imagenes_home/images_carrusel/image.svg')}}" alt="">
+                    <div class="buttons-container">
+                        <a href=""><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">LOGROS</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="title-carrusel">ARTE</h2>
+                    <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy.png')}}" alt="">
+                    <div class="buttons-container">
+                        <a href=""><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">LOGROS</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="title-carrusel">ESPAÑOL</h2>
+                    <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 2.png')}}" alt="">
+                    <div class="buttons-container">
+                        <a href=""><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">LOGROS</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="title-carrusel">CIENCIAS SOCIALES</h2>
+                    <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 3.png')}}" alt="">
+                    <div class="buttons-container">
+                        <a href=""><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">LOGROS</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="title-carrusel">MATEMATICAS</h2>
+                    <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 4.png')}}" alt="">
+                    <div class="buttons-container">
+                        <a href=""><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">LOGROS</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="title-carrusel">BIOLOGIA</h2>
+                    <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 5.png')}}" alt="">
+                    <div class="buttons-container">
+                        <a href=""><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">LOGROS</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="title-carrusel">INGLES</h2>
+                    <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 6.png')}}" alt="">
+                    <div class="buttons-container">
+                        <a href=""><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">LOGROS</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2 class="title-carrusel">MINIJUEGO</h2>
+                    <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 7.png')}}" alt="">
+                    <div class="buttons-container">
+                        <a href=""><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">LOGROS</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <script src="{{asset('js/home.js')}}"></script>
+        {{-- carrusel --}}
 
         <div class="description-container">
             <div class="description">
@@ -54,8 +141,12 @@
                 </div>
             </div>
         </div>
-    </main>
+    </main> 
+
+    @include('layouts.footer')
 
 </body>
 </html>
+
 @endsection
+

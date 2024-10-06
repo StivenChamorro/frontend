@@ -13,7 +13,6 @@ header {
     align-items: center;
 }
 
-
 .logo {
     font-family: 'Press start 2p', cursive;
     font-size: 1vw;
@@ -108,6 +107,7 @@ header {
 .cta-title{
     font-family: 'Press start 2p', cursive;
     color: white;
+    font-size: 30px;
 }
 
 main{
@@ -116,6 +116,7 @@ main{
 
 .wpland-content{
     align-items: center;
+    margin-bottom: 10%;
 }
 
 .wpland-content h2{
@@ -139,8 +140,136 @@ p{
 }
 
 /* carrusel */
+.slider{
+    width: 1300px;
+    max-width: 100vw;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.title-carrusel{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    margin: 0;
+    padding: 20px;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 3s;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+.slider .buttons button:hover{
+    background-color: #fff;
+    color: #000;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
 
+.item {
+    position: relative;
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+}
 
+.item h2, .item .button2 {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 10; /* Asegúrate de que esté por encima de la imagen */
+}
+
+.item h2 {
+    top: 30%; /* Ajusta según necesites */
+    font-size: 40px; /* Puedes ajustar el tamaño si es necesario */
+}
+
+.slider .list img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttons-container {
+    position: absolute;
+    top: 60%; /* Ajusta según lo necesites */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Espacio entre los botones */
+    z-index: 100;
+}
+
+.button2 {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #EF476F;
+    font-family: 'Press Start 2p';
+    padding: 10px;
+    border: 3px #000 solid;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.button2:hover{
+    background-color: #FFD166;
+    cursor: pointer;
+    box-shadow:  4px 4px 8px rgba(0,0,0,0.7);
+}
 /* carrusel */
 
 
@@ -160,6 +289,7 @@ p{
 
 h2{
     color: #ef476f;
+    font-size: 50px;
 }
 
 .img-container{
@@ -241,6 +371,10 @@ h2{
   .img-container {
       height: auto;
   }
+
+  .slider{
+    height: 400px;
+}
 
 }
 
