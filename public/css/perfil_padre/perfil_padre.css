@@ -1,11 +1,19 @@
 body{
-    height: 170vh  ;
+    height: auto  ;
+    width: auto;
 }
-
+header{
+    background-color: #B43654;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .container{
-    
+    top: 100px;
     background-color:rgb(241, 199, 91);
-    width:100%;
+    width:auto;
     height: 160vh;
     position: relative; 
     font-family: 'Happy Monkey', 'Happy Monkey';
@@ -636,5 +644,12 @@ footer p{
     border: none;
 }
 
+@media (max-width: 480px) {
+    header{
+        display: grid;            /* Activa Grid */
+        grid-template-columns: 1fr 1fr 1fr; /* 2 columnas iguales */
+        gap: 50px;
+      }
 
 
+}

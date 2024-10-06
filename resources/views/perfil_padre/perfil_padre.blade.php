@@ -1,3 +1,6 @@
+@extends('layouts.header')  
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +12,8 @@
     <link rel="stylesheet" href="{{ asset('css/perfil_padre/perfil_padre.css') }}">
     
 </head>
-<body>
+{{-- <body>
     <div class="container">
-    <header>
-        <img src="{{ asset('img/perfil_padre/logo.png') }}" alt="logo">
-    </header>
     <div class="vistas">
         <h3>John Smith</h2>
             <div class="camara">
@@ -90,30 +90,10 @@
     </div>
     </section>
     </aside>
-    <footer>
-    <div class="descripcion">
-    <div class="logo">
-        <img src="{{ asset('img/perfil_padre/logo.png') }}" alt="logo2">
-        <hr>
-        <div class="sociales">
-            <img src="{{ asset('img/perfil_padre/instagram.png') }}" alt="instagram">
-            <img src="{{ asset('img/perfil_padre/youtube.png') }}" alt="youtube">
-            <img src="{{ asset('img/perfil_padre/facebook.png') }}" alt="facebook">
-        </div>
-    </div>
-
-    <div class="adicion">
-        <p>Legal</p>
-        <hr>
-        <p>Terminos de uso</p>
-        <p>Politica de Cookies</p>
-        <p>Politica de privacidad</p>
-    </div>
-</div>
-    <hr>
-    <p>@ 2024 Wooperland - Todos los derechos reservados</p>
-    </footer>
-</div>
+    @include('layouts.footer')
+</div> --}}
 </body>
 <script src="{{ asset('js/perfil_padre/perfil_padre_oscuro.js') }}"></script>
 </html>
+
+@endsection

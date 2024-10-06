@@ -1,15 +1,17 @@
 @extends('layouts.header&footer')
 @section('content')
 {{-- Content --}}
-    <main class="h-full   w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B] " style="font-family: 'Happy Monkey">
-        <div class=" h-full flex flex-cols-2 ml-28">
-            <div class="w-2/5 h-[95%] my-12 ml-2 pb-8">
-                <img src="{{asset('img/terms_image.png')}}" class="h-[90%] w-full rounded-l-lg ">
+<main class="h-full w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
+    <div class="h-full flex justify-center items-center desktop:pb-20 desktop:pt-8">
+        {{-- Imagen solo visible en pantallas grandes --}}
+        <div class="hidden desktop:flex w-2/5 h-[95%] my-12 ml-2 pb-8 desktop:mt-40">
+                <img src="{{asset('img/terms_image.png')}}" class="h-[90%] w-full rounded-l-lg">
             </div>
-            <div class="w-1/2 h-[90%] mt-4 bg-gradient-to-b from-[#EF476F] to-[#892940] rounded-2xl p-8">
-                <h1 class="text-center text-white text-5xl p-4">Términos y Condiciones</h1>
+            <div class="desktop:w-1/2 desktop:h-[90%] bg-gradient-to-b from-[#EF476F] to-[#892940] rounded-2xl tablet:h-[90%] mobile:h-11/12 desktop:px-8 mobile:w-[96%] overflow-hidden mobile:mt-0 mobile:p-2">
+                <h1 class="text-center text-white text-3xl p-2">Términos y Condiciones</h1>
                 
-                <div class="text-white text-lg overflow-y-auto h-[60%] p-4">
+                <div class="text-white text-lg overflow-y-auto mobile:h-[60%] tablet:h-[74%] p-4 mobile:p-2">
+                    
                     <h2 class="text-3xl mb-4">Bienvenido a Wooperland</h2>
                     <p>
                         Al acceder y utilizar la aplicación Wooperland, aceptas cumplir con los siguientes términos y condiciones. 
@@ -44,11 +46,11 @@
                 <!-- Checkbox para aceptar los términos -->
                 <div class="flex items-center justify-center mt-6">
                     <input type="checkbox" id="acceptTerms" class="mr-2 h-6 w-6 rounded-md">
-                    <label for="acceptTerms" class="text-white text-2xl">Acepto los Términos y Condiciones</label>
+                    <label for="acceptTerms" class="text-white text-2xl mobile:text-xl">Acepto los Términos y Condiciones</label>
                 </div>
                 <!-- Botón Continuar -->
                 <div class="flex justify-center mt-6">
-                    <button class="w-1/3 p-4 bg-[#FFD166] text-black rounded-3xl text-2xl border-2 border-black shadow-md shadow-black hover:text-white">
+                    <button class="w-1/3 p-4 bg-[#FFD166] text-black rounded-3xl text-2xl mobile:text-xl border-2 border-black shadow-md shadow-black hover:text-white">
                         Continuar
                     </button>
                 </div>
