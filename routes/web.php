@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
  //Dev_Yesith
 
 
-Route::get('home',[HomeController::class,'Home']);
+Route::get('home',[HomeController::class,'Home'])->name('home');
 Route::get('header',[HomeController::class,'Header']);
 
 
@@ -43,7 +43,7 @@ Route::get('vista_1_achievement',[AchievementController::class,'achievement_view
 
 //main
 //Ruta perfil padre(BRAYAN SOLARTE)
-Route::get('perfil_padre',[ProfileFatherController  ::class,'index'])->name('vista_padre');
+Route::get('perfil_padre',[ProfileFatherController::class,'index'])->name('perfil_padre');
 //Ruta usuarios registrados(BRAYAN SOLARTE)
-Route::get('vista_usuarios',[ProfileFatherController  ::class,'index2'])->name('vista_usuarios');
+Route::get('vista_usuarios',[ProfileFatherController::class,'index2'])->name('vista_usuarios');
 

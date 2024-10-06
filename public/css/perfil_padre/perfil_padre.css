@@ -11,10 +11,9 @@ header{
     align-items: center;
 }
 .container{
-    top: 100px;
     background-color:rgb(241, 199, 91);
     width:auto;
-    height: 160vh;
+    height: 130vh;
     position: relative; 
     font-family: 'Happy Monkey', 'Happy Monkey';
     transition: .5s ease all;
@@ -23,33 +22,13 @@ body.dark .container{
     background-color: #31312C; 
     color: aliceblue;
 }
-
-header{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    position: absolute;
-    background-color: rgb(167, 28, 81);
-    margin: auto;
-    width: 100%;
-    height: 114px ;
-    z-index: 5;
-}
-header img{
-    position: relative;
-    width: 300px;
-    height: 40px;
-    left: 4%;
-
-}
-
 aside{
     background-color: rgb(252, 192, 42);
     position: absolute;
-    top: 140px;
+    top: 40px;
     right:0px;
     width: 80%;
-    height: 118vh;
+    height: 120vh;
     border-radius: 50px 0px 0px 50px;
     overflow: hidden;
     transition: .5s ease all;
@@ -157,7 +136,7 @@ span img{
 .vistas{
     position: absolute;
     width: 25%;
-    height: 170vh;
+    height: 160vh;
 }
 .vistas h3{
     position: absolute;
@@ -537,119 +516,4 @@ body.dark .clave button{
 body.dark .relleno{
     background-color: #2A2B2A;
     }
-footer{
-    position: absolute;
-    width: 100%;
-    height: 280px;
-    background-color: #282424;
-    top: 88%;
-}
-footer hr{
-    position: relative;
-    width: 85%;
-    height: 1px;
-    background-color: white;
-    border: none;
-    top: 210px;
-}
 
-footer p{
-    position: relative;
-    width: 100%;
-    font-size: 16;
-    color: white;
-    top: 215px;
-    left: 35%;
-}
-.descripcion{
-    position: absolute;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: row;
-    width: 100%;
-    height: 250px;
-}
-.logo {
-    position: relative;
-    width: 80%;
-    height: 250px;
-    top: 10%;
-    left: 0%;
-    padding: 0px;
-}
-
-
-.logo img{
-    position: relative;
-    width: 309px;
-    height: 50px;
-    left: 10%;
-}
-
-.logo hr{
-    position: relative;
-    width: 320px;
-    height: 1px;
-    background-color: white;
-    left: -420px;
-    top: 5%;
-    border: none;
-
-}
-
-.sociales{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: row;
-    gap: 35px;
-    position: relative;
-    width: 55px;
-    height: 55px;
-    top: 30px;
-    left: 135px;
-}
-
-
-.sociales img{
-    position: relative;
-    width: 100%;
-    height: 55px;
-    
-}
-
-.adicion{
-    position: relative;
-    width: 25%;
-    height: 250px; 
-    left: 0%; 
-    top: 18%;
-}
-.adicion p{
-    position: relative;
-    width: 100%;
-    font-size: 16px;
-    top: 0%;
-    color: white;
-    left: 0%;
-}
-.adicion hr{
-    position: relative;
-    width: 50%;
-    height: 1px;
-    background-color: white;
-    left: -25%;
-    top: 0%;
-    border: none;
-}
-
-@media (max-width: 480px) {
-    header{
-        display: grid;            /* Activa Grid */
-        grid-template-columns: 1fr 1fr 1fr; /* 2 columnas iguales */
-        gap: 50px;
-      }
-
-
-}

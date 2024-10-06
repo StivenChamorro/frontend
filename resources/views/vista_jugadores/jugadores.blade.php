@@ -1,3 +1,6 @@
+@extends('layouts.header1')
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +14,6 @@
 </head>
 <body>
     <div class="container">
-    <header>
-        <img src="{{ asset('img/vista_jugadores/logo.png') }}" alt="logo">
-    </header>
     <div class="vistas">
         <h3>John Smith</h2>
             <div class="camara">
@@ -22,7 +22,8 @@
             <img src="{{ asset('img/vista_jugadores/foto_usuario.png') }}" alt="usuario foto">
             <div class="menu">
             <div class="item" id="perfil">
-                <img src="{{ asset('img/vista_jugadores/persona.png') }}" alt="persona">
+                <a href="{{route('perfil_padre')}}">
+                <img src="{{ asset('img/vista_jugadores/persona.png') }}" alt="persona"></a>
                 <p>perfil</p>
             </div>
 
@@ -106,30 +107,10 @@
     </div>
     </section>
     </aside>
-    <footer>
-    <div class="descripcion">
-    <div class="logo">
-        <img src="{{ asset('img/vista_jugadores/logo.png') }}" alt="logo2">
-        <hr>
-        <div class="sociales">
-            <img src="{{ asset('img/vista_jugadores/instagram.png') }}" alt="instagram">
-            <img src="{{ asset('img/vista_jugadores/youtube.png') }}" alt="youtube">
-            <img src="{{ asset('img/vista_jugadores/facebook.png') }}" alt="facebook">
-        </div>
-    </div>
 
-    <div class="adicion">
-        <p>Legal</p>
-        <hr>
-        <p>Terminos de uso</p>
-        <p>Politica de Cookies</p>
-        <p>Politica de privacidad</p>
-    </div>
 </div>
-    <hr>
-    <p>@ 2024 Wooperland - Todos los derechos reservados</p>
-    </footer>
-</div>
+@include('layouts.footer')
 </body>
 <script src="{{ asset('js/vista_jugadores/jugadores.js') }}"></script>
 </html>
+@endsection

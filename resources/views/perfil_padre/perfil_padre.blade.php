@@ -1,4 +1,4 @@
-@extends('layouts.header')  
+@extends('layouts.header1')
 @section('content')
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/perfil_padre/perfil_padre.css') }}">
     
 </head>
-{{-- <body>
+<body>
     <div class="container">
     <div class="vistas">
         <h3>John Smith</h2>
@@ -32,12 +32,14 @@
             </div>
 
             <div class="home">
-                <img src="{{ asset('img/perfil_padre/home.png') }}" alt="home">
+                <a href="{{route('home')}}">
+                <img src="{{ asset('img/perfil_padre/home.png') }}" alt="home"></a>
                 <p>home</p>
             </div>
 
             <div class="cerrar">
-                <img src="{{ asset('img/perfil_padre/cerrar.png') }}" alt="cerrar">
+                <a href="{{route('welcome')}}">
+                <img src="{{ asset('img/perfil_padre/cerrar.png') }}" alt="cerrar"></a>
                 <p>cerrar sesion</p>
             </div>
     </div>
@@ -90,10 +92,10 @@
     </div>
     </section>
     </aside>
-    @include('layouts.footer')
-</div> --}}
+    
+</div>
 </body>
 <script src="{{ asset('js/perfil_padre/perfil_padre_oscuro.js') }}"></script>
 </html>
-
+@include('layouts.footer')
 @endsection

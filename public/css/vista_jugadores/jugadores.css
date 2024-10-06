@@ -1,13 +1,14 @@
 body{
-    height: auto;
+    height: auto  ;
+    width: auto;
 }
 
 .container{
     
     background-color:rgb(241, 199, 91);
     width: 100%;
-    height: 160vh;
-    position: absolute; 
+    height: 150vh;
+    position: relative; 
     font-family: 'Happy Monkey', 'Happy Monkey';
     transition: .5s ease all;
 }
@@ -17,30 +18,20 @@ body.dark .container{
 }
 
 header{
+    background-color: #B43654;
+    color: white;
+    padding: 20px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: start;
-    position: absolute;
-    background-color: rgb(167, 28, 81);
-    margin: auto;
-    width: 100%;
-    height: 114px ;
-    z-index: 5;
-}
-header img{
-    position: relative;
-    width: 300px;
-    height: 40px;
-    left: 4%;
-
 }
 aside{
     background-color: rgb(252, 192, 42);
     position: absolute;
-    top: 140px;
+    top: 40px;
     right:0px;
     width: 80%;
-    height: 110vh;
+    height: 120vh;
     border-radius: 50px 0px 0px 50px;
     overflow: hidden;
     transition: .5s ease all;
@@ -67,7 +58,7 @@ aside hr{
     height: 2px;
     background-color: black;
     border: none;
-    left: -32%;
+    left: -25%;
     top: 8%;
 }
 
@@ -75,8 +66,9 @@ aside .agregar{
 position: absolute;
 width: 133px;
 height: 38px;
-left: 730px;
-top: 90px;
+right: -45%;
+
+top: 10%;
 background-color: #EF476F;
 border-radius: 100px;
 border: none;
@@ -90,6 +82,8 @@ aside .agregar:hover{
     width: 170px;
     height: 50px;
     font-size: 16px;
+    right: -48% ;
+    top: 10%;
 }
 body.dark .agregar{
     color: aliceblue;
@@ -100,8 +94,8 @@ aside .eliminar{
 position: absolute;
 width: 133px;
 height: 38px;
-left: 986px;
-top: 90px;
+left: 65%;
+top: 10%;
 background-color: #EF476F;
 border-radius: 100px;
 border: none;
@@ -115,6 +109,8 @@ aside .eliminar:hover{
     width: 170px;
     height: 50px;
     font-size: 16px;
+    left: 63%;
+    top: 10%;
 }
 body.dark .eliminar{
     color: aliceblue;
@@ -198,7 +194,7 @@ span img{
 .vistas{
     position: absolute;
     width: 25%;
-    height: 160vh;
+    height: 140vh;
 }
 .vistas h3{
     position: absolute;
@@ -325,12 +321,12 @@ body.dark .decoracion{
     background-color: #31312C;
 }
 section{
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: start;
     justify-content: start;
-    top: 13vh;
-    width: 85%;
+    top: 25%;
+    width: 90%;
     left: 100px;
     height: 80vh;
     z-index: 2;
@@ -370,7 +366,7 @@ body.dark section {
     background-color: #FFCE5E;
     width: 220px;
     height: 220px;
-    top: 0px;
+    top: 10%;
     overflow: hidden;
     transition: .5s ease all;
 }
@@ -414,112 +410,7 @@ body.dark .card img{
     align-items: center;
     justify-content: center;
 }
-footer{
-    position: absolute;
-    width: 100%;
-    height: 280px;
-    background-color: #282424;
-    top: 132vh;
-}
-footer hr{
-    position: relative;
-    width: 85%;
-    height: 1px;
-    background-color: white;
-    border: none;
-    top: 210px;
-}
 
-footer p{
-    position: relative;
-    width: 100%;
-    font-size: 16;
-    color: white;
-    top: 215px;
-    left: 35%;
-}
-.descripcion{
-    position: absolute;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: row;
-    width: 100%;
-    height: 250px;
-}
-.logo {
-    position: relative;
-    width: 80%;
-    height: 250px;
-    top: 10%;
-    left: 0%;
-    padding: 0px;
-}
-
-
-.logo img{
-    position: relative;
-    width: 309px;
-    height: 50px;
-    left: 10%;
-}
-
-.logo hr{
-    position: relative;
-    width: 320px;
-    height: 1px;
-    background-color: white;
-    left: -420px;
-    top: 5%;
-    border: none;
-
-}
-
-.sociales{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: row;
-    gap: 35px;
-    position: relative;
-    width: 55px;
-    height: 55px;
-    top: 30px;
-    left: 135px;
-}
-
-
-.sociales img{
-    position: relative;
-    width: 100%;
-    height: 55px;
-    
-}
-
-.adicion{
-    position: relative;
-    width: 25%;
-    height: 250px; 
-    left: 0%; 
-    top: 18%;
-}
-.adicion p{
-    position: relative;
-    width: 100%;
-    font-size: 16px;
-    top: 0%;
-    color: white;
-    left: 0%;
-}
-.adicion hr{
-    position: relative;
-    width: 50%;
-    height: 1px;
-    background-color: white;
-    left: -25%;
-    top: 0%;
-    border: none;
-}
 
 
 
