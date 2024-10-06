@@ -37,3 +37,18 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
+
+// Función para pausar y reanudar el carrusel
+function pauseCarousel() {
+    clearInterval(refreshInterval);
+}
+function resumeCarousel() {
+    refreshInterval = setInterval(() => { next.click(); }, 3000);
+}
+
+// Pausar el carrusel cuando un modal esté activo
+const modals = document.querySelectorAll('.modal');
+modals.forEach(modal => {
+    modal.addEventListener('mouseenter', pauseCarousel);
+    modal.addEventListener('mouseleave', resumeCarousel);
+});
