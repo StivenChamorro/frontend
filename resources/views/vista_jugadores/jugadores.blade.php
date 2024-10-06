@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/58965c32f8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/vista_jugadores/jugadores.css') }}">
-    <script src="{{ asset('js/vista_jugadores/jugadores.js') }}"></script>
+    
 </head>
 <body>
     <div class="container">
@@ -131,4 +131,5 @@
     </footer>
 </div>
 </body>
+<script src="{{ asset('js/vista_jugadores/jugadores.js') }}"></script>
 </html>

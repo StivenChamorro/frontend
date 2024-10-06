@@ -1,3 +1,7 @@
+body{
+    height: auto;
+}
+
 .container{
     
     background-color:rgb(241, 199, 91);
@@ -194,7 +198,7 @@ span img{
 .vistas{
     position: absolute;
     width: 25%;
-    height: 200vh;
+    height: 160vh;
 }
 .vistas h3{
     position: absolute;
@@ -321,10 +325,10 @@ body.dark .decoracion{
     background-color: #31312C;
 }
 section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: start;
     top: 13vh;
     width: 85%;
     left: 100px;
@@ -333,6 +337,7 @@ section{
     background-color: #DFAA30 ;
     border-radius: 50px;
     transition: .5s ease all;
+    overflow: hidden;
 }
 
 body.dark section {
@@ -340,11 +345,17 @@ body.dark section {
 }
 .agregados{
     position: relative;
-    display: grid;
-    align-items: center;
-    justify-items:center ;
-    grid-template-columns: 280px 280px 280px 280px;
-    grid-template-rows: 250px 250px 250px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: start;
+    margin: 40px;
+    padding: 50px;
+    gap: 30px;
+    flex-direction: row;
+    top: 0%;
+    height: auto;
+    width: 90%;
     
 }
 
@@ -359,7 +370,7 @@ body.dark section {
     background-color: #FFCE5E;
     width: 220px;
     height: 220px;
-    top: 60px;
+    top: 0px;
     overflow: hidden;
     transition: .5s ease all;
 }

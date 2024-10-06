@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/58965c32f8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/perfil_padre/perfil_padre.css') }}">
-    <script src="{{ asset('js/perfil_padre/perfil_padre_oscuro.css') }}"></script>
+    
 </head>
 <body>
     <div class="container">
@@ -26,7 +26,7 @@
             </div>
 
             <div class="jugadores">
-                <a href="../../views/vista_jugadores/jugadores.html">
+                <a href="{{route('vista_usuarios')}}">
                     <img src="{{ asset('img/perfil_padre/jugador.png') }}" alt="jugador"></a>
                 <p>jugadores</p>
             </div>
@@ -37,7 +37,7 @@
             </div>
 
             <div class="cerrar">
-                <img ssrc="{{ asset('img/perfil_padre/cerrar.png') }}" alt="cerrar">
+                <img src="{{ asset('img/perfil_padre/cerrar.png') }}" alt="cerrar">
                 <p>cerrar sesion</p>
             </div>
     </div>
@@ -115,4 +115,5 @@
     </footer>
 </div>
 </body>
+<script src="{{ asset('js/perfil_padre/perfil_padre_oscuro.js') }}"></script>
 </html>
