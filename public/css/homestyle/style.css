@@ -1,0 +1,373 @@
+body {
+    background: linear-gradient( 180deg, #FFD166 50.13% , #F78D6B 90%); 
+    font-family: 'Happy monkey', sans-serif;
+    margin: 0;
+}
+
+.hero-content{
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-hero{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-title-content{
+    position: absolute;
+    left: 50%;
+    background-color: #ef476f;
+    box-shadow: 1px 8px 1px #E87080;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.cta-title{
+    font-family: 'Press start 2p', cursive;
+    color: white;
+    font-size: 30px;
+}
+
+main{
+    margin: 200px;
+}
+
+.wpland-content{
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.wpland-content h2{
+    color: #ef476f;
+    text-align: center;
+}
+
+.line{
+    padding: 30px;
+    border-top: 1px solid #000;  /* Borde superior */
+    border-bottom: 1px solid #000;  /* Borde inferior */
+}
+
+p{
+    font-size: 20px;
+    color: #000;
+}
+
+.topics-learn{
+    text-align: center;
+    margin-top: 10vw;
+}
+
+/* carrusel */
+.slider{
+    width: 1300px;
+    max-width: 100vw;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.title-carrusel{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    margin: 0;
+    padding: 20px;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 3s;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+.slider .buttons button:hover{
+    background-color: #fff;
+    color: #000;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+
+.item {
+    position: relative;
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+}
+
+.item h2, .item .button2 {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 10; /* Asegúrate de que esté por encima de la imagen */
+}
+
+.item h2 {
+    top: 30%; /* Ajusta según necesites */
+    font-size: 40px; /* Puedes ajustar el tamaño si es necesario */
+}
+
+.slider .list img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttons-container {
+    position: absolute;
+    top: 60%; /* Ajusta según lo necesites */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Espacio entre los botones */
+    z-index: 100;
+}
+
+.button2 {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    background-color: #EF476F;
+    font-family: 'Press Start 2p';
+    padding: 10px;
+    border: 3px #000 solid;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.button2:hover{
+    background-color: #FFD166;
+    cursor: pointer;
+    box-shadow:  4px 4px 8px rgba(0,0,0,0.7);
+}
+/* carrusel */
+
+
+.description-container{
+    border-top: 1px solid #000;  /* Borde superior */
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.description{
+    display: grid;            /* Activa Grid */
+    grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+    gap: 200px;  
+    padding-top: 150px;
+    padding-bottom: 20px;
+}
+
+h2{
+    color: #ef476f;
+    font-size: 50px;
+}
+
+.img-container{
+   height: 350px;
+}
+
+.kids-learning{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+    .nav-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+/* Estilos para pantallas de hasta 768px */
+@media (max-width: 768px) {
+
+  header{
+    display: grid;            /* Activa Grid */
+    grid-template-columns: 1fr 1fr 1fr; /* 2 columnas iguales */
+    gap: 50px;
+  }
+
+  .logo {
+      font-size: 3vw;
+  }
+
+  .nav-container {
+      flex-direction: column;
+      width: 100%;
+      border-radius: 20px;
+  }
+
+  .nav-button {
+      width: 100%;
+      padding: 5px 0;
+  }
+
+  .separator {
+      width: 80%;
+      height: 1px;
+      margin: 5px 0;
+  }
+
+  .button-profile {
+      width: 50%;
+      justify-content: center;
+      margin-top: 10px;
+      margin-left: 50px;
+  }
+
+  main {
+      margin: 100px 20px;
+  }
+
+  .cta-title-content {
+      left: 40%;
+      width: 50%;
+  }
+
+  .description {
+      grid-template-columns: 1fr;
+      gap: 50px;
+  }
+
+  .img-container {
+      height: auto;
+  }
+
+  .slider{
+    height: 400px;
+}
+
+}
+
+/* Estilos para pantallas de hasta 480px */
+@media (max-width: 480px) {
+  header{
+    display: grid;            /* Activa Grid */
+    grid-template-columns: 1fr 1fr 1fr; /* 2 columnas iguales */
+    gap: 20px;
+  }
+
+  .logo {
+      font-size: 3vw;
+      margin-right: 20px;
+  }
+
+  .nav-container {
+      width: 90%;
+  }
+
+  .nav-button {
+      font-size: 14px;
+  }
+
+  .button-profile {
+      padding: 5px;
+  }
+
+  .profile-img {
+      width: 30px;
+      height: 30px;
+      margin-left: 8px;
+  }
+
+  .arrow-profile {
+      width: 10px;
+      margin-right: 10px;
+  }
+
+  .hero-content {
+      height: 200px;
+  }
+
+  .cta-title-content {
+      padding: 10px;
+  }
+
+  .cta-title {
+      font-size: 16px;
+      text-align: center;
+  }
+
+  main {
+      margin: 50px 10px;
+  }
+
+  .wpland-content h2 {
+      font-size: 20px;
+  }
+
+  p {
+      font-size: 16px;
+  }
+
+  .img-container {
+      height: 200px;
+  }
+
+  
+}
+
+
