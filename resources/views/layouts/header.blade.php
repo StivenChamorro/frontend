@@ -41,10 +41,6 @@
                 <button class="boton_cancelar" id="cancelar_cambiar_imagen"> Cancelar </button>
             </div>
 
-            <a href="{{route('vista_3_store')}}"><button class="nav-button">Tienda</button></a>
-            <div class="separator"></div>
-            <a href=""><button class="nav-button">Avatares</button></a>
-
         </nav>
         <button class="button-profile">
              <img src="{{asset('imgs/imagenes_home/image.svg')}}" alt="" class="profile-img"> 
