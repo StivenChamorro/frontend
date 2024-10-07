@@ -41,6 +41,11 @@ header {
     transition: background-color 0.3s;
 }
 
+.nav-button a{
+    text-decoration: none;
+    color: white;
+}
+
 .nav-button:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50px;
@@ -154,6 +159,103 @@ header {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* ESTILOS IMAGENES AVATARES */
+
+.nav-container .contenedor_cambiar_imagen {
+    position: absolute;
+    font-family: Happy Monkey;
+    width: 400px;
+    height: 500px;
+    top: 120px;
+    /* left: -2%; */
+    background: linear-gradient(180deg, #FFD166 0%, #F78D6B 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    z-index: 20;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s;
+}
+
+.contenedor_cambiar_imagen.open-menu {
+    max-height: 1000px;
+}
+
+.contenedor_cambiar_imagen .titulo_cambiar_imagen {
+    font-size: 23px;
+    text-align: center;
+}
+
+.contenedor_cambiar_imagen .foto_actual {
+    width: 25%;
+    height: auto;
+    display: inline;
+    margin-left: 35%;
+    
+}
+
+.active {
+    opacity: 1 !important;
+    box-shadow: 0 5px 5px rgb(248, 251, 247);
+    border-radius: 50%;
+}
+
+.catalogo_fotos {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #B43654;
+    width: 90%;
+    height: 270px;
+    margin-left: 16px;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.foto_disponible {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    transition: .3s;
+}
+
+.foto_disponible:hover {
+    opacity: 0.1;
+}
+
+.contenedor_cambiar_imagen .boton_cancelar {
+    margin-top: 5%;
+    margin-left: auto;
+    width: 40%;
+    height: auto;
+    background: #EF476F;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    color: white;
+    font-family: Happy Monkey;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.contenedor_cambiar_imagen .boton_aceptar {
+    margin-left: 10%;
+    width: 40%;
+    height: auto;
+    background: #EF476F;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    color: white;
+    font-family: Happy Monkey;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.boton_aceptar a,
+.boton_cancelar a {
+    text-decoration: none;
+    color: white;
+}
 
 
 /* responsive */
@@ -344,5 +446,12 @@ header {
 
     .modal-container {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 780px) and (min-width: 468px) {
+    .contenedor_cambiar_imagen {
+        margin-top: -30px;
+        left: 10%;
     }
 }

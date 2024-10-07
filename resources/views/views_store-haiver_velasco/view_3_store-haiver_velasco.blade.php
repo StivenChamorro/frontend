@@ -11,6 +11,7 @@
     <title>STORE VIEW 1 </title>
     <link rel="stylesheet" href="{{ asset('css/Tienda-haiver_velasco.css/vista_3_tienda-haiver_velasco.css') }}">
     <script src="{{ asset('js/desplegable_header-haiver_velasco.js') }}"></script>
+    <script src="{{asset('js/script_buscador_tienda.js')}}" ></script>
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
 </head>
 
@@ -47,110 +48,110 @@
             </div>
             <div class="barra_6_main"></div>
 
-            <div class="contenedor_imgs_store">
+            <div class="contenedor_imgs_store" id="contedido_buscador">
                 <div class="IMG_STORE">
                     <a href="{{route('view_1_store')}}"> <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/1_img_store.png') }}"> </a>
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}" alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 1 </h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/2_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 2</h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/3_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 3</h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/4_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 4 </h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/5_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 5</h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/6_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 6</h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/7_img-store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 7</h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/8_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 8</h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/9_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 9</h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/10_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 10 </h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/11_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 11</h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/12_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 12 </h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/13_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 13</h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/14_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 14</h2>
                 </div>
                 <div class="IMG_STORE">
                     <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/15_img_store.png') }}">
                     <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
                         alt="candado de bloqueo">
                     <h1 class="costo_imagen"> 300 💎</h1>
-                    <h2 class="Nombre_Imagen"> Lorem ipsum </h2>
+                    <h2 class="Nombre_Imagen"> Lorem ipsum 15</h2>
                 </div>
             </div>
         </div>
