@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <script src="{{asset('js/script_escoger-imagen.js')}}"></script>
     @vite(['resources/views/layouts/css-layouts/header.css', 'resources/views/layouts/js-layouts/header.js'])
 
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
@@ -17,9 +17,34 @@
     <header>
         <div class="logo">WOOPERLAND</div>
         <nav class="nav-container">
+
+            <button class="nav-button"> <a href="{{route('vista_3_store')}}">Tienda</a></button>
+            <div class="separator"></div>
+            <button class="nav-button" id="mirar_imagenes">Avatares</button>
+
+            <div class="contenedor_cambiar_imagen" id="cambiar_imagen">
+                <h1 class="titulo_cambiar_imagen">  Cambiar foto de perfil</h1>
+                <img src="{{asset('imgs/imgs_achievements-haiver_velasco/img_escogida_cambiar_foto.png')}}" class="foto_actual">
+
+                <div class="catalogo_fotos">
+                    <img src="{{asset('imgs/imgs_achievements-haiver_velasco/dragon_catagolo_cambiar_foto.png')}}" class="foto_disponible">
+                    <img src="{{asset('imgs/imgs_achievements-haiver_velasco/wooperninja_catalogo_cambiar_foto.png')}}" class="foto_disponible">
+                    <img src="{{asset('imgs/imgs_achievements-haiver_velasco/woopercibor_catalogo_cambiar_foto.png')}}" class="foto_disponible">
+                    <img src="{{asset('imgs/imgs_achievements-haiver_velasco/superwooper_catalogo_cambiar_foto.png')}}" class="foto_disponible">
+                    <img src="{{asset('imgs/imgs_achievements-haiver_velasco/ciberwooper_catalogo_cambiar_foto.png')}}" class="foto_disponible">
+                    <img src="{{asset('imgs/imgs_achievements-haiver_velasco/woopercopa_catalogo_cambiar_foto.png')}}" class="foto_disponible">
+                    <img src="{{asset('imgs/imgs_achievements-haiver_velasco/woopernieve_catalogo_cambiar_foto.png')}}" class="foto_disponible">
+                    <img src="{{asset('imgs/imgs_achievements-haiver_velasco/deadpoolwooper_catalogo_cambiar_foto.png')}}" class="foto_disponible active">
+                </div>
+                
+                <button class="boton_aceptar" id="aceptar_cambiar_imagen"> Aceptar </button>
+                <button class="boton_cancelar" id="cancelar_cambiar_imagen"> Cancelar </button>
+            </div>
+
             <a href="{{route('vista_3_store')}}"><button class="nav-button">Tienda</button></a>
             <div class="separator"></div>
             <a href=""><button class="nav-button">Avatares</button></a>
+
         </nav>
         <button class="button-profile">
              <img src="{{asset('imgs/imagenes_home/image.svg')}}" alt="" class="profile-img"> 

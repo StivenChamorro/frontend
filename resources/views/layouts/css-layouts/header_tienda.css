@@ -148,7 +148,7 @@ a {
 
 }
 
-/* CONTENEDOR DE IMAGENES AVATARES */
+/* ESTILOS IMAGENES AVATARES */
 
 .tienda_avatares .contenedor_cambiar_imagen {
     position: absolute;
@@ -368,6 +368,7 @@ a {
         display: block;
         margin-right: -230px;
         margin-top: 10px;
+        cursor: pointer;
     }
 
     .tienda_avatares {

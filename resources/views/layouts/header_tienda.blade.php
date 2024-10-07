@@ -7,10 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     <script src="{{asset('js/script_escoger-imagen.js')}}"></script>
     <script src="{{asset('js/script_desplegable-perfil.js')}}"></script>
+    <script src="{{asset('js/script_buscador_tienda.js')}}"></script>
     @vite(['resources/views/layouts/css-layouts/header_tienda.css'])
     <title>Document</title>
 </head>
 <body>
+
     <header>
         <div class="contenedor_header-store" >
             <div class="logo_header">
@@ -18,9 +20,9 @@
                     src="{{ asset('imgs/imgs_store-haiver_velasco/wooperland_titulo.png') }}"alt="titulo-wooperland">
             </div>
             <div class="input-header">
-                <input type="text" placeholder="example: wooper Superheroe" alt="input_header_wooperland">
+                <input type="text" placeholder="example: wooper Superheroe" alt="input_header_wooperland" id="buscador">
                 <div class="barra_input_header"></div>
-                <img src="{{ asset('imgs/imgs_store-haiver_velasco/lupa_header.png') }}" alt="lupa_header_wooperland">
+                <img src="{{ asset('imgs/imgs_store-haiver_velasco/lupa_header.png') }}" alt="lupa_header_wooperland" id="search-toggle">
             </div>
             <div class="tienda_avatares">
                 <button class="boton-tienda"> <a href="{{route('vista_3_store')}}"> Tienda</a></button>
@@ -30,7 +32,7 @@
                 <div class="contenedor_cambiar_imagen" id="cambiar_imagen">
                     <h1 class="titulo_cambiar_imagen">  Cambiar foto de perfil</h1>
                     <img src="{{asset('imgs/imgs_achievements-haiver_velasco/img_escogida_cambiar_foto.png')}}" class="foto_actual">
-        
+
                     <div class="catalogo_fotos">
                         <img src="{{asset('imgs/imgs_achievements-haiver_velasco/dragon_catagolo_cambiar_foto.png')}}" class="foto_disponible">
                         <img src="{{asset('imgs/imgs_achievements-haiver_velasco/wooperninja_catalogo_cambiar_foto.png')}}" class="foto_disponible">

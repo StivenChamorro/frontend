@@ -10,6 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>STORE VIEW 1 </title>
         <link rel="stylesheet" href="{{ asset('css/Tienda-haiver_velasco.css/vista_1_tienda-haiver_velasco.css') }}">
+        <script src="{{asset('js/script_buscador_tienda.js')}}" ></script>
         <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -45,7 +46,7 @@
                 </div>
                 <div class="barra_6_main"></div>
 
-                <div class="contenedor_imgs_store">
+                <div class="contenedor_imgs_store" id="contedido_buscador">
                     <div class="IMG_STORE">
                         <img class="product_store" src="{{ asset('imgs/imgs_store-haiver_velasco/1_img_store.png') }}">
                         <img class="candado" src="{{ asset('imgs/imgs_store-haiver_velasco/img_candado.png') }}"
