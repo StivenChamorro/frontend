@@ -1,6 +1,11 @@
 <?php
 
 
+
+
+use App\Http\Controllers\HomeController;
+
+
 use App\Http\Controllers\AddChildController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
@@ -10,11 +15,21 @@ use App\Http\Controllers\TermsController;
 use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\StoreController;
 
+use App\Http\Controllers\ProfileFatherController;
+
+
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('home',[HomeController::class,'Home']);
+Route::get('header',[HomeController::class,'Header']);
+
 
 
 Route::get('iniciar_sesion',[LoginController::class,'store'])->name('iniciarsesion');
@@ -30,4 +45,12 @@ Route::get('vista_3_store',[StoreController::class,'store_view_3'])->name('vista
 
 //Ruta Logros (HAIVE VELASCO)
 Route::get('vista_1_achievement',[AchievementController::class,'achievement_view_1'])->name('vista_1_achievement');
+<<<<<<<<< Temporary merge branch 1
+//main
+//Ruta perfil padre(BRAYAN SOLARTE)
+Route::get('perfil padre',[ProfileFatherController  ::class,'index'])->name('view_1_store');
+//Ruta usuarios registrados(BRAYAN SOLARTE)
+Route::get('vista_usuarios',[ProfileFatherController  ::class,'index2'])->name('view_2_store');
+=========
 
+>>>>>>>>> Temporary merge branch 2
