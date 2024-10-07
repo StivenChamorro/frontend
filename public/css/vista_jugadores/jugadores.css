@@ -1,0 +1,645 @@
+body{
+    height: auto  ;
+    width: auto;
+}
+
+.container{
+    
+    background-color:rgb(241, 199, 91);
+    width: 100%;
+    height: 130vh;
+    position: relative; 
+    font-family: 'Happy Monkey', 'Happy Monkey';
+    transition: .5s ease all;
+}
+body.dark .container{
+    background-color: #31312C; 
+    color: aliceblue;
+}
+
+header{
+    background-color: #B43654;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+aside{
+    background-color: rgb(252, 192, 42);
+    position: absolute;
+    top: 40px;
+    right:0px;
+    width: 80%;
+    height: 110vh;
+    border-radius: 50px 0px 0px 50px;
+    overflow: hidden;
+    transition: .5s ease all;
+    
+}
+body.dark aside{
+    background-color: #4E4E4B;
+}
+
+aside h2{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    margin: 30px;
+    top: 0%;
+    left: 70px;
+    font-size: 48px;
+    transition: .5s ease all;
+    
+}
+aside hr{
+    position: relative;
+    width: 435px;
+    height: 2px;
+    background-color: black;
+    border: none;
+    left: -27%;
+    top: 8%;
+}
+
+aside .agregar{
+position: absolute;
+width: 133px;
+height: 45px;
+left: 55%;
+top: 13%;
+background-color: #EF476F;
+border: solid 1px black;
+border-radius: 100px;
+font-family: 'Happy Monkey', 'Happy Monkey' ;
+font-size: 12px;
+transition: .5s ease all;
+z-index: 2;
+}
+aside .agregar:hover{
+    background-color: #e7a305;
+    box-shadow: 0 2px 10px -2px black ;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+body.dark .agregar{
+    color: aliceblue;
+    border: solid 1px white;
+}
+
+body.dark .agregar:hover{
+    background-color: #949494;
+    box-shadow: 0 2px 10px -2px rgb(180, 180, 180) ;
+    border: solid 2px white;
+}
+
+aside .eliminar{
+position: absolute;
+width: 133px;
+height: 45px;
+left: 70%;
+top: 13%;
+background-color: #EF476F;
+border-radius: 100px;
+border: solid 1px black;
+font-family: 'Happy Monkey', 'Happy Monkey' ;
+font-size: 12px;
+transition: .5s ease all;
+z-index: 2;
+}
+aside .eliminar:hover{
+    background-color: #e7a305;
+    border: solid 2px black;
+    box-shadow: 0 2px 10px -2px black ;
+    border-radius: 10px;
+}
+body.dark .eliminar{
+    color: aliceblue;
+    border: solid 2px white;
+    
+}
+body.dark .eliminar:hover{
+    background-color: #949494;
+    box-shadow: 0 2px 10px -2px rgb(180, 180, 180) ;
+    border: solid 2px white;
+}
+
+body.dark aside hr{
+    background-color: aliceblue;
+}
+.decoracion{
+    background-color:rgb(241, 199, 91);
+    position: absolute;
+    width: 57%;
+    height: 70%;
+    border-radius: 100%;
+    right: -10%;
+    top:-15%;
+    transition: .5s ease all;
+    z-index: 1;
+}
+.switch{
+    background-color: rgb(252, 192, 42) ;
+    border-radius: 100px;
+    border: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    width: 102px;
+    height: 47px;
+    left: 84%;
+    top: 3%;
+    color: black;
+    z-index: 4;
+}
+
+.switch::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: rgb(245, 197, 75);
+    top: 4px;
+    left: 5px;
+    right: unset;
+    border-radius: 100px;
+    transition: .5s ease all;
+    z-index: 5;
+}
+.switch.active{
+    background-color: #4E4E4B;
+    color: #949494;
+    transition: .5s ease all;
+}
+.switch.active::after{
+    right: 5px ;
+    top: 4px;
+    left: unset;
+    background: #31312C;
+}
+span{
+    position: relative;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    line-height: 30px;
+    display: block;
+    background: none;
+}
+span img{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+}
+
+.vistas{
+    position: absolute;
+    width: 25%;
+    height: 140vh;
+}
+.vistas h3{
+    position: absolute;
+    height: 40px;
+    margin: 30px;
+    top: 220px;
+    left: 15%;
+    font-size: 24px;
+}
+.vistas img{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 23%;
+    top: 100px;
+    z-index: 1;
+}
+.camara{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    left: 190px;
+    top: 200px;
+    border: 1px solid black;
+    background-color: rgb(209, 43, 107);
+    box-shadow: 0 2px 10px -2px black ;
+    border-radius: 100%;
+    z-index: 2;
+}
+.camara img{
+position: relative;
+width: 21px;
+height: 21px;
+left: 0%;
+top: 0%;
+z-index: 3;;
+
+}
+
+.menu{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    top: 54vh;
+    left: 60px;
+    gap: 38px;
+    
+}
+
+.item{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    left: 25px;
+    top: 0%;
+}
+.item img{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    top: 0%;
+    padding: 7px;
+    background-color:#696969;
+    box-shadow: 0 2px 10px -2px black ;
+    border-radius: 100px;
+}
+
+.item p{
+    position: relative;
+    width: 100%;
+    height: 42px;
+    font-size: 20px;
+    left: 10%;
+    top: -10%;
+}
+
+#jugador.item img {
+    background-color: rgb(209, 43, 107);
+}
+
+.cerrar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    width: 250px;
+    height: 60px;
+    left: 12%;
+    top: 910px;
+}
+.cerrar img{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    border-radius: 100%;
+    box-shadow: 0 2px 10px -2px black ;
+    background-color: rgb(100, 98, 99) ;
+    top: 5%;
+    left: 40px;
+    
+}
+.cerrar p{
+    position: relative;
+    width: 80%;
+    height: 40px;
+    top: 8%;
+    left: 30%;
+    font-size: 20px;
+}
+
+body.dark .decoracion{
+    background-color: #31312C;
+}
+section{
+    position: absolute;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    top: 20%;
+    width: 90%;
+    left: 100px;
+    height: 80vh;
+    z-index: 2;
+    background-color: #DFAA30 ;
+    border-radius: 50px;
+    transition: .5s ease all;
+    overflow: hidden;
+}
+
+body.dark section {
+    background-color: #2A2B2A ;
+}
+.agregados{
+    position: relative;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 250px  250px;
+    margin: 40px;
+    padding: 50px;
+    gap: 30px;
+    flex-direction: row;
+    top: 0%;
+    height: auto;
+    width: 90%;
+    
+}
+
+.card{
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    border-radius: 30px;
+    background-color: #FFCE5E;
+    width: 220px;
+    height: 220px;
+    top: 10%;
+    /* overflow: hidden; */
+    transition: .5s ease all;
+}
+.card:hover{
+    box-shadow: 0 2px 10px -2px black ;
+    width: 250px;
+    height: 250px;
+}
+
+body.dark .card {
+    background-color: #31312C ;
+}
+body.dark .card:hover{
+    box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;    
+    width: 250px;
+    height: 250px;
+}
+
+.card img{
+    position: relative;
+    width: 82px;
+    height: 82px;
+    top: 10px;
+    box-shadow: 0 2px 10px -2px black ;
+    border-radius: 100px;
+    transition: .5s ease all;
+}
+.card #basura{
+    display: none;
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    z-index: 5;
+    top: 20px;
+    left: 25px;
+}
+.agregados.activo .card #basura{
+    display: block;
+}
+.card:hover img{
+    width: 100px;
+    height: 100px;
+}
+body.dark .card img{
+    box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
+}
+.card p{
+    position: relative;
+    background-color: #EF476F;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.registro{
+
+    display: none;
+}
+body.ok .registro{
+    display: block;
+    position: absolute;
+    font-family: 'Happy Monkey', 'Happy Monkey';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFCE5E;
+    width: 541px;
+    height: 570px;
+    border-radius: 50px;
+    gap: 40px;
+    box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
+    z-index: 4;
+    top: 200px;
+    left: 300px;
+    padding: 30px;
+}
+.nino{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 448px;
+    height: 216px;
+    background-color: #e7a305;
+    border-radius: 20px;
+    z-index: 5;
+}
+.nino img{
+    position: relative;
+    width: 82px;
+    height: 82px;
+    left: 30px;
+}
+.info{
+    position: relative;
+    display: grid;
+    left: 70px;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 30px 30px 30px 30px 30px;
+
+}
+.grafico{
+    position: relative;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 447px;
+    height: 216px;
+    background-color: #e7a305;
+    border-radius: 20px;
+}
+.grafico img{
+width: 220px;
+height: 220px;
+}
+.registro button{
+    font-family: 'Happy Monkey', 'Happy Monkey';
+width: 113px;
+height: 38px;
+border-radius: 50px;
+background-color: #EF476F;
+top: -30px;
+border: none;
+box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
+}
+@media  (max-width: 1500px){
+    .agregados{
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 250px  250px 250px;
+    } 
+    .menu{
+        left: 10%;
+    }
+}
+
+@media  (max-width: 1250px){
+    aside hr{
+        left: -13%;
+        width: 380px;
+        z-index: 4;
+    }
+    aside h2{
+        font-size: 38px;
+        z-index: 4;
+    }
+    aside .eliminar{
+        left: 70%;
+        }
+    aside .agregar{
+            left: 50%;
+        }
+    .vistas img{
+        left: 20%;
+        width: 120px;
+        height: 120px;
+    }
+    .vistas h3{
+        left: 10%;
+    }
+    .vistas .camara{
+        left: 50%;
+        width: 25px;
+        height: 25px;
+    }
+    .camara img{
+        left: 5%;
+        width: 30px;
+        height: 30px;
+    }
+    .agregados{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px  250px 250px 250px;
+    } 
+    .menu{
+        left: 10%;
+        top: 350px;
+    }
+    .menu img{
+        left: 0%;
+        width: 40px;
+        height: 40px;
+    }
+    .menu .item p{
+        display: none;
+    }
+    .cerrar img {
+        top: -200px;
+     left: 12%;
+     width: 40px;
+     height: 40px;
+    }
+    .cerrar p{
+        display: none;
+    }
+
+
+}
+
+@media  (max-width: 860px){
+    aside h2{
+        z-index: 4;
+        left: 15%;
+        font-size: 35px;
+    }
+    aside hr{
+        left: 0%;
+        width: 300px;
+        z-index: 4;
+    }
+    aside .eliminar{
+        left: 70%;
+        }
+    aside .agregar{
+            left: 35%;
+        }
+    .vistas img{
+        left: 10%;
+        width: 100px;
+        height: 100px;
+    }
+    .vistas h3{
+        left: 5%;
+        top: 190px;
+    }
+    .camara {
+        width: 20px;
+        height: 20px;
+        top: 180px;
+    }
+    .camara img{
+        left: 5%;
+        width: 20px;
+        height: 20px;
+    }
+    .agregados{
+        left: 15%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px  250px 250px 250px 250px;
+    } 
+    .menu{
+        top: 350px;
+        left: 5%;
+    }
+    .menu img{
+        left: 0%;
+        width: 40px;
+        height: 40px;
+    }
+    .menu .item p{
+        display: none;
+    }
+    .cerrar img {
+        top: -200px;
+        left: 5%;
+        width: 40px;
+        height: 40px;
+       }
+       .cerrar p{
+           display: none;
+       }
+}
+
+
