@@ -136,22 +136,28 @@ span img{
 .vistas{
     position: absolute;
     width: 25%;
-    height: 160vh;
+    height: 140vh;
 }
 .vistas h3{
     position: absolute;
     height: 40px;
     margin: 30px;
-    top: 320px;
+    top: 220px;
     left: 15%;
     font-size: 24px;
 }
-.vistas img{
+
+#changeAvatar{
+    display: none;
     position: absolute;
+}
+#avatar{
+    position: absolute;
+    cursor: pointer;
     width: 130px;
     height: 130px;
     left: 23%;
-    top: 200px;
+    top: 100px;
     z-index: 1;
 }
 .camara{
@@ -163,7 +169,7 @@ span img{
     height: 30px;
     padding: 6px;
     left: 190px;
-    top: 300px;
+    top: 200px;
     border: 1px solid black;
     background-color: rgb(209, 43, 107);
     box-shadow: 0 2px 10px -2px black ;
@@ -180,101 +186,53 @@ z-index: 3;;
 
 }
 
-.persona {
+.menu{
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: start;
-    flex-direction: row;
-    width: 250px;
-    height: 60px;
-    left: 20%;
-    top: 500px;
-}
-.persona img{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    padding: 7px;
-    border-radius: 100%;
-    box-shadow: 0 2px 10px -2px black ;
-    background-color: rgb(209, 43, 107) ;
-    top: 5%;
-    left: 0px;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    top: 54vh;
+    left: 60px;
+    gap: 38px;
     
-}
-.persona p{
-    position: relative;
-    width: 80%;
-    height: 40px;
-    top: 15%;
-    left: 20%;
-    font-size: 20px;
 }
 
-.jugadores {
-    position: absolute;
+.item{
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: row;
-    width: 250px;
+    width: 100%;
     height: 60px;
-    left: 20%;
-    top: 600px;
+    left: 25px;
+    top: 0%;
 }
-.jugadores img{
+.item img{
     position: relative;
     width: 40px;
     height: 40px;
+    left: 10px;
+    top: 0%;
     padding: 7px;
-    border-radius: 100%;
+    background-color:#696969;
     box-shadow: 0 2px 10px -2px black ;
-    background-color: rgb(100, 98, 99) ;
-    top: 5%;
-    left: 0px;
-    
-}
-.jugadores p{
-    position: relative;
-    width: 80%;
-    height: 40px;
-    top: 15%;
-    left: 20%;
-    font-size: 20px;
+    border-radius: 100px;
 }
 
-.home {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: row;
-    width: 250px;
-    height: 60px;
-    left: 20%;
-    top: 700px;
-}
-.home img{
+.item p{
     position: relative;
-    width: 40px;
-    height: 40px;
-    padding: 7px;
-    border-radius: 100%;
-    box-shadow: 0 2px 10px -2px black ;
-    background-color: rgb(100, 98, 99) ;
-    top: 5%;
-    left: 0px;
-    
-}
-.home p{
-    position: relative;
-    width: 80%;
-    height: 40px;
-    top: 15%;
-    left: 20%;
+    width: 100%;
+    height: 42px;
     font-size: 20px;
+    left: 10%;
+    top: -10%;
 }
+
+#perfil.item img {
+    background-color: rgb(209, 43, 107);
+}
+
 
 
 .cerrar {
@@ -331,6 +289,14 @@ section{
     top: 5%;
     
 }
+.informacion img{
+    display: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: -10%;
+    left: 440px;
+}
 .usuario{
     position: relative;
     left: 10%;
@@ -342,8 +308,11 @@ section{
     top: -2%;
 }
 .usuario img{
+    display: block;
     width: 130px;
     height: 130px;
+    left: 0%;
+    top: 0%;
 }
 .usuario h2{
     top: -10px;
@@ -367,6 +336,9 @@ section{
     padding: 20px;
     
 }
+.informacion.activo img{
+    display: block;
+}
 
 body.dark .informacion{
 background-color: #2A2B2A;
@@ -374,10 +346,11 @@ background-color: #2A2B2A;
 .informacion button {
 background-color: rgb(221, 28, 157);
 position: relative;
+cursor: pointer;
 width: 133px;
 height: 47px;
 left: 35%;
-top: 2%;
+top: -2%;
 border: none;
 border-radius: 50px;
 box-shadow: 0 2px 10px -2px black ;
@@ -424,7 +397,6 @@ body.dark .informacion hr{
     background-color: aliceblue;
     }
 
-
 .adicional{
     display: flex;
     flex-direction: column;
@@ -445,7 +417,14 @@ body.dark .informacion hr{
     border-radius: 40px;
     z-index: 2;
     top: -5%;
+    transition: .2s ease all;
     padding: 20px;
+}
+.clave.activo{
+    width: 620px;
+    height: 370px;
+    box-shadow: 0 2px 10px -2px black ;
+background-color: rgb(224, 171, 36);
 }
 body.dark .clave{
     background-color: #2A2B2A;
@@ -493,7 +472,7 @@ position: relative;
 width: 133px;
 height: 47px;
 left: 35%;
-top: 10%;
+top: 5%;
 border: none;
 border-radius: 50px;
 box-shadow: 0 2px 10px -2px black ;
@@ -516,4 +495,220 @@ body.dark .clave button{
 body.dark .relleno{
     background-color: #2A2B2A;
     }
+    
+    @media  (max-width: 1950px){
+        aside hr{
+            position: relative;
+            left: -27%;
+            width: 380px;
+            top: 7%;
+            z-index: 4;
+        }
+        aside h2{
+            font-size: 38px;
+            z-index: 4;
+        }
+            #avatar{
+                top: 100px;
+                width: 120px;
+                height: 120px;
+                left:20% ;
+            }
 
+        .vistas h3{
+            top: 200px;
+            left: 10%;
+        }
+        .vistas .camara{
+            top: 180px;
+            left: 50%;
+            width: 25px;
+            height: 25px;
+        }
+        .camara img{
+            left: 5%;
+            width: 30px;
+            height: 30px;
+        }
+        .container{
+            height: 150vh;
+        }
+        aside{
+            height: 130vh;
+        }
+        .decoracion{
+            height: 500px;
+            top: -100px;
+        }
+        .perfil{
+            width: 90%;
+            z-index: 3;
+            height: 870px;
+        
+        }
+     .informacion{
+        width: 90%;
+        top: 0%;
+        height: 100vh;
+    }
+        .adicional{
+            width: 95%;
+            gap: 30px;
+            top: 30px;
+        }
+        .clave {
+            width: 100%;
+            top: -4%;
+            height: 40vh;
+        }
+        .menu{
+            left: 10%;
+            top: 350px;
+        }
+        .menu img{
+            left: 0%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .cerrar img {
+            top: -200px;
+         left: 7%;
+         width: 40px;
+         height: 40px;
+        }
+        .cerrar p{
+            top: -200px;
+        }
+    
+    
+    }
+    
+    @media  (max-width: 860px){
+        .container{
+            width: 100%;
+            height: 160vh;
+        }
+        aside{
+            height: 150vh;
+        }
+        aside h2{
+            z-index: 4;
+            left: 15%;
+            font-size: 35px;
+        }
+        aside hr{
+            top: 7%;
+            left: 0%;
+            width: 300px;
+            z-index: 4;
+        }
+        aside .eliminar{
+            left: 70%;
+            }
+        aside .agregar{
+                left: 35%;
+            }
+        section{
+            display: grid;
+            grid-template-columns: 1fr ;
+            height: 150vh;
+            }
+        #avatar {
+            left: 10%;
+            width: 100px;
+            height: 100px;
+        }
+        .vistas h3{
+            left: 5%;
+            top: 190px;
+        }
+        .camara {
+            width: 20px;
+            height: 20px;
+            top: 180px;
+        }
+        .camara img{
+            left: 5%;
+            width: 20px;
+            height: 20px;
+        }
+        .perfil{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 100vh;
+            width: 100%;
+        }
+        .informacion{
+            width: 85%;
+            height: 80vh;
+        }
+        .informacion p{
+            font-size: 13px;
+        }
+        .informacion h4{
+            font-size: 14px;
+        }
+        .informacion h3{
+            font-size: 17px;
+        }
+        .informacion img{
+            width: 120px;
+            height: 120px;
+            top: 20px;
+        }
+        .informacion h2{
+            font-size: 17px;
+        }
+        .informacion button{
+            top: -3%;
+            width: 100px;
+            height: 38px;
+            font-size: 13px;
+        }
+        .clave{
+            top: 0%;
+            width: 90%;
+            height: 30vh;
+            left: -10%;
+        }
+        .clave h4{
+            font-size: 13px;
+        }
+        .clave h3{
+            font-size: 15px;
+        }
+        .relleno{
+            display: none;
+        }
+        .clave button{
+            width: 100px;
+            height: 38px;
+            font-size: 13px;
+        }
+        .menu{
+            top: 350px;
+            left: 5%;
+        }
+        .menu img{
+            left: 0%;
+            width: 40px;
+            height: 40px;
+        }
+        .menu .item p{
+            display: none;
+        }
+        .cerrar img {
+            top: -200px;
+            left: 5%;
+            width: 40px;
+            height: 40px;
+           }
+           .cerrar p{
+               display: none;
+           }
+    }
+    
+    
+    

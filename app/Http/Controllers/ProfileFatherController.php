@@ -16,5 +16,9 @@ class ProfileFatherController extends Controller
     {
         return view('vista_jugadores.jugadores');
     }
+    public function index3()
+    {
+        return view('niveles.nivel1');
+    }
 
 }
