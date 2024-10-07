@@ -118,21 +118,8 @@
         </section>
     </main>
 
-    <footer>
-      <div class="footer">
-          <div class="logo"><h2>WOOPERLAND</h2></div>
-          <div class="social-container">
-              <p class="social-text">Siguenos en nuestras redes</p>
-              <div class="social-icons">
-                  <img src="imagenes_index/ig.logo.png" alt="Instagram" class="social-icon">
-                  <img src="imagenes_index/yt.logo.png" alt="YouTube" class="social-icon">
-                  <img src="imagenes_index/fc.logo.png" alt="Facebook" class="social-icon">
-              </div>
-          </div>
-      </div>
-      <div class="copyright"><p>© 2024 Wooperland</p></div>
-      </footer>
-
+    
+    @include('layouts.footer')
 </body>
 
 </html>
