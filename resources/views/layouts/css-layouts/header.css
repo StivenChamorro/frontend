@@ -427,7 +427,7 @@
 .boton_cancelar a {
     text-decoration: none;
     color: white;
-
+}
 .container-pin {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -696,5 +696,4 @@
     }
 }
 
-  }
 
