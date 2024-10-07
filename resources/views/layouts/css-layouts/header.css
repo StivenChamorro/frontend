@@ -18,7 +18,7 @@
   header {
     background-color: var(--color-primary);
     color: var(--color-text);
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,7 @@
     border-radius: 50px;
     display: inline-flex;
     align-items: center;
-    padding: 5px;
+    padding: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
@@ -45,7 +45,7 @@
     color: var(--color-text);
     background: none;
     border: none;
-    font-size: clamp(14px, 1.5vw, 20px);
+    font-size: clamp(10px, 1vw, 15px);
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -72,7 +72,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px 5px 5px;
+    padding: 5px 5px 5px 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -84,15 +84,15 @@
   }
   
   .profile-img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
   }
   
   .arrow-profile {
-    width: 12px;
+    width: 10px;
     height: auto;
   }
   
