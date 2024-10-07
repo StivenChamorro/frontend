@@ -20,7 +20,7 @@
 
                     <div class="flex flex-col w-full">
                         <label class="text-white text-2xl mobile:text-xl mb-2">Contraseña:</label>
-                        <input class="desktop:w-full h-12 rounded-2xl shadow-md shadow-black px-4 text-xl mobile:text-lg" placeholder="Ingresar Contraseña">
+                        <input type="password" class="desktop:w-full h-12 rounded-2xl shadow-md shadow-black px-4 text-xl mobile:text-lg" placeholder="Ingresar Contraseña">
                     </div>
 
                     <div class="flex justify-center">
