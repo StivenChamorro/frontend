@@ -2,7 +2,7 @@
 @section('content')
 {{-- Content --}}
 <main class="h-full w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
-    <div class="h-full flex justify-center items-center desktop:pb-20 desktop:pt-8">
+    <div class="h-full flex justify-center items-center desktop:pb-20">
         {{-- Imagen solo visible en pantallas grandes --}}
         <div class="hidden desktop:flex w-2/5 h-[95%] my-12 ml-2 pb-8 desktop:mt-40">
                 <img src="{{asset('img/terms_image.png')}}" class="h-[90%] w-full rounded-l-lg">
@@ -49,7 +49,7 @@
                     <label for="acceptTerms" class="text-white text-2xl mobile:text-xl">Acepto los Términos y Condiciones</label>
                 </div>
                 <!-- Botón Continuar -->
-                <div class="flex justify-center mt-6">
+                <div class="flex justify-center mt-4">
                     <button class="w-1/3 p-4 bg-[#FFD166] text-black rounded-3xl text-2xl mobile:text-xl border-2 border-black shadow-md shadow-black hover:text-white">
                         Continuar
                     </button>

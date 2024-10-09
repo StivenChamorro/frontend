@@ -2,7 +2,7 @@
 @section('content')
 {{-- Content --}}
     <main class="h-full  w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B] " style="font-family: 'Happy Monkey">
-        <div class=" h-full flex flex-cols-2 mx-24 mobile:justify-center mobile:mx-2">         
+        <div class="w-[90%] h-full flex flex-cols-2 mx-24 mobile:justify-center mobile:mx-2 pl-32">         
             <div class="desktop:w-1/2 desktop:h-[90%] bg-gradient-to-b from-[#EF476F] to-[#892940] rounded-2xl p-8 tablet:h-[90%] mobile:h-11/12 desktop:mt-8 desktop:px-14 mobile:h-[90%] mobile:w-full overflow-y-auto mobile:mt-10">  
                 <h1 class="text-center text-white text-5xl p-4 mobile:text-4xl mobile:p-0">Registrate</h1>
                 <form action="" class="w-full grid gap-2 mt-2">

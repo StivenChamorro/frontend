@@ -18,7 +18,7 @@
    
     <section class="hero">
         <div class="hero-content">
-            <img src="{{ asset('imgs/imagenes_home/hero.svg'),  }}" alt="Wooper Character" class="img-hero">
+            <img src="{{ asset('imgs/imagenes_home/hero.svg')  }}" alt="Wooper Character" class="img-hero">
             <div class="cta-title-content"><h2 class="cta-title">Bienvenidos a Wooperland!!</h2></div>
         </div>
     </section>
@@ -40,7 +40,7 @@
                     <h2 class="title-carrusel">ASTRONOMIA</h2>
                     <img src="{{asset('imgs/imagenes_home/images_carrusel/image.svg')}}" alt="">
                     <div class="buttons-container">
-                        <a href="{{route('vista_nivel')}}"><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">JUGAR</button></a>
                         <a href=""><button class="button2">LOGROS</button></a>
                     </div>
                 </div>

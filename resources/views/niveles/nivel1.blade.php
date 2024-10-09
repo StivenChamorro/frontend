@@ -17,7 +17,7 @@
     <img id="anuncio" src="{{asset('img/niveles/aprendemate.png')}}" alt="aprendemate">
     <section class="hero">
         <div class="fondomatematicas">
-            <img src="{{ asset('img/niveles/fondomatematicas.png'),  }}" alt="fondo matematicas" class="img-hero">
+            <img src="{{ asset('img/niveles/fondomatematicas.png')  }}" alt="fondo matematicas" class="img-hero">
             {{-- <img src="{{ asset('img/niveles/fondomatematicas.png'),  }}" alt="fondo matematicas" class="img-hero"> --}}
         </div>
     </section>

@@ -48,8 +48,8 @@ Route::get('vista_1_achievement',[AchievementController::class,'achievement_view
 
 //main
 //Ruta perfil padre(BRAYAN SOLARTE)
-Route::get('perfil padre',[ProfileFatherController  ::class,'index'])->name('view_1_store');
+Route::get('perfil_padre',[ProfileFatherController  ::class,'index'])->name('view_1_store_');
 //Ruta usuarios registrados(BRAYAN SOLARTE)
-Route::get('vista_usuarios',[ProfileFatherController  ::class,'index2'])->name('view_2_store');
+Route::get('vista_usuarios',[ProfileFatherController  ::class,'index2'])->name('view_2_store_');
 
 

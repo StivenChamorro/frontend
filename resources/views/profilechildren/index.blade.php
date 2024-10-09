@@ -1,27 +1,25 @@
-@extends('layouts.header&footer2')
+@extends('layouts.master')
 @section('content')
 {{-- Content --}}
-<main class="h-screen w-full flex flex-col" style="font-family: 'Happy Monkey">
+<main class="h-screen w-full flex flex-col mx-auto" style="font-family: 'Happy Monkey';">
     <!-- Parte superior con la imagen -->
-    <div class="h-1/3 bg-cover bg-center relative">
-        <img src="{{asset('img/bg_child.png')}}" class="w-full h-full object-cover">
-        
+    <div class="h-2/5 w-full bg-cover bg-center relative" style="background-image: url('{{ asset('img/bg_child.png') }}');">
         <!-- Título sobre la imagen -->
         <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
-            <h1 class="text-5xl font-bold" style="font-family: 'Happy Monkey', cursive;">¡Hola!</h1>
-            <p class="text-3xl font-semibold">Nick</p>
+            <h1 class="text-4xl md:text-5xl font-bold" style="font-family: 'Happy Monkey', cursive;">¡Hola!</h1>
+            <p class="text-2xl md:text-3xl font-semibold">Nick</p>
         </div>
     </div>
 
     <!-- Parte inferior con el gradiente -->
-    <div class="h-2/3 bg-gradient-to-b from-[#FFD166] to-[#F78C6B] flex justify-center items-center">
+    <div class="h-3/5 w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B] flex items-center tablet:px-8">
         <!-- Contenedor de tarjetas -->
-        <div class="flex space-x-6 mt-[-100px] items-end">
+        <div class="w-full h-full flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 desktop:mt-[-150px] items-end desktop:px-64">
             <!-- Tarjeta de perfil (más alta y superpuesta) -->
-            <div class="bg-white rounded-xl p-6 w-80 h-[30rem] shadow-lg flex flex-col items-center relative z-10">
+            <div class="bg-white rounded-xl p-6 w-full desktop:w-[30rem] desktop:h-[40rem] shadow-lg flex flex-col items-center relative z-10">
                 <!-- Contenedor de imagen para hacer el efecto de superposición -->
                 <div class="relative -mt-20 mb-4">
-                    <img src="https://via.placeholder.com/150" alt="Avatar" class="w-32 h-32 rounded-full border-4 border-white object-cover">
+                    <img src="https://via.placeholder.com/150" alt="Avatar" class="desktop:w-44 desktop:h-44 rounded-full border-4 border-white object-cover">
                     <button class="absolute bottom-0 right-0 bg-[#F2446B] p-1 rounded-full text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -38,9 +36,8 @@
                 </button>
             </div>
             
-        
             <!-- Tarjeta de información -->
-            <div class="bg-white rounded-xl p-6 w-[22rem] h-[25rem] shadow-lg flex flex-col">
+            <div class="bg-white rounded-xl p-6 w-full desktop:w-[30rem] desktop:h-[30rem] shadow-lg flex flex-col">
                 <h3 class="text-lg font-semibold text-[#F2446B] flex items-center mb-2">
                     <span class="mr-2">📝</span> Escribe sobre ti
                 </h3>
@@ -50,7 +47,7 @@
             </div>
         
             <!-- Tarjeta de temas recientes -->
-            <div class="bg-white rounded-xl p-6 w-80 h-[25rem] shadow-lg flex flex-col">
+            <div class="bg-white rounded-xl p-6 w-full desktop:w-[30rem] desktop:h-[30rem] shadow-lg flex flex-col">
                 <h3 class="text-lg font-semibold text-[#F2446B] flex items-center mb-2">
                     <span class="mr-2">📚</span> Temas recientes
                 </h3>
@@ -67,8 +64,6 @@
                 </ul>
             </div>
         </div>
-        
     </div>
 </main>
-
 @endsection
