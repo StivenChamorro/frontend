@@ -23,6 +23,15 @@ export default {
         'press-start': ['"Press Start 2P"', 'cursive'],
         'happy-monkey': ['"Happy Monkey"', 'sans-serif'],
       },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        slide: 'slide 10s linear infinite',
+      },
     },
   },
   plugins: [

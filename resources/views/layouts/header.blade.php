@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
 
-    <title>@yield('title')</title> <!-- Sección para el título dinámico -->
+    <title>WOOPERLAND</title> <!-- Sección para el título dinámico -->
 
 </head>
 <body>
