@@ -2,18 +2,10 @@ body{
     height: auto  ;
     width: auto;
 }
-header{
-    background-color: #B43654;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .container{
     background-color:rgb(241, 199, 91);
     width:auto;
-    height: 130vh;
+    height: 110vh;
     position: relative; 
     font-family: 'Happy Monkey', 'Happy Monkey';
     transition: .5s ease all;
@@ -25,19 +17,17 @@ body.dark .container{
 aside{
     background-color: rgb(252, 192, 42);
     position: absolute;
-    top: 40px;
+    top: 20px;
     right:0px;
     width: 80%;
-    height: 120vh;
+    height: 102vh;
     border-radius: 50px 0px 0px 50px;
     overflow: hidden;
-    transition: .5s ease all;
-    
+    transition: .5s ease all;  
 }
 body.dark aside{
     background-color: #4E4E4B;
 }
-
 aside h2{
     position: absolute;
     width: 100%;
@@ -46,8 +36,7 @@ aside h2{
     top: 0%;
     left: 40px;
     font-size: 48px;
-    transition: .5s ease all;
-    
+    transition: .5s ease all; 
 }
 aside hr{
     position: relative;
@@ -55,17 +44,16 @@ aside hr{
     height: 2px;
     background-color: black;
     border: none;
-    left: -32%;
-    top: 8%;
+    left: -30%;
+    top: 10%;
 }
-
 body.dark aside hr{
     background-color: aliceblue;
 }
 .decoracion{
     background-color:rgb(241, 199, 91);
     position: absolute;
-    width: 57%;
+    width: 45%;
     height: 70%;
     border-radius: 100%;
     right: -10%;
@@ -74,7 +62,7 @@ body.dark aside hr{
     z-index: 1;
 }
 .switch{
-    background-color: rgb(252, 192, 42) ;
+    background-color: gray  ;
     border-radius: 100px;
     border: none;
     position: relative;
@@ -88,10 +76,9 @@ body.dark aside hr{
     height: 47px;
     left: 84%;
     top: 3%;
-    color: black;
+    background: #31312C;
     z-index: 4;
 }
-
 .switch::after{
     content: "";
     display: block;
@@ -107,8 +94,7 @@ body.dark aside hr{
     z-index: 5;
 }
 .switch.active{
-    background-color: #4E4E4B;
-    color: #949494;
+    background-color: rgb(245, 197, 75);
     transition: .5s ease all;
 }
 .switch.active::after{
@@ -132,21 +118,19 @@ span img{
     height: 25px;
     top: 10px;
 }
-
 .vistas{
     position: absolute;
     width: 25%;
-    height: 140vh;
+    height: 110vh;
 }
 .vistas h3{
     position: absolute;
     height: 40px;
     margin: 30px;
-    top: 220px;
+    top: 150px;
     left: 15%;
     font-size: 24px;
 }
-
 #changeAvatar{
     display: none;
     position: absolute;
@@ -157,7 +141,7 @@ span img{
     width: 130px;
     height: 130px;
     left: 23%;
-    top: 100px;
+    top: 30px;
     z-index: 1;
 }
 .camara{
@@ -169,7 +153,7 @@ span img{
     height: 30px;
     padding: 6px;
     left: 190px;
-    top: 200px;
+    top: 120px;
     border: 1px solid black;
     background-color: rgb(209, 43, 107);
     box-shadow: 0 2px 10px -2px black ;
@@ -180,12 +164,8 @@ span img{
 position: relative;
 width: 21px;
 height: 21px;
-left: 0%;
-top: 0%;
 z-index: 3;;
-
 }
-
 .menu{
     position: absolute;
     display: flex;
@@ -194,12 +174,10 @@ z-index: 3;;
     flex-direction: column;
     width: 100%;
     height: auto;
-    top: 54vh;
+    top: 35vh;
     left: 60px;
-    gap: 38px;
-    
+    gap: 38px; 
 }
-
 .item{
     position: relative;
     display: flex;
@@ -213,13 +191,11 @@ z-index: 3;;
     width: 40px;
     height: 40px;
     left: 10px;
-    top: 0%;
     padding: 7px;
     background-color:#696969;
     box-shadow: 0 2px 10px -2px black ;
     border-radius: 100px;
 }
-
 .item p{
     position: relative;
     width: 100%;
@@ -228,13 +204,9 @@ z-index: 3;;
     left: 10%;
     top: -10%;
 }
-
 #perfil.item img {
     background-color: rgb(209, 43, 107);
 }
-
-
-
 .cerrar {
     position: absolute;
     display: flex;
@@ -243,8 +215,8 @@ z-index: 3;;
     flex-direction: row;
     width: 250px;
     height: 60px;
-    left: 17%;
-    top: 900px;
+    left: 18%;
+    top: 650px;
 }
 .cerrar img{
     position: relative;
@@ -256,7 +228,6 @@ z-index: 3;;
     background-color: rgb(100, 98, 99) ;
     top: 20%;
     left: 20px;
-    
 }
 .cerrar p{
     position: relative;
@@ -271,30 +242,34 @@ body.dark .decoracion{
     background-color: #31312C;
 }
 section{
-    display: flex;
     position: relative;
-    top: 70px;
+    top: 45px;
     width: 95%;
     gap: 7%;
-    height: 80vh;
+    height: 90vh;
 }
-
 .perfil{
     display: flex;
     justify-content: center;
     position: relative;
-    width: 45%;
-    height: 92vh;
-    left: 50px;
-    top: 5%;
-    
+    width: 100%;
+    height: 80vh;
+    gap: 50px;
+}
+.informacion.activo img{
+    display: block;
+    left: 70%;
+    top: -30px;
+}
+.informacion.activo {
+    grid-template-rows: 60px 150px 40px 40px 5px 5px 40px 40px 5px 5px 40px 40px 5px 5px 40px 40px 5px 5px 100px;
 }
 .informacion img{
     display: none;
     position: relative;
     width: 20px;
     height: 20px;
-    top: -10%;
+    top: -70%;
     left: 440px;
 }
 .usuario{
@@ -304,8 +279,7 @@ section{
     align-items: center;
     justify-content: start;
     width: 80%;
-    height: 190px;
-    top: -2%;
+    height: 140px;
 }
 .usuario img{
     display: block;
@@ -314,6 +288,10 @@ section{
     left: 0%;
     top: 0%;
 }
+.informacion.activo .usuario img{
+    left: 0px;
+    top: 0;
+}
 .usuario h2{
     top: -10px;
     position: relative;
@@ -321,67 +299,48 @@ section{
     width: 100%;
     height: 50px;
     left: 10px;
-    margin: 0px;
-
 }
-
 .informacion{
     position: relative;
-    width: 100%;
-    height: 90vh;
+    display: grid;
+    grid-template-rows: 60px 150px 40px 40px 10px 40px 40px 10px 40px 40px 10px 40px 40px 40px;
+    width: 95%;
+    height: 85vh;
     border-radius: 40px;
     background-color:rgb(224, 171, 36) ;
     transition: .5s ease all;
-    top: -4%;
-    padding: 20px;
-    
+    padding: 40px auto;
+    left: 50px;
+    scrollbar-width:none;
+    overflow-y: auto;
 }
-.informacion.activo img{
-    display: block;
+.informacion.activo{
+    box-shadow: 0 2px 10px -2px black ;
 }
-
 body.dark .informacion{
 background-color: #2A2B2A;
-}
-.informacion button {
-background-color: rgb(221, 28, 157);
-position: relative;
-cursor: pointer;
-width: 133px;
-height: 47px;
-left: 35%;
-top: -2%;
-border: none;
-border-radius: 50px;
-box-shadow: 0 2px 10px -2px black ;
-font-family: 'Happy Monkey', 'Happy Monkey';
-font-size: 20px;
-
 }
 body.dark .informacion button{
     color: aliceblue;
     }
-
 .informacion h3{
     position: relative;
     font-size: 24px;
-    left: 30% ;
+    width: 260px;
+    margin: 10px auto;
 }
-
 .informacion p{
     position: relative;
     left: 10%;
     font-size: 16px;
-    top: -5%;
+    width: 70%;
 }
-
 .informacion h4{
     position: relative;
     left: 10% ;
     font-size: 20px;
-    top: -5%;
+    width: 70%;
 }
-
 .informacion hr{
     position: relative;
     width: 70%;
@@ -391,40 +350,39 @@ body.dark .informacion button{
     left: -5%;
     top: 0%;
     transition: .5s ease all;
-    top: -5%;
 } 
+.informacion button p{
+    font-size: 20px;
+    left: 0px;
+}
 body.dark .informacion hr{
     background-color: aliceblue;
     }
-
 .adicional{
     display: flex;
     flex-direction: column;
     gap: 25px;
     position: relative;
-    width: 45%;
-    height: 92vh;
-    left: 50px;
-    top: 5%;
+    width: 100%;
+    height: 90vh;
 }
 .clave{
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
+    width: 95%;
+    left: 40px;
     height: 35vh;
     background-color:rgb(224, 171, 36);
     border-radius: 40px;
     z-index: 2;
-    top: -5%;
     transition: .2s ease all;
-    padding: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 .clave.activo{
-    width: 620px;
-    height: 370px;
     box-shadow: 0 2px 10px -2px black ;
-background-color: rgb(224, 171, 36);
+    background-color: rgb(224, 171, 36);
 }
 body.dark .clave{
     background-color: #2A2B2A;
@@ -444,7 +402,6 @@ body.dark .clave{
     font-size: 20px;
     gap: 40px;
     top: 10%;
-
 }
 .clave input{
     position: relative;
@@ -453,9 +410,17 @@ body.dark .clave{
     top: 35%;
     border-radius: 8px;
     background-color:rgb(224, 171, 36);
+    font-family: 'Happy Monkey', 'Happy Monkey';
+    font-size: 17px;
     border: 0.5px solid black;
     transition: .5s ease all;
-    
+    cursor: pointer;  
+}
+.fa-solid{
+    position: absolute;
+    top: 175px;
+    left: 83%;
+    cursor: pointer;    
 }
 body.dark .clave input{
     background-color: #2A2B2A;
@@ -463,40 +428,45 @@ body.dark .clave input{
     }
 .formulario{
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 66px 66px;
 }
-.clave button{
-background-color: rgb(221, 28, 157);
-position: relative;
-width: 133px;
-height: 47px;
-left: 35%;
-top: 5%;
-border: none;
-border-radius: 50px;
-box-shadow: 0 2px 10px -2px black ;
-font-family: 'Happy Monkey', 'Happy Monkey';
-font-size: 20px;
-}
+.informacion button, .clave button{
+    background-color: rgb(221, 28, 157);
+    position: relative;
+    cursor: pointer;
+    width: 133px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px -2px black ;
+    font-family: 'Happy Monkey', 'Happy Monkey';
+    font-size: 20px;
+    margin: 0 auto;
+    }
+    .informacion.activo button {
+        top: 30px;
+    }
 body.dark .clave button{
     color: aliceblue;
     }
-
 .relleno{
-    width: 100%;
-    height: 45vh;
+    position: relative;
+    width: 95%;
+    height: 47vh;
+    left: 40px;
     background-color:rgb(224, 171, 36);
     border-radius: 40px;
     z-index: 2;
-    padding: 20px;
-    top: -25px;
 }
 body.dark .relleno{
     background-color: #2A2B2A;
     }
     
-    @media  (max-width: 1950px){
+    /* @media  (max-width: 1860px){
         aside hr{
             position: relative;
             left: -27%;
@@ -711,4 +681,4 @@ body.dark .relleno{
     }
     
     
-    
+     */

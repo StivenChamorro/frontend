@@ -162,7 +162,9 @@
             <p>promedio de horas 1.98 horas</p>
 
         </div>
+        <a href="{{route('vista_usuarios')}}">
         <button>editar informacion</button>
+    </a>
     </div>
 
 </div>

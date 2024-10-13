@@ -16,15 +16,6 @@ body.dark .container{
     background-color: #31312C; 
     color: aliceblue;
 }
-
-header{
-    background-color: #B43654;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 aside{
     background-color: rgb(252, 192, 42);
     position: absolute;
@@ -139,7 +130,7 @@ body.dark aside hr{
     z-index: 1;
 }
 .switch{
-    background-color: rgb(252, 192, 42) ;
+    background-color: gray ;
     border-radius: 100px;
     border: none;
     position: relative;
@@ -153,7 +144,7 @@ body.dark aside hr{
     height: 47px;
     left: 84%;
     top: 3%;
-    color: black;
+    background: #31312C;
     z-index: 4;
 }
 
@@ -172,8 +163,7 @@ body.dark aside hr{
     z-index: 5;
 }
 .switch.active{
-    background-color: #4E4E4B;
-    color: #949494;
+    background-color: rgb(245, 197, 75);
     transition: .5s ease all;
 }
 .switch.active::after{
@@ -340,7 +330,8 @@ section{
     background-color: #DFAA30 ;
     border-radius: 50px;
     transition: .5s ease all;
-    overflow: hidden;
+    scrollbar-width: none;
+    overflow-y: auto;
 }
 
 body.dark section {
@@ -357,8 +348,7 @@ body.dark section {
     flex-direction: row;
     top: 0%;
     height: auto;
-    width: 90%;
-    
+    width: 90%;    
 }
 
 .card{

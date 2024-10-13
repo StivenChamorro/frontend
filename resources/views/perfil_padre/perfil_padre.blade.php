@@ -66,20 +66,20 @@
         </div>
             <h4>Nombres</h4>
             <p>John Andres</p>
-            <hr>
             <img id="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz">
+            <hr>
             <h4>Apellidos</h4>
             <p>Smith Pines</p>
-            <hr>
             <img id="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz">
+            <hr>
             <h4>Fecha nacimiento</h4>
             <p>12/08/1986</p>
-            <hr>
             <img id="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz">
+            <hr>
             <h4>Correo electronico</h4>
             <p>johnsmith@example.com</p>
-            <hr>
             <img id="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz">
+            <hr>
 
             <button id="editar"><p>Editar</p></button>
     </div>
@@ -87,13 +87,15 @@
         <div class="clave" id="clave">
             <h3>informacion privada</h2>
             <div class="formulario">
-            <h4>Usuario</h4> <input type="text" name="usuario" id="nombre" placeholder="jhonsmith@example.com">
-            <h4>Contraseña</h4><input type="text" name="contraseña" id="contraseñar" placeholder="*********  ">
+            <h4>Usuario</h4> <input type="text" name="usuario" id="nombre" placeholder="Ingrese el correo electronico">
+            <h4>Contraseña</h4><input class="pass" type="password" name="contraseña" id="pass" placeholder="*********  ">
+            <i class="fa-solid fa-eye-low-vision"></i>
+            
+
         </div>
             <button id="cambiar"><p>Editar</p></button>
         </div>
         <div class="relleno">
-            <h1></h1>
         </div>
     </div>
     </section>
