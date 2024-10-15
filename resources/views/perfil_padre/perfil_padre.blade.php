@@ -16,11 +16,11 @@
     <div class="container">
     <div class="vistas">
         <h3>John Smith</h2>
-            <div class="camara">
+            <input type="file" id="inputFoto" accept="image/*" />
+            <button class="camara" onclick="cargarFoto()">
                 <img src="{{ asset('img/perfil_padre/camara.png') }}" alt="camara">
-            </div>
-            <input type="file" id="changeAvatar" accept="image/* ">
-            <img src="{{asset('img/perfil_padre/foto_usuario.png')}}" alt="" id="avatar">
+            </button>
+            <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
             <div class="menu">
                 <div class="item" id="perfil">
                     
@@ -105,6 +105,7 @@
 </body>
 <script src="{{ asset('js/perfil_padre/perfil_padre_oscuro.js') }}"></script>
 <script src="{{ asset('js/perfil_padre/desplegable.js') }}"></script>
+<script src="{{asset('js/perfil_padre/foto_perfil.js')}}"></script>
 </html>
 @include('layouts.footer')
 @endsection

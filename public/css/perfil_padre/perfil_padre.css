@@ -5,7 +5,7 @@ body{
 .container{
     background-color:rgb(241, 199, 91);
     width:auto;
-    height: 110vh;
+    height: 90vh;
     position: relative; 
     font-family: 'Happy Monkey', 'Happy Monkey';
     transition: .5s ease all;
@@ -20,7 +20,7 @@ aside{
     top: 20px;
     right:0px;
     width: 80%;
-    height: 102vh;
+    height: 85vh;
     border-radius: 50px 0px 0px 50px;
     overflow: hidden;
     transition: .5s ease all;  
@@ -33,9 +33,9 @@ aside h2{
     width: 100%;
     height: 40px;
     margin: 30px;
-    top: 0%;
-    left: 40px;
-    font-size: 48px;
+    top: -2%;
+    left: 70px;
+    font-size: 40px;
     transition: .5s ease all; 
 }
 aside hr{
@@ -44,8 +44,8 @@ aside hr{
     height: 2px;
     background-color: black;
     border: none;
-    left: -30%;
-    top: 10%;
+    left: -26%;
+    top: 8%;
 }
 body.dark aside hr{
     background-color: aliceblue;
@@ -72,22 +72,22 @@ body.dark aside hr{
     cursor: pointer;
     display: flex;
     outline: none;
-    width: 102px;
-    height: 47px;
+    width: 85px;
+    height: 40px;
     left: 84%;
-    top: 3%;
+    top: 0%;
     background: #31312C;
     z-index: 4;
 }
 .switch::after{
     content: "";
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     position: absolute;
     background-color: rgb(245, 197, 75);
-    top: 4px;
-    left: 5px;
+    top: 2px;
+    left: 2px;
     right: unset;
     border-radius: 100px;
     transition: .5s ease all;
@@ -98,8 +98,8 @@ body.dark aside hr{
     transition: .5s ease all;
 }
 .switch.active::after{
-    right: 5px ;
-    top: 4px;
+    right: 2px ;
+    top: 2px;
     left: unset;
     background: #31312C;
 }
@@ -131,7 +131,7 @@ span img{
     left: 15%;
     font-size: 24px;
 }
-#changeAvatar{
+#inputFoto{
     display: none;
     position: absolute;
 }
@@ -143,14 +143,15 @@ span img{
     left: 23%;
     top: 30px;
     z-index: 1;
+    border-radius: 100px;
 }
 .camara{
     position: absolute;
     display: flex;
     align-items: center;
     justify-content:  center;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     padding: 6px;
     left: 190px;
     top: 120px;
@@ -158,6 +159,7 @@ span img{
     background-color: rgb(209, 43, 107);
     box-shadow: 0 2px 10px -2px black ;
     border-radius: 100%;
+    cursor: pointer;
     z-index: 2;
 }
 .camara img{
@@ -216,7 +218,7 @@ z-index: 3;;
     width: 250px;
     height: 60px;
     left: 18%;
-    top: 650px;
+    top: 600px;
 }
 .cerrar img{
     position: relative;
@@ -243,26 +245,27 @@ body.dark .decoracion{
 }
 section{
     position: relative;
-    top: 45px;
+    top: 10px;
     width: 95%;
-    gap: 7%;
+    padding: 10px;
     height: 90vh;
 }
 .perfil{
     display: flex;
     justify-content: center;
     position: relative;
-    width: 100%;
-    height: 80vh;
-    gap: 50px;
+    width: 90%;
+    height: 77vh;
+    gap: 90px;
+    left: 5%;
 }
 .informacion.activo img{
     display: block;
-    left: 70%;
+    left: 75%;
     top: -30px;
 }
 .informacion.activo {
-    grid-template-rows: 60px 150px 40px 40px 5px 5px 40px 40px 5px 5px 40px 40px 5px 5px 40px 40px 5px 5px 100px;
+    grid-template-rows: 40px 130px 35px 35px 5px 5px 35px 35px 5px 5px 35px 35px 5px 5px 35px 35px 5px 5px 50px;
 }
 .informacion img{
     display: none;
@@ -283,8 +286,8 @@ section{
 }
 .usuario img{
     display: block;
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     left: 0%;
     top: 0%;
 }
@@ -295,7 +298,7 @@ section{
 .usuario h2{
     top: -10px;
     position: relative;
-    font-size: 34px;
+    font-size: 25px;
     width: 100%;
     height: 50px;
     left: 10px;
@@ -303,14 +306,14 @@ section{
 .informacion{
     position: relative;
     display: grid;
-    grid-template-rows: 60px 150px 40px 40px 10px 40px 40px 10px 40px 40px 10px 40px 40px 40px;
-    width: 95%;
-    height: 85vh;
+    grid-template-rows: 40px 130px 35px 35px 5px 35px 35px 5px 35px 35px 5px 35px 35px 40px;
+    width: 90%;
+    height: 72vh;
     border-radius: 40px;
     background-color:rgb(224, 171, 36) ;
     transition: .5s ease all;
     padding: 40px auto;
-    left: 50px;
+    left: 30px;
     scrollbar-width:none;
     overflow-y: auto;
 }
@@ -325,7 +328,7 @@ body.dark .informacion button{
     }
 .informacion h3{
     position: relative;
-    font-size: 24px;
+    font-size: 22px;
     width: 260px;
     margin: 10px auto;
 }
@@ -338,7 +341,7 @@ body.dark .informacion button{
 .informacion h4{
     position: relative;
     left: 10% ;
-    font-size: 20px;
+    font-size: 19px;
     width: 70%;
 }
 .informacion hr{
@@ -352,7 +355,7 @@ body.dark .informacion button{
     transition: .5s ease all;
 } 
 .informacion button p{
-    font-size: 20px;
+    font-size: 17px;
     left: 0px;
 }
 body.dark .informacion hr{
@@ -370,9 +373,9 @@ body.dark .informacion hr{
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 95%;
+    width: 90%;
     left: 40px;
-    height: 35vh;
+    height: 34vh;
     background-color:rgb(224, 171, 36);
     border-radius: 40px;
     z-index: 2;
@@ -394,19 +397,19 @@ body.dark .clave{
     left: 30%;
     width: 60%;
     height: auto;
-    font-size: 24px;
+    font-size: 20px;
 }
 .clave h4{
     position: relative;
     left: 25%;
-    font-size: 20px;
+    font-size: 17px;
     gap: 40px;
     top: 10%;
 }
 .clave input{
     position: relative;
     width: 80%;
-    height: 25px;
+    height: 35px;
     top: 35%;
     border-radius: 8px;
     background-color:rgb(224, 171, 36);
@@ -418,7 +421,7 @@ body.dark .clave{
 }
 .fa-solid{
     position: absolute;
-    top: 175px;
+    top: 167px;
     left: 83%;
     cursor: pointer;    
 }
@@ -435,8 +438,8 @@ body.dark .clave input{
     background-color: rgb(221, 28, 157);
     position: relative;
     cursor: pointer;
-    width: 133px;
-    height: 47px;
+    width: 125px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -444,19 +447,23 @@ body.dark .clave input{
     border-radius: 50px;
     box-shadow: 0 2px 10px -2px black ;
     font-family: 'Happy Monkey', 'Happy Monkey';
-    font-size: 20px;
+    font-size: 17px;
     margin: 0 auto;
     }
     .informacion.activo button {
         top: 30px;
+    }
+
+    .clave button{
+        top: 20px;
     }
 body.dark .clave button{
     color: aliceblue;
     }
 .relleno{
     position: relative;
-    width: 95%;
-    height: 47vh;
+    width: 90%;
+    height: 34vh;
     left: 40px;
     background-color:rgb(224, 171, 36);
     border-radius: 40px;
