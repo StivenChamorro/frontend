@@ -13,6 +13,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TermsController;
 
 use App\Http\Controllers\AchievementController;
+use App\Http\Controllers\LevelController;
 use App\Http\Controllers\StoreController;
 
 use App\Http\Controllers\ProfileFatherController;
@@ -26,15 +27,16 @@ Route::get('/', function () {
 })->name('welcome');
 
 
-
 Route::get('home',[HomeController::class,'Home'])->name('home');
 Route::get('header',[HomeController::class,'Header']);
+Route::get('gamedino',[LevelController::class, 'GameDino'])->name('gamedino');
 
 
 
 Route::get('iniciar_sesion',[LoginController::class,'store'])->name('iniciarsesion');
 Route::get('register',[RegisterController::class,'store'])->name('registro');
 Route::get('add_child',[AddChildController::class,'store'])->name('add_child');
+Route::get('add_child',[AddChildController::class,'store'])->name('add-children');
 Route::get('terms',[TermsController::class,'store'])->name('terminos');
 Route::get('profile',[ProfileController::class,'store'])->name('profile');
 

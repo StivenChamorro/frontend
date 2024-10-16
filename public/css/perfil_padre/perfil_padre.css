@@ -2,6 +2,20 @@ body{
     height: auto  ;
     width: auto;
 }
+header{
+    background-color: #B43654;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+
 .container{
     background-color:rgb(241, 199, 91);
     width:auto;

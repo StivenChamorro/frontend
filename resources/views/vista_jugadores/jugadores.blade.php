@@ -24,7 +24,7 @@
             <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
             <div class="menu">
             <div class="item" id="perfil">
-                <a href="{{route('perfil_padre')}}">
+                <a href="{{route('profile_father')}}">
                 <img src="{{ asset('img/vista_jugadores/persona.png') }}" alt="persona"></a>
                 <p>perfil</p>
             </div>
@@ -63,11 +63,86 @@
             <span><img src="{{ asset('img/vista_jugadores/luna.png') }}" alt="luna"></span>
         </button>
 
-        <button id="agregar" class="agregar">Agregar Jugador</button>
+        <a href=""><button id="agregar" class="agregar">Agregar Jugador</button></a>
         <button id="eliminar" class="eliminar">Eliminar Jugador</button>
         <section>
 
     <div id="agregados" style="margin-top: 20px;" class="agregados">
+
+
+    <div id="agregados" class="agregados">
+        <div  class="card">
+            <img id="avatar" src="{{ asset('img/vista_jugadores/wooper_mamado.png') }}" alt="wooper_mamado">
+            <h3>Nick</h3>
+            <p>Nicolas Smith Pines
+                <a href="{{route('father_users')}}">
+                <img id="basura" src="{{asset('img/vista_jugadores/eliminar1.png')}}" alt="eliminar">
+            </a>
+        </p>
+        </div>
+
+        <div class="card">
+            <img id="avatar" src="{{ asset('img/vista_jugadores/wooper_mamado.png') }}" alt="wooper_mamado">
+            <h3>Nick</h3>
+            <p>Nicolas Smith Pines
+                <a href="{{route('father_users')}}">
+                <img id="basura" src="{{asset('img/vista_jugadores/eliminar1.png')}}" alt="eliminar">
+                </a>
+            </p>
+        </div>
+        <div class="card">
+            <img id="avatar" src="{{ asset('img/vista_jugadores/wooper_mamado.png') }}" alt="wooper_mamado">
+            <h3>Nick</h3>
+            <p>Nicolas Smith Pines
+                <a href="{{route('father_users')}}">
+                <img id="basura" src="{{asset('img/vista_jugadores/eliminar1.png')}}" alt="eliminar">
+                </a>
+            </p>
+        </div>
+        <div class="card">
+            <img id="avatar" src="{{ asset('img/vista_jugadores/wooper_mamado.png') }}" alt="wooper_mamado">
+            <h3>Nick</h3>
+            <p>Nicolas Smith Pines
+                <a href="{{route('father_users')}}">
+                <img id="basura" src="{{asset('img/vista_jugadores/eliminar1.png')}}" alt="eliminar">
+                </a>
+             </p>
+        </div>
+        <div class="card">
+            <img id="avatar" src="{{ asset('img/vista_jugadores/wooper_mamado.png') }}" alt="wooper_mamado">
+            <h3>Nick</h3>
+            <p>Nicolas Smith Pines
+                <a href="{{route('father_users')}}">
+                <img id="basura" src="{{asset('img/vista_jugadores/eliminar1.png')}}" alt="eliminar">
+                </a>
+             </p>
+        </div>
+        <div class="card">
+            <img id="avatar" src="{{ asset('img/vista_jugadores/wooper_mamado.png') }}" alt="wooper_mamado">
+            <h3>Nick</h3>
+            <p>Nicolas Smith Pines
+                <a href="{{route('father_users')}}">
+                <img id="basura" src="{{asset('img/vista_jugadores/eliminar1.png')}}" alt="eliminar">
+                </a>
+             </p>
+        </div>
+        <div class="card">
+            <img id="avatar" src="{{ asset('img/vista_jugadores/wooper_mamado.png') }}" alt="wooper_mamado">
+            <h3>Nick</h3>
+            <p>Nicolas Smith Pines
+                <a href="{{route('father_users')}}">
+                <img id="basura" src="{{asset('img/vista_jugadores/eliminar1.png')}}" alt="eliminar">
+                </a>
+            </p>
+        </div>
+        <div id="avatar" class="card">
+            <img src="{{ asset('img/vista_jugadores/wooper_mamado.png') }}" alt="wooper_mamado">
+            <h3>Nick</h3>
+            <p>Nicolas Smith Pines
+                <a href="{{route('father_users')}}">
+                <img id="basura" src="{{asset('img/vista_jugadores/eliminar1.png')}}" alt="eliminar">
+                </a>
+            </p>
 
         </div>
 
@@ -100,9 +175,13 @@
             <p>promedio de horas 1.98 horas</p>
 
         </div>
+
         <a href="{{route('vista_usuarios')}}">
         <button>editar informacion</button>
     </a>
+
+        <a href="{{route('father_users')}}"><button>editar informacion</button></a>
+
     </div>
 
     <script src="{{ asset('js/vista_jugadores/crear_jugador.js') }}"></script>
