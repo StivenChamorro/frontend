@@ -1,4 +1,4 @@
-@extends('layouts.header_tienda')
+@extends('layouts.header')
 @section('content')
 
 <!DOCTYPE html>

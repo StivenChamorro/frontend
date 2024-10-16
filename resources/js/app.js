@@ -1,36 +1,61 @@
-import './bootstrap';
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let thumbnails = document.querySelectorAll('.thumbnail .item');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const slide = document.querySelector('.carousel-slide');
-    const images = slide.querySelectorAll('img');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    let counter = 0;
-    const size = slide.clientWidth;
-
-    function updateSlidePosition() {
-        slide.style.transform = `translateX(${-size * counter}px)`;
+// config param
+let countItem = items.length;
+let itemActive = 0;
+// event next click
+next.onclick = function(){
+    itemActive = itemActive + 1;
+    if(itemActive >= countItem){
+        itemActive = 0;
     }
-
-    function moveSlide(direction) {
-        if (direction === 'next') {
-            counter = (counter + 1) % images.length;
-        } else {
-            counter = (counter - 1 + images.length) % images.length;
-        }
-        updateSlidePosition();
+    showSlider();
+}
+//event prev click
+prev.onclick = function(){
+    itemActive = itemActive - 1;
+    if(itemActive < 0){
+        itemActive = countItem - 1;
     }
+    showSlider();
+}
+// auto run slider
+let refreshInterval = setInterval(() => {
+    next.click();
+}, 5000)
+function showSlider(){
+    // remove item active old
+    let itemActiveOld = document.querySelector('.slider .list .item.active');
+    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+    itemActiveOld.classList.remove('active');
+    thumbnailActiveOld.classList.remove('active');
 
-    nextButton.addEventListener('click', () => moveSlide('next'));
-    prevButton.addEventListener('click', () => moveSlide('prev'));
+    // active new item
+    items[itemActive].classList.add('active');
+    thumbnails[itemActive].classList.add('active');
+    setPositionThumbnail();
 
-    window.addEventListener('resize', () => {
-        images.forEach(img => img.style.width = `${slide.clientWidth}px`);
-        updateSlidePosition();
-    });
+    // clear auto time run slider
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+        next.click();
+    }, 5000)
+}
+function setPositionThumbnail () {
+    let thumbnailActive = document.querySelector('.thumbnail .item.active');
+    let rect = thumbnailActive.getBoundingClientRect();
+    if (rect.left < 0 || rect.right > window.innerWidth) {
+        thumbnailActive.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+    }
+}
 
-    // Inicializar tamaños
-    images.forEach(img => img.style.width = `${slide.clientWidth}px`);
-    updateSlidePosition();
-});
+// click thumbnail
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        itemActive = index;
+        showSlider();
+    })
+})

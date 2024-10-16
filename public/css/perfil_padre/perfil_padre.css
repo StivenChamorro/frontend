@@ -10,6 +10,11 @@ header{
     justify-content: space-between;
     align-items: center;
 }
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
 .container{
     background-color:rgb(241, 199, 91);
     width:auto;
