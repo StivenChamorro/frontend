@@ -40,7 +40,7 @@
                     <h2 class="title-carrusel">ASTRONOMIA</h2>
                     <img src="{{asset('imgs/imagenes_home/images_carrusel/image.svg')}}" alt="">
                     <div class="buttons-container">
-                        <a href=""><button class="button2">JUGAR</button></a>
+                        <a href="#"><button class="button2">JUGAR</button></a>
                         <a href=""><button class="button2">LOGROS</button></a>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                     <h2 class="title-carrusel">MATEMATICAS</h2>
                     <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 4.png')}}" alt="">
                     <div class="buttons-container">
-                        <a href=""><button class="button2">JUGAR</button></a>
+                        <a href="{{route('level')}}"><button class="button2">JUGAR</button></a>
                         <a href="{{route('vista_1_achievement')}}"><button class="button2">LOGROS</button></a>
                     </div>
                 </div>
@@ -96,8 +96,7 @@
                     <h2 class="title-carrusel">MINIJUEGO</h2>
                     <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 7.png')}}" alt="">
                     <div class="buttons-container">
-                        <a href=""><button class="button2">JUGAR</button></a>
-                        <a href=""><button class="button2">LOGROS</button></a>
+                        <a href="{{route('gamedino')}}"><button class="button2">JUGAR</button></a>
                     </div>
                 </div>
             </div>
