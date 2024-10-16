@@ -36,6 +36,7 @@ Route::get('gamedino',[LevelController::class, 'GameDino'])->name('gamedino');
 Route::get('iniciar_sesion',[LoginController::class,'store'])->name('iniciarsesion');
 Route::get('register',[RegisterController::class,'store'])->name('registro');
 Route::get('add_child',[AddChildController::class,'store'])->name('add_child');
+Route::get('add_child',[AddChildController::class,'store'])->name('add-children');
 Route::get('terms',[TermsController::class,'store'])->name('terminos');
 Route::get('profile',[ProfileController::class,'store'])->name('profile');
 
