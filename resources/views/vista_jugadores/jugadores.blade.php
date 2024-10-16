@@ -10,14 +10,15 @@
     <script src="https://kit.fontawesome.com/58965c32f8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/vista_jugadores/jugadores.css') }}">
-    
+
+
 </head>
 <body>
     <div id="principal" class="container">
     <div class="vistas">
         <h3>John Smith</h2>
             <input type="file" id="inputFoto" accept="image/*" />
-            <button class="camara" onclick="cargarFotoN()">
+            <button class="camara" onclick="cargarFoto()">
                 <img src="{{ asset('img/perfil_padre/camara.png') }}" alt="camara">
             </button>
             <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
@@ -37,19 +38,16 @@
                 <img src="{{ asset('img/vista_jugadores/home.png') }}" alt="home"></a>
                 <p>home</p>
             </div>
-        </div>
-            <div class="cerrar"><a href="{{route('welcome')}}">
+            <div class="item"><a href="{{route('welcome')}}">
                 <img src="{{ asset('img/vista_jugadores/cerrar.png') }}" alt="cerrar"></a>
                 <p>cerrar sesion</p>
             </div>
+        </div>
     </div>
     <div class="agregara" id="agregara">
         <h1>Agregar jugador</h1>
-        
+
         <input type="file" id="inputImagen" accept="image/*" />
-        <button class="camara" onclick="cargarFoto()">
-            <img src="{{ asset('img/perfil_padre/camara.png') }}" alt="camara">
-        </button>
         <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
         <input type="text" id="titulo" placeholder="Título" />
         <input type="text" id="contexto" placeholder="contexto" />
@@ -72,7 +70,7 @@
     <div id="agregados" style="margin-top: 20px;" class="agregados">
 
         </div>
-       
+
         <div class="relleno">
             <h1></h1>
         </div>
@@ -107,13 +105,12 @@
     </a>
     </div>
 
+    <script src="{{ asset('js/vista_jugadores/crear_jugador.js') }}"></script>
+    <script src="{{ asset('js/vista_jugadores/jugadores.js') }}"></script>
+<script src="{{ asset('js/vista_jugadores/visualizar.js') }}"></script>
+<script src="{{ asset('js/perfil_padre/foto_perfil.js') }}"></script>
 </div>
 @include('layouts.footer')
 </body>
-<script src="{{ asset('js/vista_jugadores/jugadores.js') }}"></script>
-<script src="{{ asset('js/vista_jugadores/visualizar.js') }}"></script>
-<script src="{{ asset('js/vista_jugadores/crear_jugador.js') }}"></script>
-<script src="{{ asset('js/vista_jugadores/foto_perfil.js') }}"></script>
-
 </html>
 @endsection

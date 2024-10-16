@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/58965c32f8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/perfil_padre/perfil_padre.css') }}">
-    
+
 </head>
 <body>
     <div class="container">
@@ -23,27 +23,26 @@
             <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
             <div class="menu">
                 <div class="item" id="perfil">
-                    
+
                     <img src="{{ asset('img/vista_jugadores/persona.png') }}" alt="persona">
                     <p>perfil</p>
                 </div>
-    
+
                 <div class="item" id="jugador">
                     <a href="{{route('vista_usuarios')}}">
                     <img src="{{ asset('img/vista_jugadores/jugador.png') }}" alt="jugador"></a>
                     <p>jugadores</p>
                 </div>
-    
+
                 <div class="item" id="home"><a href="{{route('home')}}">
                     <img src="{{ asset('img/vista_jugadores/home.png') }}" alt="home"></a>
                     <p>home</p>
                 </div>
-            </div>
-
-            <div class="cerrar">
-                <a href="{{route('welcome')}}">
-                <img src="{{ asset('img/perfil_padre/cerrar.png') }}" alt="cerrar"></a>
-                <p>cerrar sesion</p>
+                <div class="item">
+                    <a href="{{route('welcome')}}">
+                    <img src="{{ asset('img/perfil_padre/cerrar.png') }}" alt="cerrar"></a>
+                    <p>cerrar sesion</p>
+                </div>
             </div>
     </div>
     <aside>
@@ -90,7 +89,7 @@
             <h4>Usuario</h4> <input type="text" name="usuario" id="nombre" placeholder="Ingrese el correo electronico">
             <h4>Contraseña</h4><input class="pass" type="password" name="contraseña" id="pass" placeholder="*********  ">
             <i class="fa-solid fa-eye-low-vision"></i>
-            
+
 
         </div>
             <button id="cambiar"><p>Editar</p></button>
@@ -100,12 +99,12 @@
     </div>
     </section>
     </aside>
-    
+
 </div>
 </body>
+<script src="{{asset('js/perfil_padre/foto_perfil.js')}}"></script>
 <script src="{{ asset('js/perfil_padre/perfil_padre_oscuro.js') }}"></script>
 <script src="{{ asset('js/perfil_padre/desplegable.js') }}"></script>
-<script src="{{asset('js/perfil_padre/foto_perfil.js')}}"></script>
 </html>
 @include('layouts.footer')
 @endsection

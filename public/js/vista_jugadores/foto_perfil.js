@@ -1,3 +1,5 @@
+
+
 window.onload = function() {
     const fotoPerfil = document.getElementById('avatar');
     const imagenGuardada = localStorage.getItem('fotoPerfil');
@@ -13,7 +15,7 @@ const input = document.getElementById('inputFoto');
 
 fotoPerfil.addEventListener('click', () => input.click());
 
-function cargarFotoN() {
+function cargarFoto() {
     if (input.files && input.files[0]) {
         const reader = new FileReader();
 
@@ -30,3 +32,5 @@ function cargarFotoN() {
         alert("Por favor, selecciona una imagen.");
     }
 }
+
+

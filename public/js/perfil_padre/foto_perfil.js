@@ -8,6 +8,7 @@ window.onload = function() {
     }
 };
 
+
 const fotoPerfil = document.getElementById('avatar');
 const input = document.getElementById('inputFoto');
 
@@ -30,3 +31,5 @@ function cargarFoto() {
         alert("Por favor, selecciona una imagen.");
     }
 }
+
+

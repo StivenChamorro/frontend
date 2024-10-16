@@ -1,14 +1,10 @@
-const fotoPerfil = document.getElementById('avatar');
-const input = document.getElementById('inputFoto');
-fotoPerfil.addEventListener('click', () => input.click());
-
-
-
-
 let tarjetas = JSON.parse(localStorage.getItem('tarjetas')) || [];
 
+
 // Cargar tarjetas al iniciar
+
 window.onload = mostrarTarjetas;
+
 
 function mostrarTarjetas() {
     const galeria = document.getElementById('agregados');
@@ -34,7 +30,7 @@ function agregarTarjeta() {
     const inputImagen = document.getElementById('inputImagen');
 
 
-    
+
     if (titulo && inputImagen.files && inputImagen.files[0]) {
         const reader = new FileReader();
         reader.onload = function(e) {
@@ -59,7 +55,7 @@ function editarTarjeta(index) {
     const inputImagen = document.createElement('input');
     inputImagen.type = 'file';
     inputImagen.accept = 'image/*';
-    
+
     if (nuevoTitulo !== null) { // Solo actúo si el título no es cancelado
         inputImagen.onchange = function() {
             if (inputImagen.files && inputImagen.files[0]) {
