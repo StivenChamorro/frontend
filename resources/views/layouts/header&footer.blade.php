@@ -18,9 +18,13 @@
 </head>
 <body>
     <header>
-        <div class="logo">WOOPERLAND</div>
+        <div class="contenedor_header-store" >
+            <div class="logo_header">
+                <img class="logo"
+                    src="{{ asset('imgs/imgs_store-haiver_velasco/wooperland_titulo.png') }}"alt="titulo-wooperland">
+            </div>
+        </div>
     </header>
-
     <!-- Sección para el contenido de la vista -->
     @yield('content') <!-- Aquí se inyectará el contenido de las vistas -->
     @include('layouts.footer')

@@ -1,4 +1,4 @@
-@extends('layouts.header&footer')
+@extends('layouts.header1')
 @section('content')
 {{-- Content --}}
     <main class="h-full w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
@@ -62,4 +62,6 @@
             </div>
         </div>
     </main>
+    @yield('content') <!-- Aquí se inyectará el contenido de las vistas -->
+@include('layouts.footer')
 @endsection

@@ -27,7 +27,7 @@ Route::get('/', function () {
 
 
 
-Route::get('home',[HomeController::class,'Home']);
+Route::get('home',[HomeController::class,'Home'])->name('home');
 Route::get('header',[HomeController::class,'Header']);
 
 

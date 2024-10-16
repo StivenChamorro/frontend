@@ -4,10 +4,12 @@ body{
 }
 
 .wooperland-footer {
-    background-color: #282424;
-    color: #ffffff;
-    padding: 50px;
-  }
+  background-color: #282424;
+  color: #ffffff;
+  padding: 50px;
+  margin-top: 50px;
+}
+
   
   .footer-content {
     display: flex;
