@@ -13,6 +13,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TermsController;
 
 use App\Http\Controllers\AchievementController;
+use App\Http\Controllers\LevelController;
 use App\Http\Controllers\StoreController;
 
 use App\Http\Controllers\ProfileFatherController;
@@ -23,12 +24,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 
-
-Route::get('home',[HomeController::class,'Home']);
+Route::get('home',[HomeController::class,'Home'])->name('home');
 Route::get('header',[HomeController::class,'Header']);
+Route::get('gamedino',[LevelController::class, 'GameDino'])->name('gamedino');
 
 
 
