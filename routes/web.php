@@ -13,7 +13,6 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TermsController;
 
 use App\Http\Controllers\AchievementController;
-use App\Http\Controllers\LevelController;
 use App\Http\Controllers\StoreController;
 
 use App\Http\Controllers\ProfileFatherController;
@@ -53,6 +52,5 @@ Route::get('perfil_padre',[ProfileFatherController::class,'index'])->name('perfi
 //Ruta usuarios registrados(BRAYAN SOLARTE)
 Route::get('vista_usuarios',[ProfileFatherController::class,'index2'])->name('vista_usuarios');
 
-Route::get('vista_niveles',[LevelController::class,'index1'])->name('vista_niveles');
 
 
