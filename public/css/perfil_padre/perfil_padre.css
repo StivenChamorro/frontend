@@ -484,7 +484,7 @@ body.dark .relleno{
      .informacion{
         width: 90%;
         top: 0%;
-        height: 100vh;
+
     }
         .adicional{
             width: 95%;
@@ -494,7 +494,7 @@ body.dark .relleno{
         .clave {
             width: 100%;
             top: -4%;
-            height: 40vh;
+            
         }
         .menu{
             left: 10%;
