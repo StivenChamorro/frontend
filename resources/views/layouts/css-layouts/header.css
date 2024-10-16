@@ -23,6 +23,24 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  header a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+  }
+
+  .img-logo{
+    width: 70px;
+    height: 60px;
+  }
   
   .logo {
     font-family: var(--font-secondary);
@@ -75,11 +93,10 @@
   .button-profile {
     background-color: var(--color-secondary);
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 5px 8px 7px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }

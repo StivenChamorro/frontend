@@ -18,7 +18,11 @@
 
 <body>
     <header>
-        <div class="logo">WOOPERLAND</div>
+        <div class="logo-container">
+            <img class="img-logo" src="{{asset('imgs/imagenes_home/logo.png')}}" alt="">
+            <a href="{{route('home')}}"><div class="logo">WOOPERLAND</div></a>
+        </div>
+        
         <nav class="nav-container">
 
             <button class="nav-button"> <a href="{{ route('vista_3_store') }}">Tienda</a></button>
@@ -121,7 +125,7 @@
                         <input type="text" maxlength="1" class="pin-input" data-index="2">
                         <input type="text" maxlength="1" class="pin-input" data-index="3">
                     </div>
-                    <a href="#"><button class="accept">Ingresar</button></a>
+                    <a href="{{route('profile_father')}}"><button class="accept">Ingresar</button></a>
                     <button class="back2" aria-label="Cerrar">×</button>
                 </div>
             </div>
