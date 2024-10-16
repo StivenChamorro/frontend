@@ -25,7 +25,7 @@
 
                     <div class="flex justify-center mobile:px-12 desktop:px-36 hover:scale-110">
                         <button class="desktop:w-2/4 p-3 bg-[#FFD166] text-black rounded-3xl mt-6 text-lg mobile:w-2/3 mobile:text-lg border-2 border-black shadow-md shadow-black hover:text-white">
-                            <a href="{{route('home')}}">Iniciar Sesión</a>
+                            Iniciar Sesión
                         </button>
                     </div>
                 </form>

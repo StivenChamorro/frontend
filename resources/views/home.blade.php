@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/homestyle/style.css')}}">
+
+    <link rel="icon" href="{{ asset('iconWooper.ico') }}" type="image/x-icon">
+
 </head>
 <body>
    
@@ -72,7 +75,7 @@
                     <h2 class="title-carrusel">MATEMATICAS</h2>
                     <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 4.png')}}" alt="">
                     <div class="buttons-container">
-                        <a href="{{route('level')}}"><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">JUGAR</button></a>
                         <a href="{{route('vista_1_achievement')}}"><button class="button2">LOGROS</button></a>
                     </div>
                 </div>

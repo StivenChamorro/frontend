@@ -52,8 +52,6 @@
                     <div class="flex justify-center">
                         <button class="w-[12rem] h-12 bg-[#FFD166] text-black rounded-2xl mt-6 text-2xl border border-black shadow-md shadow-black hover:text-white hover:scale-110 transition duration-200">
                             Registrarme
-                        <button class="w-1/2 h-12 bg-[#FFD166] text-black rounded-2xl mt-6 text-2xl border border-black shadow-md shadow-black hover:text-white">
-                            <a href="{{route('terminos')}}">Registrarme</a>
                         </button>
                     </div>
                 </form>
