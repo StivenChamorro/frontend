@@ -72,7 +72,11 @@
                     <h2 class="title-carrusel">MATEMATICAS</h2>
                     <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 4.png')}}" alt="">
                     <div class="buttons-container">
+
+                        <a href="{{route('vista_niveles')}}"><button class="button2">JUGAR</button></a>
+
                         <a href="{{route('level')}}"><button class="button2">JUGAR</button></a>
+
                         <a href="{{route('vista_1_achievement')}}"><button class="button2">LOGROS</button></a>
                     </div>
                 </div>

@@ -10,16 +10,18 @@
     <script src="https://kit.fontawesome.com/58965c32f8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/vista_jugadores/jugadores.css') }}">
-    
+
+
 </head>
 <body>
     <div id="principal" class="container">
     <div class="vistas">
         <h3>John Smith</h2>
-            <div class="camara">
-                <img src="{{ asset('img/vista_jugadores/camara.png') }}" alt="camara">
-            </div>
-            <img src="{{ asset('img/vista_jugadores/foto_usuario.png') }}" alt="usuario foto">
+            <input type="file" id="inputFoto" accept="image/*" />
+            <button class="camara" onclick="cargarFoto()">
+                <img src="{{ asset('img/perfil_padre/camara.png') }}" alt="camara">
+            </button>
+            <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
             <div class="menu">
             <div class="item" id="perfil">
                 <a href="{{route('profile_father')}}">
@@ -36,11 +38,20 @@
                 <img src="{{ asset('img/vista_jugadores/home.png') }}" alt="home"></a>
                 <p>home</p>
             </div>
-        </div>
-            <div class="cerrar"><a href="{{route('welcome')}}">
+            <div class="item"><a href="{{route('welcome')}}">
                 <img src="{{ asset('img/vista_jugadores/cerrar.png') }}" alt="cerrar"></a>
                 <p>cerrar sesion</p>
             </div>
+        </div>
+    </div>
+    <div class="agregara" id="agregara">
+        <h1>Agregar jugador</h1>
+
+        <input type="file" id="inputImagen" accept="image/*" />
+        <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
+        <input type="text" id="titulo" placeholder="Título" />
+        <input type="text" id="contexto" placeholder="contexto" />
+        <button class="agreg_btn" onclick="agregarTarjeta()">Agregar Tarjeta</button>
     </div>
     <aside>
         <div class="decoracion">
@@ -55,6 +66,9 @@
         <a href=""><button id="agregar" class="agregar">Agregar Jugador</button></a>
         <button id="eliminar" class="eliminar">Eliminar Jugador</button>
         <section>
+
+    <div id="agregados" style="margin-top: 20px;" class="agregados">
+
 
     <div id="agregados" class="agregados">
         <div  class="card">
@@ -129,10 +143,9 @@
                 <img id="basura" src="{{asset('img/vista_jugadores/eliminar1.png')}}" alt="eliminar">
                 </a>
             </p>
-        </div>
 
         </div>
-       
+
         <div class="relleno">
             <h1></h1>
         </div>
@@ -162,13 +175,21 @@
             <p>promedio de horas 1.98 horas</p>
 
         </div>
+
+        <a href="{{route('vista_usuarios')}}">
+        <button>editar informacion</button>
+    </a>
+
         <a href="{{route('father_users')}}"><button>editar informacion</button></a>
+
     </div>
 
+    <script src="{{ asset('js/vista_jugadores/crear_jugador.js') }}"></script>
+    <script src="{{ asset('js/vista_jugadores/jugadores.js') }}"></script>
+<script src="{{ asset('js/vista_jugadores/visualizar.js') }}"></script>
+<script src="{{ asset('js/perfil_padre/foto_perfil.js') }}"></script>
 </div>
 @include('layouts.footer')
 </body>
-<script src="{{ asset('js/vista_jugadores/jugadores.js') }}"></script>
-<script src="{{ asset('js/vista_jugadores/visualizar.js') }}"></script>
 </html>
 @endsection
