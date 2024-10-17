@@ -358,7 +358,7 @@ a {
     .logo_header .logo {
         width: 230%;
         display: flex;
-        margin-left: -3%;
+        margin-left: -15%;
     }
 
     .input-header input {

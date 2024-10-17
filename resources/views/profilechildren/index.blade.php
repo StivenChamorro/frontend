@@ -14,7 +14,7 @@
 
         <!-- Parte inferior con el gradiente -->
         <div
-            class="relative h-[70%] w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B] flex items-center tablet:px-8 -mt-20 z-20">
+            class="relative h-[69%] w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B] flex items-center tablet:px-8 -mt-20 z-20">
             <!-- Contenedor de tarjetas -->
             <div class="w-full h-full flex flex-col tablet:flex-col desktop:flex-row space-y-6 tablet:space-y-6 desktop:space-y-0 desktop:space-x-6 items-end desktop:px-64 desktop:mb-32">
                 <div id="profile-view">
