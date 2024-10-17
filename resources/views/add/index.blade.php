@@ -1,7 +1,7 @@
 @extends('layouts.header1')
 @section('content')
     {{-- Content --}}
-    <main class="h-full w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
+    <main class="h-90rem w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
         <div class="h-full flex flex-col mobile:flex-row justify-center items-center px-4 tablet:px-0">
             <div class="relative w-1/3 h-full grid grid-rows-3">
                 <!-- Primera fila (Imagen wooper en Avion) -->

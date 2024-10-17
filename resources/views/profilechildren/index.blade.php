@@ -14,10 +14,9 @@
 
         <!-- Parte inferior con el gradiente -->
         <div
-            class="relative h-[69%] w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B] flex items-center tablet:px-8 -mt-20 z-20">
+            class="relative h-[70%] w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B] flex items-center tablet:px-8 -mt-20 z-20">
             <!-- Contenedor de tarjetas -->
-            <div
-                class="w-full h-full flex flex-col tablet:flex-col desktop:flex-row space-y-6 tablet:space-y-6 desktop:space-y-0 desktop:space-x-6 items-end desktop:px-64">
+            <div class="w-full h-full flex flex-col tablet:flex-col desktop:flex-row space-y-6 tablet:space-y-6 desktop:space-y-0 desktop:space-x-6 items-end desktop:px-64 desktop:mb-32">
                 <div id="profile-view">
                     <div
                         class="bg-white rounded-xl text-center p-6 w-full tablet:w-[42rem] tablet:h-[15rem] tablet:mx-4 mobile:w-[24rem] mobile:mx-12 desktop:w-[30rem] desktop:h-[40rem] shadow-lg flex flex-col items-center relative z-30">
@@ -40,20 +39,13 @@
                 </div>
 
                 <!-- Modal de edición de nombre -->
-                <div id="profile-edit-modal"
-                    class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center tablet:w-[25rem]">
+                <div id="profile-edit-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
                     <div class="bg-white rounded-lg p-4 shadow-md w-full desktop:w-[30rem] tablet:w-[20rem]">
                         <h2 class="text-lg font-bold text-center">Editar nombre</h2>
-                        <form id="name-form" class="flex flex-col items-center" aria-label="Edit name form"
-                            onsubmit="saveName(event)">
-                            <input id="name-input"
-                                class="border border-gray-300 rounded-md p-2 text-center text-sm text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#EF476F]"
-                                type="text" placeholder="Escribe el nuevo nombre" required />
-                            <button type="submit"
-                                class="mt-4 bg-[#EF476F] text-white px-4 py-2 rounded-full shadow-md hover:bg-[#d8335a]">Guardar
-                                nombre</button>
-                            <button type="button" onclick="closeNameModal()"
-                                class="mt-2 text-gray-500 hover:text-gray-800">Cancelar</button>
+                        <form id="name-form" class="flex flex-col items-center" onsubmit="saveName(event)">
+                            <input id="name-input" class="border border-gray-300 rounded-md p-2 text-center text-sm text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#EF476F]" type="text" placeholder="Escribe el nuevo nombre" required />
+                            <button type="submit" class="mt-4 bg-[#EF476F] text-white px-4 py-2 rounded-full shadow-md hover:bg-[#d8335a]">Guardar nombre</button>
+                            <button type="button" onclick="closeNameModal()" class="mt-2 text-gray-500 hover:text-gray-800">Cancelar</button>
                         </form>
                     </div>
                 </div>
@@ -75,20 +67,13 @@
                 </div>
 
                 <!-- Modal de edición de información -->
-                <div id="info-edit-modal"
-                    class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+                <div id="info-edit-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
                     <div class="bg-white rounded-lg p-4 shadow-md w-full desktop:w-[30rem] tablet:w-[25rem]">
                         <h2 class="text-lg font-bold text-center">Editar información</h2>
-                        <form id="info-form" class="flex flex-col items-center" aria-label="Edit info form"
-                            onsubmit="saveInfo(event)">
-                            <textarea id="info-input" rows="4"
-                                class="tablet:w-[20rem] mobile:w-[25rem] border border-gray-300 rounded-md p-2 text-center text-sm text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#EF476F]"
-                                placeholder="Escribe tu información aquí" required></textarea>
-                            <button type="submit"
-                                class="mt-4 bg-[#EF476F] text-white px-4 py-2 rounded-full shadow-md hover:bg-[#d8335a]">Guardar
-                                información</button>
-                            <button type="button" onclick="closeInfoModal()"
-                                class="mt-2 text-gray-500 hover:text-gray-800">Cancelar</button>
+                        <form id="info-form" class="flex flex-col items-center" onsubmit="saveInfo(event)">
+                            <textarea id="info-input" rows="4" class="tablet:w-[20rem] mobile:w-[20rem] border border-gray-300 rounded-md p-2 text-center text-sm text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#EF476F]" placeholder="Escribe tu información aquí" required></textarea>
+                            <button type="submit" class="mt-4 bg-[#EF476F] text-white px-4 py-2 rounded-full shadow-md hover:bg-[#d8335a]">Guardar información</button>
+                            <button type="button" onclick="closeInfoModal()" class="mt-2 text-gray-500 hover:text-gray-800">Cancelar</button>
                         </form>
                     </div>
                 </div>
