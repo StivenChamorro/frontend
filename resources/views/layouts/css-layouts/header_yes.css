@@ -1,0 +1,417 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ESTILOS HEADER DE TIENDA */
+
+.contenedor_header-store {
+    position: relative;
+    background-color: #B43654;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo_header .logo {
+    width: 120%;
+    flex-grow: 1;
+    height: auto;
+    padding-top: 10px;
+}
+
+.input-header {
+    flex-grow: 1;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 10%;
+    width: 100%;
+}
+
+.input-header input {
+    display: flex;
+    margin-left: -70px;
+    width: 70%;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    font-family: 'Happy Monkey';
+    padding-left:7%;
+    outline: none;
+}
+
+.input-header img {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 38%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.tienda_avatares {
+    background-color: #E87080;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 18px;
+    margin-right: 10%;
+    width: 45%;
+    padding: 10px;
+}
+
+.boton-avatares {
+    width: auto;
+    height: 100%;
+    background: none;
+    border: none;
+    font-family: 'Happy Monkey';
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.boton-tienda{
+    width: auto;
+    height: 100%;
+    top: 50px;
+    background: none;
+    border: none;
+    font-family: 'Happy Monkey';
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.barra_tienda-avatares {
+    margin-inline: 10px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    border-right: 1px solid white;
+}
+
+.contenedor_desplegable_header {
+    position: static;
+    margin-left: auto;
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+    background-color: #E87080;
+    border-radius: 25px;
+    padding: 2px 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.img_perfil_header {
+    width: 50px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_perfil_header img {
+    width: 97%;
+    height: auto;
+    display: block;
+    margin-top: 4px;
+    margin-left: -15px;
+    cursor: pointer;
+}
+
+.flecha_header {
+    width: 9px;
+    height: 9px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(45deg);
+    margin-left: 10px;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: solid;
+
+}
+
+/* ESTILOS IMAGENES AVATARES */
+
+.tienda_avatares .contenedor_cambiar_imagen {
+    position: absolute;
+    font-family: Happy Monkey;
+    width: 400px;
+    height: 500px;
+    margin-top: 5%;
+    display: block;
+    background: linear-gradient(180deg, #FFD166 0%, #F78D6B 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    z-index: 10;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s;
+}
+
+.contenedor_cambiar_imagen.open-menu {
+    max-height: 1000px;
+}
+
+.contenedor_cambiar_imagen .titulo_cambiar_imagen {
+    font-size: 23px;
+    text-align: center;
+}
+
+.contenedor_cambiar_imagen .foto_actual {
+    width: 25%;
+    height: auto;
+    display: inline;
+    margin-left: 35%;
+    
+}
+
+.active {
+    opacity: 1 !important;
+    box-shadow: 0 5px 5px rgb(248, 251, 247);
+    border-radius: 50%;
+}
+
+.catalogo_fotos {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #B43654;
+    width: 90%;
+    height: 270px;
+    margin-left: 16px;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.foto_disponible {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    transition: .3s;
+}
+
+.foto_disponible:hover {
+    opacity: 0.1;
+}
+
+.contenedor_cambiar_imagen .boton_cancelar {
+    margin-top: 5%;
+    margin-left: auto;
+    width: 40%;
+    height: auto;
+    background: #EF476F;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    color: white;
+    font-family: Happy Monkey;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.contenedor_cambiar_imagen .boton_aceptar {
+    margin-left: 10%;
+    width: 40%;
+    height: auto;
+    background: #EF476F;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    color: white;
+    font-family: Happy Monkey;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.boton_aceptar a,
+.boton_cancelar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* DESPLEGABLE PERFIL HEADER */
+
+.contenedor_desplegable_header .menu_perfil_desplegable {
+    position: absolute;
+    top: 110%;
+    left: 80%;
+    transform: translateX(-30%);
+    width: 300px;
+    height: 410%;
+    border-radius: 10%;
+    font-family: 'Happy Monkey';
+    color: white;
+    background-color: #B43654;
+    max-height: 0; /* Cerrado inicialmente */
+    overflow: hidden;
+    transition: max-height 0.8s;
+    z-index: 10;
+}
+
+.menu_perfil_desplegable.open-menu {
+    max-height: 600px; /* Cuando está abierto */
+}
+
+/* Sección de nombre de usuario */
+.nombre_usuario_desplegable {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.nombre_usuario_desplegable .img_perfil_desplegable {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;/* Espaciado entre la imagen y el texto */
+}
+
+.nombre_usuario_desplegable .texto_nombre_usuario_desplegable {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+/* Barras de separación */
+.barra_1_desplegable {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: -15px 0;
+}
+
+.barra_2_desplegable {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin: 0px 0;
+    margin-top: -11%;
+}
+
+/* Lista de opciones de perfil */
+.container_perfil_desplegable_li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 15px;
+}
+
+.container_perfil_desplegable_li ol {
+    list-style: none;
+    padding: 0;
+}
+
+.container_perfil_desplegable_li li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.container_perfil_desplegable_li img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.container_perfil_desplegable_li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Sección de cerrar sesión */
+.cerrar_sesion_desplegable {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.cerrar_sesion_desplegable .img_cerrar_sesion_despleglable {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.cerrar_sesion_desplegable .texto_cerrar_sesion_desplegable {
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: auto;
+}
+
+@media screen and (max-width: 780px) and (min-width: 468px) {
+    .logo_header .logo {
+        width: 230%;
+        display: flex;
+        margin-left: -15%;
+    }
+
+    .input-header input {
+        display: none;
+    }
+
+    .input-header img {
+        display: block;
+        margin-right: -230px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .tienda_avatares {
+        display: inline-flex;
+        margin-top: 10px;
+        margin-right: -45px;
+        width: 100%;
+    }
+
+    .flecha_header {
+        display: none;
+    }
+
+    .contenedor_desplegable_header {
+        background: none;
+        box-shadow: none;
+    }
+
+    .img_perfil_header {
+        display: grid;
+        width: 45%;
+        height: auto;
+        max-width: 50%;
+    }
+
+    .img_perfil_header img {
+        margin-left: 200%; 
+        margin-top: 20px;
+        width: 50px;
+    }
+
+    .contenedor_desplegable_header .menu_perfil_desplegable {
+        height: auto;
+        transform: translateX(-80%);
+    }
+
+    .contenedor_cambiar_imagen {
+        position: relative;
+        top: 65px;
+    }
+
+    .contenedor_header-store{
+        height: 70px;
+    }
+}

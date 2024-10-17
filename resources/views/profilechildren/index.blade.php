@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.header_yes')
 @section('content')
     {{-- Content --}}
     <main class="h-screen w-full flex flex-col mx-auto" style="font-family: 'Happy Monkey';">
@@ -14,7 +14,7 @@
 
         <!-- Parte inferior con el gradiente -->
         <div
-            class="relative h-3/5 w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B] flex items-center tablet:px-8 -mt-20 z-20">
+            class="relative h-[69%] w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B] flex items-center tablet:px-8 -mt-20 z-20">
             <!-- Contenedor de tarjetas -->
             <div
                 class="w-full h-full flex flex-col tablet:flex-col desktop:flex-row space-y-6 tablet:space-y-6 desktop:space-y-0 desktop:space-x-6 items-end desktop:px-64">
