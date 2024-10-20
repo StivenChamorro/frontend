@@ -30,7 +30,7 @@ Route::get('/', function () {
 
 Route::get('home',[HomeController::class,'Home'])->name('home');
 Route::get('header',[HomeController::class,'Header']);
-Route::get('gamedino',[LevelController::class, 'GameDino'])->name('gamedino');
+Route::get('woopergame',[LevelController::class, 'Woopergame'])->name('woopergame');
 
 
 

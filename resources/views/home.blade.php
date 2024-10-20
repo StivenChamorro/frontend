@@ -100,7 +100,7 @@
                     <h2 class="title-carrusel">MINIJUEGO</h2>
                     <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 7.png')}}" alt="">
                     <div class="buttons-container">
-                        <a href="{{route('gamedino')}}"><button class="button2">JUGAR</button></a>
+                        <a href="{{route('woopergame')}}"><button class="button2">JUGAR</button></a>
                     </div>
                 </div>
             </div>

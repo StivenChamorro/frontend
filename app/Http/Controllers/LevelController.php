@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class LevelController extends Controller
 {
-    public function GameDino(){
+    public function Woopergame(){
         return view('game.game');
     }
 }
