@@ -2,21 +2,12 @@ body{
     height: auto  ;
     width: auto;
 }
-header{
-    background-color: #B43654;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 a{
     text-decoration: none;
     cursor: pointer;
     color: #000;
 }
-
-.container{
+main{
     background-color:rgb(241, 199, 91);
     width:auto;
     height: 90vh;
@@ -24,7 +15,7 @@ a{
     font-family: 'Happy Monkey', 'Happy Monkey';
     transition: .5s ease all;
 }
-body.dark .container{
+body.dark main{
     background-color: #31312C;
     color: aliceblue;
 }
@@ -47,8 +38,8 @@ aside h2{
     width: 100%;
     height: 40px;
     margin: 30px;
-    top: -2%;
-    left: 70px;
+    top: -3%;
+    left: 5%;
     font-size: 40px;
     transition: .5s ease all;
 }
@@ -58,7 +49,7 @@ aside hr{
     height: 2px;
     background-color: black;
     border: none;
-    left: -29%;
+    left: 8%;
     top: 7%;
 }
 body.dark aside hr{
@@ -120,6 +111,8 @@ body.dark aside hr{
 span{
     position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 45px;
     height: 45px;
     line-height: 30px;
@@ -131,6 +124,7 @@ span img{
     width: 25px;
     height: 25px;
     top: 10px;
+    margin: 0 auto;
 }
 .vistas{
     position: absolute;
@@ -138,11 +132,11 @@ span img{
     height: 110vh;
 }
 .vistas h3{
-    position: absolute;
+    position: relative;
     height: 40px;
     margin: 30px;
-    top: 150px;
     left: 15%;
+    top: 140px;
     font-size: 24px;
 }
 #inputFoto{
@@ -170,7 +164,7 @@ span img{
     height: 35px;
     padding: 6px;
     left: 40%;
-    top: 120px;
+    top: 130px;
     border: 1px solid black;
     background-color: rgb(209, 43, 107);
     box-shadow: 0 2px 10px -2px black ;
@@ -187,19 +181,19 @@ z-index: 3;;
 .menu{
     position: absolute;
     display: grid;
-    grid-template-columns: 300px;
+    grid-template-columns: 250px;
     grid-template-rows: 70px 70px 70px 200px;
     align-items: center;
     justify-content: center;
-    top: 30vh;
+    top: 25vh;
     left: 60px;
     gap: 38px;
 }
 .item{
     position: relative;
-    display: flex;
-    width: 100%;
-    height: 60px;
+    display: grid;
+    grid-template-columns: 50px 200px;
+    grid-template-rows: 50px;
     left: 25px;
     top: 0%;
 }
@@ -215,11 +209,13 @@ z-index: 3;;
 }
 .item p{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     width: 100%;
     height: 42px;
     font-size: 20px;
     left: 10%;
-    top: -10%;
 }
 #perfil.item img {
     background-color: rgb(209, 43, 107);
@@ -231,7 +227,7 @@ body.dark .decoracion{
 }
 section{
     position: relative;
-    top: 10px;
+    top: 25px;
     width: 95%;
     padding: 10px;
     height: 90vh;
@@ -298,7 +294,7 @@ section{
     border-radius: 40px;
     background-color:rgb(224, 171, 36) ;
     transition: .5s ease all;
-    padding: 40px auto;
+    padding: 40px;
     left: 30px;
     scrollbar-width:none;
     overflow-y: auto;
@@ -336,7 +332,7 @@ body.dark .informacion button{
     height: 1px;
     background-color: black;
     border: none;
-    left: -5%;
+    left: 10%;
     top: 0%;
     transition: .5s ease all;
 }
@@ -366,6 +362,7 @@ body.dark .informacion hr{
     border-radius: 40px;
     z-index: 2;
     transition: .2s ease all;
+    padding: 40px;
     overflow-y: auto;
     scrollbar-width: none;
 }
@@ -383,20 +380,22 @@ body.dark .clave{
     left: 30%;
     width: 60%;
     height: auto;
-    font-size: 20px;
+    font-size: 22px;
 }
 .clave h4{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     left: 25%;
     font-size: 17px;
     gap: 40px;
-    top: 10%;
 }
 .clave input{
     position: relative;
     width: 80%;
     height: 35px;
-    top: 35%;
+    top: 30%;
     border-radius: 8px;
     background-color:rgb(224, 171, 36);
     font-family: 'Happy Monkey', 'Happy Monkey';
@@ -407,8 +406,8 @@ body.dark .clave{
 }
 .fa-solid{
     position: absolute;
-    top: 167px;
-    left: 83%;
+    top: 53%;
+    left: 77%;
     cursor: pointer;
 }
 body.dark .clave input{

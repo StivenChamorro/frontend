@@ -1,4 +1,4 @@
-@extends('layouts.header1')
+@extends('layouts.header&footer')
 @section('content')
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <div class="container">
+    <main>
     <div class="vistas">
         <h3>John Smith</h2>
             <input type="file" id="inputFoto" accept="image/*" />
@@ -46,13 +46,6 @@
                 </div>
 
             </div>
-            <a href="{{route('welcome')}}">
-            <div class="cerrar">
-                <img src="{{ asset('img/perfil_padre/cerrar.png') }}" alt="cerrar">
-                <p>cerrar sesion</p>
-
-            </div>
-            </a>
     </div>
     <aside>
         <div class="decoracion">
@@ -100,11 +93,6 @@
             <h4>Contraseña</h4><input class="pass" type="password" name="contraseña" id="pass" placeholder="*********  ">
             <i class="fa-solid fa-eye-low-vision"></i>
 
-
-
-            <h4>Usuario</h4> <input type="text" name="usuario" id="nombre" placeholder="jhonsmith@example.com">
-            <h4>Contraseña</h4><input type="password" name="contraseña" id="contraseñar" placeholder="*********  ">
-
         </div>
             <button id="cambiar"><p>Editar</p></button>
         </div>
@@ -114,11 +102,10 @@
     </section>
     </aside>
 
-</div>
+</main>
 </body>
 <script src="{{asset('js/perfil_padre/foto_perfil.js')}}"></script>
 <script src="{{ asset('js/perfil_padre/perfil_padre_oscuro.js') }}"></script>
 <script src="{{ asset('js/perfil_padre/desplegable.js') }}"></script>
 </html>
-@include('layouts.footer')
 @endsection

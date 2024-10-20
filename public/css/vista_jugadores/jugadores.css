@@ -2,8 +2,7 @@ body{
     height: auto  ;
     width: auto;
 }
-.container{
-
+main{
     background-color:rgb(241, 199, 91);
     width: 100%;
     height: 90vh;
@@ -11,7 +10,7 @@ body{
     font-family: 'Happy Monkey', 'Happy Monkey';
     transition: .5s ease all;
 }
-body.dark .container{
+body.dark main{
     background-color: #31312C;
     color: aliceblue;
 }
@@ -25,22 +24,19 @@ aside{
     border-radius: 50px 0px 0px 50px;
     overflow: hidden;
     transition: .5s ease all;
-
 }
 body.dark aside{
     background-color: #4E4E4B;
 }
-
 aside h2{
     position: absolute;
     width: 100%;
     height: 40px;
     margin: 30px;
     top: -2%;
-    left: 70px;
+    left: 5%;
     font-size: 40px;
     transition: .5s ease all;
-
 }
 aside hr{
     position: relative;
@@ -48,10 +44,9 @@ aside hr{
     height: 2px;
     background-color: black;
     border: none;
-    left: -29%;
+    left: 7%;
     top: 8%;
 }
-
 aside .agregar{
 position: absolute;
 width: 133px;
@@ -146,7 +141,6 @@ body.dark aside hr{
     background: #31312C;
     z-index: 4;
 }
-
 .switch::after{
     content: "";
     display: block;
@@ -182,11 +176,11 @@ span{
 }
 span img{
     position: relative;
+    margin: 0 auto;
     width: 25px;
     height: 25px;
     top: 10px;
 }
-
 .vistas{
     position: absolute;
     width: 25%;
@@ -224,8 +218,8 @@ span img{
     width: 35px;
     height: 35px;
     padding: 6px;
-    left: 220px;
-    top: 120px;
+    left: 40%;
+    top: 130px;
     border: 1px solid black;
     background-color: rgb(209, 43, 107);
     box-shadow: 0 2px 10px -2px black ;
@@ -234,28 +228,27 @@ span img{
     z-index: 2;
 }
 .camara img{
-    position: relative;
-    width: 21px;
-    height: 21px;
-    z-index: 3;;
+position: relative;
+width: 21px;
+height: 21px;
+z-index: 3;;
 }
 .menu{
     position: absolute;
     display: grid;
-    grid-template-columns: 300px;
+    grid-template-columns: 250px;
     grid-template-rows: 70px 70px 70px 200px;
     align-items: center;
     justify-content: center;
-    top: 30vh;
+    top: 25vh;
     left: 60px;
     gap: 38px;
 }
-
 .item{
     position: relative;
-    display: flex;
-    width: 100%;
-    height: 60px;
+    display: grid;
+    grid-template-columns: 50px 200px;
+    grid-template-rows: 50px;
     left: 25px;
     top: 0%;
 }
@@ -270,7 +263,6 @@ span img{
     box-shadow: 0 2px 10px -2px black ;
     border-radius: 100px;
 }
-
 .item p{
     position: relative;
     width: 100%;
@@ -279,12 +271,9 @@ span img{
     left: 10%;
     top: -10%;
 }
-
 #jugador.item img {
     background-color: rgb(209, 43, 107);
 }
-
-
 body.dark .decoracion{
     background-color: #31312C;
 }
@@ -304,7 +293,6 @@ section{
     scrollbar-width: none;
     overflow-y: auto;
 }
-
 body.dark section {
     background-color: #2A2B2A ;
 }
@@ -336,6 +324,10 @@ body.dark section {
     transition: .5s ease all;
     z-index: 6;
 }
+.card h3{
+    position: relative;
+    top: -20px;
+}
 .card:hover{
     box-shadow: 0 2px 10px -2px black ;
     width: 250px;
@@ -353,7 +345,7 @@ body.dark .card:hover{
     position: relative;
     width: 82px;
     height: 82px;
-    top: 10px;
+    top: 0;
     box-shadow: 0 2px 10px -2px black ;
     border-radius: 100px;
     transition: .5s ease all;
@@ -372,7 +364,7 @@ body.dark .card:hover{
     top: 90%;
     left: 90%;
 }
-.agregados.activo .card .editar{
+/* .agregados.activo .card .editar{
     display: block;
     position: absolute;
     cursor: pointer;
@@ -382,15 +374,14 @@ body.dark .card:hover{
     z-index: 5;
     top: 90%;
     left: 50%;
-}
+} */
 .agregados.activo .card .basura{
     display: block;
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 41px;
+    height: 41px;
     top: -2px;
-    left: -7px;
-    border-radius: 100px;
+    border-radius: 100%;
     z-index: 6;
 }
 .card:hover img{
@@ -404,7 +395,7 @@ body.dark .card img{
     position: relative;
     background-color: #EF476F;
     width: 100%;
-    height: 100%;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -423,7 +414,7 @@ body.dark .card img{
     gap: 50px;
     padding: 50px;
     width: 400px;
-    height: 480px;
+    height: 580px;
     background-color: #e7a305;
     top: 50px;
     left: 20%;
@@ -431,17 +422,15 @@ body.dark .card img{
     border-radius: 20px;
     box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
 }
-
 .agregara.activo input {
     position: relative;
     background-color: aliceblue;
     width: auto;
     height: 40px;
-    top: 50px;
+    top: 80px;
     border-radius: 20px;
     border: #31312C;
 }
-
 .agregara.activo #inputImagen{
     position: relative;
     cursor: pointer;
@@ -449,43 +438,20 @@ body.dark .card img{
     height: 20px;
     background-color: #EF476F;
     border: 0px;
-    top: 60px;
-
+    top: 90px;
 }
 .agregara.activo #avatar{
     position: absolute;
     width: 130px;
     height: 130px;
-    left: 180px;
-    top: 20%;
+    left: 135px;
+    top: 13%;
     z-index: 1;
     border-radius: 100px;
 }
-.agregara.activo .camara{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content:  center;
-    width: 35px;
-    height: 35px;
-    padding: 6px;
-    left: 280px;
-    top: 200px;
-    border: 1px solid black;
-    background-color: rgb(209, 43, 107);
-    box-shadow: 0 2px 10px -2px black ;
-    border-radius: 100%;
-    z-index: 2;
-}
-.agregara.activo .camara img{
-position: relative;
-width: 21px;
-height: 21px;
-z-index: 3;;
-}
 .agregara.activo .agreg_btn{
     position: relative;
-    top: 50px;
+    top: 80px;
     width: 150px;
     height: 50px;
     border-radius: 20px;
