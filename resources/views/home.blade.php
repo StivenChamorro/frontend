@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.header_yes2')
 
 @section('content')
 <!DOCTYPE html>
@@ -73,9 +73,9 @@
                     <img src="{{asset('imgs/imagenes_home/images_carrusel/image copy 4.png')}}" alt="">
                     <div class="buttons-container">
 
-                        <a href="{{route('vista_niveles')}}"><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">JUGAR</button></a>
 
-                        <a href="{{route('level')}}"><button class="button2">JUGAR</button></a>
+                        <a href=""><button class="button2">JUGAR</button></a>
 
                         <a href="{{route('vista_1_achievement')}}"><button class="button2">LOGROS</button></a>
                     </div>
