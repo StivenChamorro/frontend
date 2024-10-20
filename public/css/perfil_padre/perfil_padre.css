@@ -220,8 +220,6 @@ z-index: 3;;
 #perfil.item img {
     background-color: rgb(209, 43, 107);
 }
-
-
 body.dark .decoracion{
     background-color: #31312C;
 }
@@ -403,6 +401,11 @@ body.dark .clave{
     border: 0.5px solid black;
     transition: .5s ease all;
     cursor: pointer;
+}
+#botonera {
+    display: flex;
+    gap: 10px; 
+    margin-top: 10px; 
 }
 .fa-solid{
     position: absolute;
