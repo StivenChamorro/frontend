@@ -125,7 +125,7 @@
                         <input type="text" maxlength="1" class="pin-input" data-index="2">
                         <input type="text" maxlength="1" class="pin-input" data-index="3">
                     </div>
-                    <a href="{{route('profile_father')}}"><button class="accept">Ingresar</button></a>
+                    <a href=""><button class="accept">Ingresar</button></a>
                     <button class="back2" aria-label="Cerrar">×</button>
                 </div>
             </div>

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js']) <!-- Referencia correcta a los archivos -->    
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) <!-- Referencia correcta a los archivos -->     --}}
 
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
