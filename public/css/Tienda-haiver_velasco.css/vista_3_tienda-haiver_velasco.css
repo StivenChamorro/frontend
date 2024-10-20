@@ -243,6 +243,136 @@ body {
     height: 100%;
 }
 
+/* ESTILOS MEJORADOS PARA LA TARJETA DE COMPRA DEL DRAGÓN */
+
+#modal_desplegado {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: 1000;
+    display: none; 
+    position: fixed;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* box-shadow */
+}
+
+#modal_desplegado::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente negro */
+    z-index: -1; /* Para que esté detrás del modal */
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Justo debajo del z-index del modal */
+}
+
+.container_tarjeta {
+    display: flex;
+    max-width: 600px;
+    top: 300px;
+    left: 20%;
+    width: 100%;
+    margin: 60px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.img_dragon {
+    position: relative;
+    z-index: 1;
+}
+
+.img_dragon .sombreado,
+.img_dragon .tarjeta_comprar {
+    width: 100%;
+    height: auto;
+}
+
+.img_dragon .sombreado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.titulo_anuncio_compra,
+.texto_anuncio_compra,
+.costo_anuncio_compra {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFFFFF;
+    text-align: center;
+    z-index: 3;
+    width: 80%;
+    font-family: 'Happy Monkey', sans-serif;
+}
+
+.titulo_anuncio_compra {
+    top: 5%;
+    left: 70%;
+    font-size: 20px;
+}
+
+.texto_anuncio_compra {
+    top: 25%;
+    left: 70%;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    width: 30%;
+}
+
+.costo_anuncio_compra {
+    top: 75%;
+    left: 75%;
+    font-size: 24px;
+}
+
+.boton_comprar {
+    position: absolute;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 45px;
+    text-align: center;
+    border-radius: 17px;
+    background-color: #FFD166;
+    z-index: 3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.texto_comprar {
+    position: relative;
+    font-weight: 200;
+    font-size: 22px;
+    top: -12px;
+    letter-spacing: 0.07em;
+    font-family: 'Happy Monkey', sans-serif;
+}
+
+.a_comprar {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 @media screen and (min-width: 468px) and (max-width: 780px) {
 
     .contenedor_main .descripcion_store {
@@ -304,8 +434,8 @@ body {
     }
 
     .candado {
-        top: 40px;
-        right: 40px;
+        top: 10px;
+        right: 10px;
         width: 60px;
     }
 
@@ -325,8 +455,8 @@ body {
 
     .container_tarjeta {
         top: auto;
-        left: 5%;
-        width: 90%;
+        margin-left: 10px;
+        width: 80%;
         margin-top: 50px;
     }
 
@@ -337,17 +467,23 @@ body {
     }
 
     .container_tarjeta .titulo_anuncio_compra,
-    .container_tarjeta .texto_anuncio_compra,
-    .container_tarjeta .costo_anuncio_compra {
+    .container_tarjeta .texto_anuncio_compra {
         left: 50%;
         transform: translateX(-50%);
-        width: 80%;
+        width: 90%;
+    }
+
+    .container_tarjeta .costo_anuncio_compra{
+        left: 70%;
+        top: 60%;
+        transform: translateX(-50%);
+        width: 90%;
     }
 
     .container_tarjeta .boton_comprar {
-        left: 50%;
+        left: 20%;
         transform: translateX(-50%);
-        width: 60%;
+        width: 34%;
     }
 
     .img_store_descripcion{

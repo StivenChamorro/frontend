@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/homestyle/style.css')}}">
 </head>
 <body>
-   
+
     <section class="hero">
         <div class="hero-content">
             <img src="{{ asset('imgs/imagenes_home/hero.svg'),  }}" alt="Wooper Character" class="img-hero">

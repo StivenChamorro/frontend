@@ -81,13 +81,14 @@ body {
 
 .container_logros {
     position: relative;
-    top: 10px;
+    top: 40px;
     left: 15%;
     width: 0px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     font-family: Happy Monkey;
+    padding-bottom: 6%;
 }
 
 .product-card {
@@ -122,13 +123,16 @@ body {
     font-family: Happy Monkey;
     position: relative;
     top: 10px;
-    left: -25%;
+    right: -3%;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     font-weight: bold;
     color: #000000;
+}
 
+.info .logro{
+    width: 120px;
 }
 
 .product-card .diamante_logro {
@@ -225,30 +229,23 @@ body {
 
 .matematicas .desplegable_tema {
     position: absolute;
-    top: 32%;
-    left: 42%;
-    width: 300%;
+    top: 55%;
+    left: 32%;
+    width: 20%;
     z-index: 10;
 }
 
 .titulo_matematicas{
-    background-color: #DFAA30;
     border: none;
     cursor: pointer;
     width: 35%;
     height: auto;
+    padding: 7px;
     border-radius: 10px 5px;
 }
 
-.titulo_matematicas:hover{
-    transition: -7s;
-    width: 35%;
-    height: 15%;
-    border-radius: 20px 10px; 
-}
-
 .matematicas .menu {
-    background-color: #DFAA30;
+    background-color: #FABD30;
     width: 310px;
     margin-top: 4%;
     margin-left: -3.3%;
@@ -347,22 +344,18 @@ body {
     .matematicas .desplegable_tema {
         position: absolute;
         width: 100%;
-        margin-top: 80px;
-        margin-left: -120px;
-    }
-
-    .titulo_matematicas:hover{
-        width: -100px;
-        height: 45px;
-        border-radius: 10px;
-        font-size: 20px;
-        transition: 0.2s;
+        margin-top: -30px;
+        margin-left: -50px;
     }
 
     .matematicas .titulo_matematicas {
         font-size: 20px;
         left: 50%;
+        width: 40%;
+        height: 7%;
         margin-top: 8%;
+        padding-top: 7px;
+        text-align: center;
     }
 
     .diamantes_jugador{

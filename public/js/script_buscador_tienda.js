@@ -1,11 +1,10 @@
-// Espera a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
-    // Obtiene el input de búsqueda y el contenedor de imágenes
-    const searchInput = document.getElementById('buscador');
+    // const searchInput = document.getElementById('buscador');
+    // const searchToggle = document.getElementById('search-toggle');
     const contenedorImgs = document.getElementById('contedido_buscador');
     const imgStores = contenedorImgs.getElementsByClassName('IMG_STORE');
 
-    // Función para realizar la búsqueda
+    // Función para realizar la búsqueda (la que ya tenías)
     function buscar() {
         const searchTerm = searchInput.value.toLowerCase();
 
@@ -26,4 +25,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Añade el evento 'input' al campo de búsqueda
     searchInput.addEventListener('input', buscar);
 
+    // Función para mostrar/ocultar el input de búsqueda
+    /*  function toggleSearchInput() {
+        searchInput.classList.toggle('show-input');
+        if (searchInput.classList.contains('show-input')) {
+            searchInput.focus();
+        }
+    }
+
+    // Evento para el botón de búsqueda (lupa)
+    searchToggle.addEventListener('click', toggleSearchInput);
+
+    // Evento para el input de búsqueda
+    searchInput.addEventListener('input', buscar);
+
+    // Cerrar el input si se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+        if (!searchInput.contains(event.target) && !searchToggle.contains(event.target)) {
+            searchInput.classList.remove('show-input');
+        }
+    }); */
+    
 });

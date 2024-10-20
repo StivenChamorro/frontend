@@ -8,6 +8,7 @@
     <script src="{{asset('js/script_escoger-imagen.js')}}"></script>
     <script src="{{asset('js/script_desplegable-perfil.js')}}"></script>
     <script src="{{asset('js/script_buscador_tienda.js')}}"></script>
+    <script src="{{asset('js/script_input_responsive.js')}}"></script>
     @vite(['resources/views/layouts/css-layouts/header_tienda.css'])
     <title>Document</title>
 </head>
@@ -15,13 +16,13 @@
 
     <header>
         <div class="contenedor_header-store" >
-            <div class="logo_header">
-                <img class="logo"
-                    src="{{ asset('imgs/imgs_store-haiver_velasco/wooperland_titulo.png') }}"alt="titulo-wooperland">
+            <div class="titulo_wooperland">
+                <img class="logo1" src="{{asset('imgs/imgs_store-haiver_velasco/logo_wooperland.png')}}" alt="logo-wooperland">
+                <img class="titulo1" src="{{ asset('imgs/imgs_store-haiver_velasco/wooperland_titulo.png') }}" alt="titulo-wooperland">
             </div>
             <div class="input-header">
-                <input type="text" placeholder="example: wooper Superheroe" alt="input_header_wooperland" id="buscador">
-                <div class="barra_input_header"></div>
+                <input type="text" placeholder="example: wooper Superheroe" alt="input_header_wooperland" id="buscador" class="search-input">
+                {{-- <div class="barra_input_header"></div> --}}
                 <img src="{{ asset('imgs/imgs_store-haiver_velasco/lupa_header.png') }}" alt="lupa_header_wooperland" id="search-toggle">
             </div>
             <div class="tienda_avatares">
@@ -51,12 +52,12 @@
             
             <div class="contenedor_desplegable_header" >
                 <div class="img_perfil_header">
-                    <img src="{{ asset('imgs/imgs_store-haiver_velasco/wooper_header.png') }}" id="menu_header">
+                    <img src="{{ asset('imgs/imgs_store-haiver_velasco/wooper_header.png') }}" id="img_perfil_actual">
                 </div>
                 
                 <div class="menu_perfil_desplegable" id="menu_desplegado_header">
                     <div class="nombre_usuario_desplegable">
-                        <img src="{{asset('imgs/imgs_store-haiver_velasco/wooper_header.png')}}" class="img_perfil_desplegable">
+                        <img src="{{asset('imgs/imgs_store-haiver_velasco/wooper_header.png')}}" class="img_perfil_desplegable" id="foto_perfil">
                         <h1 class="texto_nombre_usuario_desplegable"> Nick</h1>
                     </div>
                     <div class="barra_1_desplegable"></div>
