@@ -54,5 +54,7 @@ Route::get('perfil_padre',[ProfileFatherController::class,'index'])->name('profi
 //Ruta usuarios registrados(BRAYAN SOLARTE)
 Route::get('vista_usuarios',[ProfileFatherController::class,'index2'])->name('father_users');
 
+Route::get('niveles',[ProfileFatherController::class,'index3'])->name('levels');
+
 
 

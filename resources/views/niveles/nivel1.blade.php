@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.header_yes2')
 @section('content')
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
     <section class="hero">
         <div class="fondomatematicas">
             <img src="{{ asset('img/niveles/fondomatematicas.png')  }}" alt="fondo matematicas" class="img-hero">
-            {{-- <img src="{{ asset('img/niveles/fondomatematicas.png'),  }}" alt="fondo matematicas" class="img-hero"> --}}
+           
         </div>
     </section>
     <aside>
@@ -30,8 +30,13 @@
         </div>
     </aside>
     <aside>
-        <div class="nivel">
-            <img src="{{asset('img/niveles/matematicas.png')}}" alt="matematicas">
+        <div id="nivel" class="nivel">
+            <img class="tierra" src="{{asset('img/niveles/matematicas.png')}}" alt="matematicas">
+            <img class="recorrido" src="{{asset('img/niveles/recorrido.png')}}" alt="recorrido">
+            <img id="pixel1" class="pixel1" src="{{asset('img/niveles/pixel1.png')}}" alt="pixel1">
+            <img class="nivel1" src="{{asset('img/niveles/nivel1.png')}}" alt="nivel1">
+            <img class="nivel2_bloqueado" src="{{asset('img/niveles/nivel2_bloqueado.png')}}" alt="nivel2_bloqueado">
+            <img class="nivel3_bloqueado" src="{{asset('img/niveles/nivel3_bloqueado.png')}}" alt="nivel3_bloqueado">
         </div>
     </aside>
     <section>
@@ -39,8 +44,8 @@
     </section>
 
 </body>
-<script src="{{ asset('js/vista_jugadores/jugadores.js') }}"></script>
-<script src="{{ asset('js/vista_jugadores/visualizar.js') }}"></script>
+<script src="{{ asset('js/niveles/nivel1.js') }}"></script>
+
 </html>
 @include('layouts.footer')
 @endsection
