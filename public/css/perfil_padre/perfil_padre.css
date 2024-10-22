@@ -192,15 +192,15 @@ z-index: 3;;
 .item{
     position: relative;
     display: grid;
-    grid-template-columns: 50px 200px;
-    grid-template-rows: 50px;
+    grid-template-columns: 60px 200px;
+    grid-template-rows: 60px;
     left: 25px;
     top: 0%;
 }
 .item img{
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     left: 10px;
     padding: 7px;
     background-color:#696969;
@@ -334,6 +334,13 @@ body.dark .informacion button{
     top: 0%;
     transition: .5s ease all;
 }
+.informacion input{
+    background-color: rgb(224, 171, 36);
+    transition: .5s ease all;
+}
+body.dark .informacion input{
+    background-color: #2A2B2A;
+}
 .informacion button p{
     font-size: 17px;
     left: 0px;
@@ -404,12 +411,12 @@ body.dark .clave{
 }
 #botonera {
     display: flex;
-    gap: 10px; 
-    margin-top: 10px; 
+    gap: 10px;
+    margin-top: 10px;
 }
 .fa-solid{
     position: absolute;
-    top: 53%;
+    top: 48%;
     left: 77%;
     cursor: pointer;
 }
@@ -510,7 +517,7 @@ body.dark .relleno{
         .clave {
             width: 100%;
             top: -4%;
-            
+
         }
         .menu{
             left: 10%;
