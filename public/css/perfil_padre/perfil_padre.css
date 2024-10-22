@@ -10,10 +10,16 @@ a{
 main{
     background-color:rgb(241, 199, 91);
     width:auto;
+    margin: 0;
     height: 90vh;
     position: relative;
     font-family: 'Happy Monkey', 'Happy Monkey';
     transition: .5s ease all;
+}
+footer{
+    position: absolute;
+    width: 100%;
+    top: 90vh;
 }
 body.dark main{
     background-color: #31312C;
@@ -129,7 +135,7 @@ span img{
 .vistas{
     position: absolute;
     width: 25%;
-    height: 110vh;
+    height: 90vh;
 }
 .vistas h3{
     position: relative;
@@ -228,7 +234,7 @@ section{
     top: 25px;
     width: 95%;
     padding: 10px;
-    height: 90vh;
+    height: 80vh;
 }
 .perfil{
     display: flex;

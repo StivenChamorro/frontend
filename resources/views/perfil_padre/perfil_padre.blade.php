@@ -65,35 +65,35 @@
                         <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}" alt="foto usuario">
                         <h2 id="nombreUsuario">John Smith</h2>
                     </div>
-                
+
                     <h4>Nombres</h4>
                     <p class="editable" id="nombres">John Andres</p>
                     <img class="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz" style="display: none;">
-                
+
                     <hr>
-                
+
                     <h4>Apellidos</h4>
                     <p class="editable" id="apellidos">Smith Pines</p>
                     <img class="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz" style="display: none;">
-                
+
                     <hr>
-                
+
                     <h4>Fecha Nacimiento</h4>
                     <p class="editable" id="fechaNacimiento">12/08/1986</p>
                     <img class="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz" style="display: none;">
-                
+
                     <hr>
-                
+
                     <h4>Correo Electrónico</h4>
                     <p class="editable" id="correo">johnsmith@example.com</p>
                     <img class="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz" style="display: none;">
-                
+
                     <hr>
-                
+
                     <button id="editar"><p>Editar</p></button>
                 </div>
-                
-                
+
+
     <div class="adicional">
         <div class="clave" id="clave">
             <h3>Información Privada</h3>
@@ -110,7 +110,7 @@
             <button id="cancelar" style="display: none;"><p>Cancelar</p></button>
         </div>
         </div>
-        
+
         <div class="relleno">
         </div>
     </div>

@@ -28,6 +28,11 @@ aside{
 body.dark aside{
     background-color: #4E4E4B;
 }
+footer{
+    position: absolute;
+    width: 100%;
+    top: 90vh;
+}
 aside h2{
     position: absolute;
     width: 100%;
@@ -184,7 +189,7 @@ span img{
 .vistas{
     position: absolute;
     width: 25%;
-    height: 110vh;
+    height: 95vh;
 }
 .vistas h3{
     position: absolute;
@@ -265,11 +270,13 @@ z-index: 3;;
 }
 .item p{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     width: 100%;
     height: 42px;
     font-size: 20px;
     left: 10%;
-    top: -10%;
 }
 #jugador.item img {
     background-color: rgb(209, 43, 107);
