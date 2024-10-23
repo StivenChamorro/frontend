@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="{{ asset('js/script_escoger-imagen.js') }}"></script>
+    <script src="{{asset('js/script_escoger-imagen.js')}}"></script>
     @vite(['resources/views/layouts/css-layouts/header.css', 'resources/views/layouts/js-layouts/header.js', 'resources/css/app1.css', 'resources/js/target.js',])
     {{-- 'resources/css/app.css' --}}
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
@@ -31,8 +31,7 @@
 
             <div class="contenedor_cambiar_imagen" id="cambiar_imagen">
                 <h1 class="titulo_cambiar_imagen"> Cambiar foto de perfil</h1>
-                <img src="{{ asset('imgs/imgs_achievements-haiver_velasco/img_escogida_cambiar_foto.png') }}"
-                    class="foto_actual">
+                <img src="{{ asset('imgs/imgs_achievements-haiver_velasco/img_escogida_cambiar_foto.png') }}" class="foto_actual">
 
                 <div class="catalogo_fotos">
                     <img src="{{ asset('imgs/imgs_achievements-haiver_velasco/dragon_catagolo_cambiar_foto.png') }}"
