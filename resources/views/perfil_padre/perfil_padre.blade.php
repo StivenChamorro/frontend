@@ -1,4 +1,4 @@
-@extends('layouts.header1')
+@extends('layouts.header&footer')
 @section('content')
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <div class="container">
+    <main>
     <div class="vistas">
         <h3>John Smith</h2>
             <input type="file" id="inputFoto" accept="image/*" />
@@ -46,13 +46,6 @@
                 </div>
 
             </div>
-            <a href="{{route('welcome')}}">
-            <div class="cerrar">
-                <img src="{{ asset('img/perfil_padre/cerrar.png') }}" alt="cerrar">
-                <p>cerrar sesion</p>
-
-            </div>
-            </a>
     </div>
     <aside>
         <div class="decoracion">
@@ -66,59 +59,70 @@
         </button>
         <section>
             <div class="perfil">
-        <div class="informacion" id="informacion">
-            <h3>informacion personal</h3>
-            <div class="usuario">
-            <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}" alt="foto usuario">
-            <h2>John Smith</h2>
-        </div>
-            <h4>Nombres</h4>
-            <p>John Andres</p>
-            <img id="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz">
-            <hr>
-            <h4>Apellidos</h4>
-            <p>Smith Pines</p>
-            <img id="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz">
-            <hr>
-            <h4>Fecha nacimiento</h4>
-            <p>12/08/1986</p>
-            <img id="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz">
-            <hr>
-            <h4>Correo electronico</h4>
-            <p>johnsmith@example.com</p>
-            <img id="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz">
-            <hr>
-
-            <button id="editar"><p>Editar</p></button>
-    </div>
+                <div class="informacion" id="informacion">
+                    <h3>Información Personal</h3>
+                    <div class="usuario">
+                        <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}" alt="foto usuario">
+                        <h2 id="nombreUsuario">John Smith</h2>
+                    </div>
+                
+                    <h4>Nombres</h4>
+                    <p class="editable" id="nombres">John Andres</p>
+                    <img class="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz" style="display: none;">
+                
+                    <hr>
+                
+                    <h4>Apellidos</h4>
+                    <p class="editable" id="apellidos">Smith Pines</p>
+                    <img class="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz" style="display: none;">
+                
+                    <hr>
+                
+                    <h4>Fecha Nacimiento</h4>
+                    <p class="editable" id="fechaNacimiento">12/08/1986</p>
+                    <img class="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz" style="display: none;">
+                
+                    <hr>
+                
+                    <h4>Correo Electrónico</h4>
+                    <p class="editable" id="correo">johnsmith@example.com</p>
+                    <img class="lapiz" src="{{asset('img/perfil_padre/lapiz.png')}}" alt="lapiz" style="display: none;">
+                
+                    <hr>
+                
+                    <button id="editar"><p>Editar</p></button>
+                </div>
+                
+                
     <div class="adicional">
         <div class="clave" id="clave">
-            <h3>informacion privada</h2>
+            <h3>Información Privada</h3>
             <div class="formulario">
-
-            <h4>Usuario</h4> <input type="text" name="usuario" id="nombre" placeholder="Ingrese el correo electronico">
-            <h4>Contraseña</h4><input class="pass" type="password" name="contraseña" id="pass" placeholder="*********  ">
-            <i class="fa-solid fa-eye-low-vision"></i>
-
-
-
-            <h4>Usuario</h4> <input type="text" name="usuario" id="nombre" placeholder="jhonsmith@example.com">
-            <h4>Contraseña</h4><input type="password" name="contraseña" id="contraseñar" placeholder="*********  ">
-
-        </div>
+                <h4>Usuario</h4>
+                <input type="text" name="usuario" id="nombre" placeholder="Ingrese el correo electronico">
+                <h4>Contraseña</h4>
+                <input class="pass" type="password" name="contraseña" id="pass" placeholder="*********">
+                <i class="fa-solid fa-eye-low-vision" id="togglePassword"></i>
+            </div>
             <button id="cambiar"><p>Editar</p></button>
+            <div id="botonera" >
+            <button id="guardar" style="display: none;"><p>Guardar</p></button>
+            <button id="cancelar" style="display: none;"><p>Cancelar</p></button>
         </div>
+        </div>
+        
         <div class="relleno">
         </div>
     </div>
+            </div>
     </section>
     </aside>
 
-</div>
+</main>
 </body>
 <script src="{{asset('js/perfil_padre/foto_perfil.js')}}"></script>
 <script src="{{ asset('js/perfil_padre/perfil_padre_oscuro.js') }}"></script>
 <script src="{{ asset('js/perfil_padre/desplegable.js') }}"></script>
+<script src="{{ asset('js/perfil_padre/contraseña.js') }}"></script>
 </html>
-@include('layouts.footer')
 @endsection
