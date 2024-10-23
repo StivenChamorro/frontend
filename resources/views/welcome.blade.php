@@ -1,4 +1,4 @@
-@vite(['resources/css/app1.css', 'resources/js/app.js']) <!-- Referencia correcta a los archivos -->    
+@vite(['resources/css/app.css', 'resources/js/app.js']) <!-- Referencia correcta a los archivos -->    
 
 <!DOCTYPE html>
 <html lang="en">
