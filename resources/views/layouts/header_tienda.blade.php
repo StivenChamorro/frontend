@@ -10,6 +10,8 @@
     <script src="{{asset('js/script_buscador_tienda.js')}}"></script>
     <script src="{{asset('js/script_input_responsive.js')}}"></script>
     @vite(['resources/views/layouts/css-layouts/header_tienda.css'])
+    {{-- @vite(['resources/views/layouts/css-layouts/header_tienda.css','resources/css/app.css','resources/js/animate.js']) --}}
+
     <title>Document</title>
 </head>
 <body>

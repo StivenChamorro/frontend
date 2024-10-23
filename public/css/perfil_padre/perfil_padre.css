@@ -2,52 +2,46 @@ body{
     height: auto  ;
     width: auto;
 }
-header{
-    background-color: #B43654;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
 }
-.container{
+main{
     background-color:rgb(241, 199, 91);
     width:auto;
-    height: 130vh;
-    position: relative; 
+    height: 90vh;
+    position: relative;
     font-family: 'Happy Monkey', 'Happy Monkey';
     transition: .5s ease all;
 }
-body.dark .container{
-    background-color: #31312C; 
+body.dark main{
+    background-color: #31312C;
     color: aliceblue;
 }
 aside{
     background-color: rgb(252, 192, 42);
     position: absolute;
-    top: 40px;
+    top: 20px;
     right:0px;
     width: 80%;
-    height: 120vh;
+    height: 85vh;
     border-radius: 50px 0px 0px 50px;
     overflow: hidden;
     transition: .5s ease all;
-    
 }
 body.dark aside{
     background-color: #4E4E4B;
 }
-
 aside h2{
     position: absolute;
     width: 100%;
     height: 40px;
     margin: 30px;
-    top: 0%;
-    left: 40px;
-    font-size: 48px;
+    top: -3%;
+    left: 5%;
+    font-size: 40px;
     transition: .5s ease all;
-    
 }
 aside hr{
     position: relative;
@@ -55,17 +49,16 @@ aside hr{
     height: 2px;
     background-color: black;
     border: none;
-    left: -32%;
-    top: 8%;
+    left: 8%;
+    top: 7%;
 }
-
 body.dark aside hr{
     background-color: aliceblue;
 }
 .decoracion{
     background-color:rgb(241, 199, 91);
     position: absolute;
-    width: 57%;
+    width: 45%;
     height: 70%;
     border-radius: 100%;
     right: -10%;
@@ -74,7 +67,7 @@ body.dark aside hr{
     z-index: 1;
 }
 .switch{
-    background-color: rgb(252, 192, 42) ;
+    background-color: gray  ;
     border-radius: 100px;
     border: none;
     position: relative;
@@ -84,42 +77,42 @@ body.dark aside hr{
     cursor: pointer;
     display: flex;
     outline: none;
-    width: 102px;
-    height: 47px;
+    width: 85px;
+    height: 40px;
     left: 84%;
-    top: 3%;
-    color: black;
+    top: 0%;
+    background: #31312C;
     z-index: 4;
 }
-
 .switch::after{
     content: "";
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     position: absolute;
     background-color: rgb(245, 197, 75);
-    top: 4px;
-    left: 5px;
+    top: 2px;
+    left: 2px;
     right: unset;
     border-radius: 100px;
     transition: .5s ease all;
     z-index: 5;
 }
 .switch.active{
-    background-color: #4E4E4B;
-    color: #949494;
+    background-color: rgb(245, 197, 75);
     transition: .5s ease all;
 }
 .switch.active::after{
-    right: 5px ;
-    top: 4px;
+    right: 2px ;
+    top: 2px;
     left: unset;
     background: #31312C;
 }
 span{
     position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 45px;
     height: 45px;
     line-height: 30px;
@@ -131,23 +124,22 @@ span img{
     width: 25px;
     height: 25px;
     top: 10px;
+    margin: 0 auto;
 }
-
 .vistas{
     position: absolute;
     width: 25%;
-    height: 140vh;
+    height: 110vh;
 }
 .vistas h3{
-    position: absolute;
+    position: relative;
     height: 40px;
     margin: 30px;
-    top: 220px;
     left: 15%;
+    top: 140px;
     font-size: 24px;
 }
-
-#changeAvatar{
+#inputFoto{
     display: none;
     position: absolute;
 }
@@ -157,54 +149,51 @@ span img{
     width: 130px;
     height: 130px;
     left: 23%;
-    top: 100px;
+    top: 30px;
     z-index: 1;
+    border-radius: 100px;
+    border: 2px solid #4E4E4B;
+    box-shadow: 0 2px 10px -2px black ;
 }
 .camara{
     position: absolute;
     display: flex;
     align-items: center;
     justify-content:  center;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     padding: 6px;
-    left: 190px;
-    top: 200px;
+    left: 40%;
+    top: 130px;
     border: 1px solid black;
     background-color: rgb(209, 43, 107);
     box-shadow: 0 2px 10px -2px black ;
     border-radius: 100%;
+    cursor: pointer;
     z-index: 2;
 }
 .camara img{
 position: relative;
 width: 21px;
 height: 21px;
-left: 0%;
-top: 0%;
 z-index: 3;;
-
 }
-
 .menu{
     position: absolute;
-    display: flex;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: 70px 70px 70px 200px;
     align-items: center;
-    justify-content: start;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    top: 54vh;
+    justify-content: center;
+    top: 25vh;
     left: 60px;
     gap: 38px;
-    
 }
-
 .item{
     position: relative;
-    display: flex;
-    width: 100%;
-    height: 60px;
+    display: grid;
+    grid-template-columns: 50px 200px;
+    grid-template-rows: 50px;
     left: 25px;
     top: 0%;
 }
@@ -213,88 +202,57 @@ z-index: 3;;
     width: 40px;
     height: 40px;
     left: 10px;
-    top: 0%;
     padding: 7px;
     background-color:#696969;
     box-shadow: 0 2px 10px -2px black ;
     border-radius: 100px;
 }
-
 .item p{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     width: 100%;
     height: 42px;
     font-size: 20px;
     left: 10%;
-    top: -10%;
 }
-
 #perfil.item img {
     background-color: rgb(209, 43, 107);
 }
-
-
-
-.cerrar {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: row;
-    width: 250px;
-    height: 60px;
-    left: 17%;
-    top: 900px;
-}
-.cerrar img{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    padding: 7px;
-    border-radius: 100%;
-    box-shadow: 0 2px 10px -2px black ;
-    background-color: rgb(100, 98, 99) ;
-    top: 20%;
-    left: 20px;
-    
-}
-.cerrar p{
-    position: relative;
-    width: 80%;
-    height: 40px;
-    top: 15%;
-    left: 20%;
-    font-size: 20px;
-}
-
 body.dark .decoracion{
     background-color: #31312C;
 }
 section{
-    display: flex;
     position: relative;
-    top: 70px;
+    top: 25px;
     width: 95%;
-    gap: 7%;
-    height: 80vh;
+    padding: 10px;
+    height: 90vh;
 }
-
 .perfil{
     display: flex;
     justify-content: center;
     position: relative;
-    width: 45%;
-    height: 92vh;
-    left: 50px;
-    top: 5%;
-    
+    width: 90%;
+    height: 77vh;
+    gap: 90px;
+    left: 5%;
+}
+.informacion.activo img{
+    display: block;
+    left: 75%;
+    top: -30px;
+}
+.informacion.activo {
+    grid-template-rows: 40px 130px 35px 35px 5px 5px 35px 35px 5px 5px 35px 35px 5px 5px 35px 35px 5px 5px 50px;
 }
 .informacion img{
     display: none;
     position: relative;
     width: 20px;
     height: 20px;
-    top: -10%;
+    top: -70%;
     left: 440px;
 }
 .usuario{
@@ -304,127 +262,111 @@ section{
     align-items: center;
     justify-content: start;
     width: 80%;
-    height: 190px;
-    top: -2%;
+    height: 140px;
 }
 .usuario img{
     display: block;
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     left: 0%;
     top: 0%;
+}
+.informacion.activo .usuario img{
+    left: 0px;
+    top: 0;
 }
 .usuario h2{
     top: -10px;
     position: relative;
-    font-size: 34px;
+    font-size: 25px;
     width: 100%;
     height: 50px;
     left: 10px;
-    margin: 0px;
-
 }
-
 .informacion{
     position: relative;
-    width: 100%;
-    height: 90vh;
+    display: grid;
+    grid-template-rows: 40px 130px 35px 35px 5px 35px 35px 5px 35px 35px 5px 35px 35px 40px;
+    width: 90%;
+    height: 72vh;
     border-radius: 40px;
     background-color:rgb(224, 171, 36) ;
     transition: .5s ease all;
-    top: -4%;
-    padding: 20px;
-    
+    padding: 40px;
+    left: 30px;
+    scrollbar-width:none;
+    overflow-y: auto;
 }
-.informacion.activo img{
-    display: block;
+.informacion.activo{
+    box-shadow: 0 2px 10px -2px black ;
 }
-
 body.dark .informacion{
 background-color: #2A2B2A;
-}
-.informacion button {
-background-color: rgb(221, 28, 157);
-position: relative;
-cursor: pointer;
-width: 133px;
-height: 47px;
-left: 35%;
-top: -2%;
-border: none;
-border-radius: 50px;
-box-shadow: 0 2px 10px -2px black ;
-font-family: 'Happy Monkey', 'Happy Monkey';
-font-size: 20px;
-
 }
 body.dark .informacion button{
     color: aliceblue;
     }
-
 .informacion h3{
     position: relative;
-    font-size: 24px;
-    left: 30% ;
+    font-size: 22px;
+    width: 260px;
+    margin: 10px auto;
 }
-
 .informacion p{
     position: relative;
     left: 10%;
     font-size: 16px;
-    top: -5%;
+    width: 70%;
 }
-
 .informacion h4{
     position: relative;
     left: 10% ;
-    font-size: 20px;
-    top: -5%;
+    font-size: 19px;
+    width: 70%;
 }
-
 .informacion hr{
     position: relative;
     width: 70%;
     height: 1px;
     background-color: black;
     border: none;
-    left: -5%;
+    left: 10%;
     top: 0%;
     transition: .5s ease all;
-    top: -5%;
-} 
+}
+.informacion button p{
+    font-size: 17px;
+    left: 0px;
+}
 body.dark .informacion hr{
     background-color: aliceblue;
     }
-
 .adicional{
     display: flex;
     flex-direction: column;
     gap: 25px;
     position: relative;
-    width: 45%;
-    height: 92vh;
-    left: 50px;
-    top: 5%;
+    width: 100%;
+    height: 90vh;
 }
 .clave{
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
-    height: 35vh;
+    width: 90%;
+    left: 40px;
+    height: 34vh;
     background-color:rgb(224, 171, 36);
     border-radius: 40px;
     z-index: 2;
-    top: -5%;
     transition: .2s ease all;
-    padding: 20px;
+    padding: 40px;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 .clave.activo{
-    width: 620px;
-    height: 370px;
     box-shadow: 0 2px 10px -2px black ;
-background-color: rgb(224, 171, 36);
+    background-color: rgb(224, 171, 36);
 }
 body.dark .clave{
     background-color: #2A2B2A;
@@ -436,26 +378,40 @@ body.dark .clave{
     left: 30%;
     width: 60%;
     height: auto;
-    font-size: 24px;
+    font-size: 22px;
 }
 .clave h4{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     left: 25%;
-    font-size: 20px;
+    font-size: 17px;
     gap: 40px;
-    top: 10%;
-
 }
 .clave input{
     position: relative;
     width: 80%;
-    height: 25px;
-    top: 35%;
+    height: 35px;
+    top: 30%;
     border-radius: 8px;
     background-color:rgb(224, 171, 36);
+    font-family: 'Happy Monkey', 'Happy Monkey';
+    font-size: 17px;
     border: 0.5px solid black;
     transition: .5s ease all;
-    
+    cursor: pointer;
+}
+#botonera {
+    display: flex;
+    gap: 10px; 
+    margin-top: 10px; 
+}
+.fa-solid{
+    position: absolute;
+    top: 53%;
+    left: 77%;
+    cursor: pointer;
 }
 body.dark .clave input{
     background-color: #2A2B2A;
@@ -463,78 +419,74 @@ body.dark .clave input{
     }
 .formulario{
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 66px 66px;
 }
-.clave button{
-background-color: rgb(221, 28, 157);
-position: relative;
-width: 133px;
-height: 47px;
-left: 35%;
-top: 5%;
-border: none;
-border-radius: 50px;
-box-shadow: 0 2px 10px -2px black ;
-font-family: 'Happy Monkey', 'Happy Monkey';
-font-size: 20px;
-}
+.informacion button, .clave button{
+    background-color: rgb(221, 28, 157);
+    position: relative;
+    cursor: pointer;
+    width: 125px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px -2px black ;
+    font-family: 'Happy Monkey', 'Happy Monkey';
+    font-size: 17px;
+    margin: 0 auto;
+    }
+    .informacion.activo button {
+        top: 30px;
+    }
+
+    .clave button{
+        top: 20px;
+    }
 body.dark .clave button{
     color: aliceblue;
     }
-
 .relleno{
-    width: 100%;
-    height: 45vh;
+    position: relative;
+    width: 90%;
+    height: 34vh;
+    left: 40px;
     background-color:rgb(224, 171, 36);
     border-radius: 40px;
     z-index: 2;
-    padding: 20px;
-    top: -25px;
 }
 body.dark .relleno{
     background-color: #2A2B2A;
     }
-    
-    @media  (max-width: 1950px){
+
+     @media  (max-width: 1560px){
         aside hr{
             position: relative;
-            left: -27%;
-            width: 380px;
+            left: -22%;
+            width: 35%;
             top: 7%;
             z-index: 4;
         }
-        aside h2{
-            font-size: 38px;
-            z-index: 4;
-        }
-            #avatar{
-                top: 100px;
-                width: 120px;
-                height: 120px;
+            /* #avatar{
                 left:20% ;
-            }
+            } */
 
         .vistas h3{
             top: 200px;
             left: 10%;
         }
-        .vistas .camara{
-            top: 180px;
-            left: 50%;
-            width: 25px;
-            height: 25px;
+       .camara{
+            top: 120px;
+            left: 40%;
+            width: 35px;
+            height: 35px;
         }
         .camara img{
             left: 5%;
-            width: 30px;
-            height: 30px;
-        }
-        .container{
-            height: 150vh;
-        }
-        aside{
-            height: 130vh;
+            width: 25px;
+            height: 25px;
         }
         .decoracion{
             height: 500px;
@@ -543,13 +495,12 @@ body.dark .relleno{
         .perfil{
             width: 90%;
             z-index: 3;
-            height: 870px;
-        
+            height: auto;
         }
      .informacion{
         width: 90%;
         top: 0%;
-        height: 100vh;
+
     }
         .adicional{
             width: 95%;
@@ -559,7 +510,7 @@ body.dark .relleno{
         .clave {
             width: 100%;
             top: -4%;
-            height: 40vh;
+            
         }
         .menu{
             left: 10%;
@@ -570,20 +521,8 @@ body.dark .relleno{
             width: 40px;
             height: 40px;
         }
-
-        .cerrar img {
-            top: -200px;
-         left: 7%;
-         width: 40px;
-         height: 40px;
-        }
-        .cerrar p{
-            top: -200px;
-        }
-    
-    
     }
-    
+/*
     @media  (max-width: 860px){
         .container{
             width: 100%;
@@ -709,6 +648,6 @@ body.dark .relleno{
                display: none;
            }
     }
-    
-    
-    
+
+
+     */

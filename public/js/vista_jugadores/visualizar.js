@@ -13,3 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    let agregarInformacion = document.getElementById("agregar");
+    let agregarDesplegado = document.getElementById("agregara");
+
+    agregarInformacion.addEventListener('click', function() {
+        agregarDesplegado.classList.toggle("activo");
+
+    });
+    const btnswitch =document.getElementById('avatar');
+
+    btnswitch.addEventListener('click', ()=>{
+        document.body.classList.toggle('ok');
+        });
+
+});

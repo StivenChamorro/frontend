@@ -23,6 +23,24 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  header a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+  }
+
+  .img-logo{
+    width: 70px;
+    height: 60px;
+  }
   
   .logo {
     font-family: var(--font-secondary);
@@ -75,11 +93,10 @@
   .button-profile {
     background-color: var(--color-secondary);
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 5px 8px 7px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -383,6 +400,11 @@
     border-radius: 20px;
 }
 
+#img_perfil_actual {
+  width: 55px;
+  height: auto;
+}
+
 .foto_disponible {
     width: 70px;
     height: 70px;
@@ -395,7 +417,7 @@
 }
 
 .contenedor_cambiar_imagen .boton_cancelar {
-    margin-top: 5%;
+    margin-top: auto;
     margin-left: auto;
     width: 40%;
     height: auto;
@@ -427,7 +449,7 @@
 .boton_cancelar a {
     text-decoration: none;
     color: white;
-
+}
 .container-pin {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -696,5 +718,4 @@
     }
 }
 
-  }
 

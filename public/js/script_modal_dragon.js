@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let modal = document.getElementById('modal');
     let modalDesplegado = document.getElementById('modal_desplegado');
-    let botonComprar = document.getElementById('boton_comprar');
+    let botonComprar = document.getElementById('a_comprar');
     let candado = modal.querySelector('.candado');
     let costoImagen = modal.querySelector('.costo_imagen');
     let tusDiamantes = document.getElementById('tus_diamantes');

@@ -167,8 +167,7 @@
                 <p class="texto_anuncio_compra"> Un amigo de wooper, traido de una defirente cultura</p>
                 <h2 class="costo_anuncio_compra"> Coste: 300 💎</h2>
                 <div class="boton_comprar">
-                    <h1 class="texto_comprar"><a href="{{ route('vista_2_store') }}" class="a_comprar" id="boton_comprar">Comprar</a>
-                    </h1>
+                    <h1 id="a_comprar"> Comprar </h1>
                 </div>
             </div>
         </div>

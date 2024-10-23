@@ -1,125 +1,177 @@
+@vite(['resources/css/app.css', 'resources/js/app.js']) <!-- Referencia correcta a los archivos -->    
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wooperland</title>
+    <title>Document</title>
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) <!-- Referencia correcta a los archivos -->     --}}
 
-    <!-- estilo -->
-    @vite(['resources/css/app.css', 'resources/js/app.js']) <!-- Referencia correcta a los archivos -->    
-    <!-- fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <header>
-        <h1 class="wooperland-title">WOOPERLAND</h1>
-    </header>
 
-    <main>
-            <section class="welcome-section">
-                <div class="welcome-content">
-                  <div class="welcome-text">
-                    <h1>BIENVENIDOS A WOOPERLAND</h1>
-                    <p>Encontrarás un mundo de aventuras mientras aprendes con Wooper</p>
-                  </div>
-                  <span class="character-group">
-                    <img src="imagenes_index/image.png" alt="Wooper characters" class="characters-img">
-                  </span>
-                </div>
-              </section>
+  <header>
+    <div class="logo">
+      <img class="img-logo" src="{{asset('imgs/imagenes_home/logo.png')}}" alt="">
+      <h1>Wooperland</h1>
+    </div>
+    <ul class="menu">
+        <a href="{{route('iniciarsesion')}}"><li>Iniciar Sesión</li></a>
+        <a href="{{route('registro')}}"><li>Registrarse</li></a>
+    </ul>
+</header>
 
-            <section class="learn-section">
-              <div class="learn-content">
-                <h1 class="learn-wooperland">APRENDE CON WOOPER</h1>
-              </div>
-            </section>
+    <!-- slider -->
 
-            <section class="carousel-section">
-              <div class="carousel-container">
-                  <div class="carousel-wrapper">
-                      <div class="carousel-slide">
-                          <img src="imagenes_index/imagen1.svg" alt="Imagen 1">
-                          <img src="imagenes_index/imagen2.svg" alt="Imagen 2">
-                          <img src="imagenes_index/imagen3.svg" alt="Imagen 3">
-                          <img src="imagenes_index/imagen4.svg" alt="Imagen 4">
-                          <img src="imagenes_index/imagen5.svg" alt="Imagen 5">
-                          <img src="imagenes_index/imagen6.svg" alt="Imagen 6">
-                          <img src="imagenes_index/imagen7.svg" alt="Imagen 7">
-                          <img src="imagenes_index/imagen8.svg" alt="Imagen 8">
-                      </div>
-                  </div>
-                  <button class="carousel-button prev">&lt;</button>
-                  <button class="carousel-button next">&gt;</button>
-              </div>
-              <script src="{{ asset('js/app.js') }}"></script>
-          </section>
-
-            <section class="nav-card-section">
-              <div class="nav-cards-content">
-                <div class="card">
-                  <div class="image-content">
-                    <img src="imagenes_index/obtenpistas.png" alt="img-card1">
-                  </div>
-                  <div class="footer-card">
-                    <h1>¡Obtén pistas!</h1>
-                  </div>
-                </div>
-
-                <div class="card">
-                  <div class="image-content">
-                    <img src="imagenes_index/exploratemas.png" alt="img-card2">
-                  </div>
-                  <div class="footer-card">
-                    <h1>Explora diferentes temas</h1>
-                  </div>
-                </div>
-
-                <div class="card">
-                  <div class="image-content">
-                    <img src="imagenes_index/ganarlogros.png" alt="img-card3">
-                  </div>
-                  <div class="footer-card">
-                    <h1>Desbloquea logros</h1>
-                  </div>
-                </div>
-
-              </div>
-            </section>
-
-            <section class="cta-section">
-              <div class="cta-container">
-              <div class="cta-text">
-                  <h1>JUEGA Y PRUEBA WOOPERLAND YA</h1>
-              </div>
-              <div class="cta-button">
-                  <a href="{{route('iniciarsesion')}}"><button>JUGAR
-                      <!-- <span class="arrow">➤</span> -->
-                       <span><img src="imagenes_index/arrowPlay.png" alt="" class="arrow-play"></span>
-                  </button></a>
-              </div>
-            </div>
-          </section>
-
-          <section class="app-download-section">
-           <div class="app-downloand-container">
-            <div class="download-box">
-                <div class="left-text">
-                    <h2>Descarga la app de Wooper</h2>
-                    <p>Con la app de Wooper podrás disfrutar de las aventuras en cualquier momento y lugar.</p>
-                </div>
-                <div class="right-text">
-                    <p>Descárgala en el siguiente link:</p>
-                    <a href="http://woperland.com" target="_blank">http://woperland.com</a>
+    <div class="slider">
+        <!-- list Itemsa -->
+        <div class="list">
+            <div class="item active">
+                <img src="{{asset('imagenes_index/image.png')}}">
+                <div class="content">
+                    <p>Wooperland</p>
+                    <h2>Astronomia</h2>
+                    <p>
+                        Junto a wooper viaja a través del espacio, mientras conoces a nuestros planetas y estrellas vecinos
+                    </p>
                 </div>
             </div>
-          </div>
-        </section>
-    </main>
+            <div class="item">
+                <img src="{{asset('imagenes_index/image copy.png')}}">
+                <div class="content">
+                    <p>Wooperland</p>
+                    <h2>Arte</h2>
+                    <p>
+                        Conoce a los artistas mas grandes de la historia, mientras aprendes de sus obras
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/image copy 2.png')}}">
+                <div class="content">
+                    <p>Wooperland</p>
+                    <h2>Español</h2>
+                    <p>
+                        Aprende español junto a wooper, descubriendo nuevas palabras y su significado  
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/image copy 3.png')}}">
+                <div class="content">
+                    <p>Wooperland</p>
+                    <h2>Ciencias Sociales</h2>
+                    <p>
+                        Descubre, historias y datos que no conocías sobre el mundo, te deslumbrarás
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/image copy 4.png')}}">
+                <div class="content">
+                    <p>Wooperland</p>
+                    <h2>Matemáticas</h2>
+                    <p>
+                        Aprende sobre matemáticas de manera divertida, mientras ganas premios por completar cada nivel
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/image copy 5.png')}}">
+                <div class="content">
+                    <p>Wooperland</p>
+                    <h2>Ciencias Naturales</h2>
+                    <p>
+                        Adéntrate en la selva y conoce sobre los animales salvajes. Pero ten cuidado en tu viaje
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/image copy 6.png')}}">
+                <div class="content">
+                    <p>Wooperland</p>
+                    <h2>Inglés</h2>
+                    <p>
+                        Aprende inglés junto a wooper, algún día conocerás personas que hablen inglés. see you later
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <video src="{{asset('imagenes_index/woopergame.mp4')}}" controls autoplay muted loop></video>
+                <div class="content">
+                    <p>Wooperland</p>
+                    <h2>Minijuego</h2>
+                    <p>
+                        Prueba nuestro minijuego, te será muy familiar pero es impresión tuya nada mas 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- button arrows -->
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- thumbnail -->
+        <div class="thumbnail">
+            <div class="item active">
+                <img src="{{asset('imagenes_index/astronomia.png')}}">
+                <div class="content">
+                    Astronomia
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/arte.png')}}">
+                <div class="content">
+                    Arte
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/español.png')}}">
+                <div class="content">
+                    Español
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/sociales.png')}}">
+                <div class="content">
+                    Ciencias Sociales
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/matematicas.png')}}">
+                <div class="content">
+                    Matemáticas
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/naturales.png')}}">
+                <div class="content">
+                    Ciencias Naturales
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/ingles.png')}}">
+                <div class="content">
+                    Inglés
+                </div>
+            </div>
+            <div class="item">
+                <img src="{{asset('imagenes_index/minijuego.png')}}">
+                <div class="content">
+                    Minijuego
+                </div>
+            </div>
+        </div>
+    </div>
 
-    
-    @include('layouts.footer')
+
+    <script src="app.js"></script>
+
+    {{-- @include('layouts.footer') --}}
 </body>
-
 </html>

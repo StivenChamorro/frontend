@@ -1,16 +1,6 @@
 /* CONTENIDO DEL BODY */
 body {
     background: linear-gradient(180deg, #FFD166 50.13%, #F78D6B 90%);
-}
-
-.contenedor_main{
-    position: relative;
-    width: 80%;
-    height: 100%;
-}
-
-/* Estilos generales */
-body {
     font-family: 'Happy Monkey', cursive;
 }
 
@@ -162,87 +152,6 @@ body {
     font-size: 22px;
 }
 
-/* ESTILOS QUE TIENE LA TARJETA DE COMPRA DEL DRAGON */
-.container_tarjeta {
-    width: 100%;
-    max-width: 600px;
-    margin: 60px auto;
-    position: relative;
-}
-
-.img_dragon {
-    position: relative;
-}
-
-.img_dragon .sombreado,
-.img_dragon .tarjeta_comprar {
-    width: 100%;
-    height: auto;
-}
-
-.img_dragon .sombreado {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-.titulo_anuncio_compra,
-.texto_anuncio_compra,
-.costo_anuncio_compra {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #FFFFFF;
-    text-align: center;
-    z-index: 2;
-    width: 80%;
-}
-
-.titulo_anuncio_compra {
-    top: 10%;
-    font-size: 25px;
-}
-
-.texto_anuncio_compra {
-    top: 30%;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.costo_anuncio_compra {
-    top: 60%;
-    font-size: 22px;
-}
-
-.boton_comprar {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: #FFD166;
-    z-index: 2;
-}
-
-.texto_comprar {
-    font-weight: 200;
-    font-size: 20px;
-    line-height: 40px;
-    letter-spacing: 0.07em;
-}
-
-.a_comprar {
-    text-decoration: none;
-    color: black;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
 /* ESTILOS MEJORADOS PARA LA TARJETA DE COMPRA DEL DRAGÓN */
 
 #modal_desplegado {
@@ -344,33 +253,25 @@ body {
 
 .boton_comprar {
     position: absolute;
+    bottom: 10%;
     left: 20%;
     transform: translateX(-50%);
-    width: 160px;
-    height: 45px;
+    width: 150px;
+    height: 40px;
     text-align: center;
-    border-radius: 17px;
+    border-radius: 10px;
     background-color: #FFD166;
-    z-index: 3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
-.texto_comprar {
+#a_comprar {
     position: relative;
-    font-weight: 200;
-    font-size: 22px;
-    top: -12px;
-    letter-spacing: 0.07em;
-    font-family: 'Happy Monkey', sans-serif;
-}
-
-.a_comprar {
-    cursor: pointer;
     text-decoration: none;
     color: black;
-    display: block;
-    width: 100%;
-    height: 100%;
+    cursor: pointer;
+    font-size:x-large;
+    font-weight: 100;
+    top: -30%;
 }
 
 @media screen and (min-width: 468px) and (max-width: 780px) {
