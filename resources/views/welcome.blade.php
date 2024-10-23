@@ -28,7 +28,7 @@
     <!-- slider -->
 
     <div class="slider">
-        <!-- list Items -->
+        <!-- list Itemsa -->
         <div class="list">
             <div class="item active">
                 <img src="{{asset('imagenes_index/image.png')}}">
