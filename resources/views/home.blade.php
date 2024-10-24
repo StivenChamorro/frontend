@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/homestyle/style.css')}}">
+
+    <link rel="icon" href="{{ asset('iconWooper.ico') }}" type="image/x-icon">
+
 </head>
 <body>
 
