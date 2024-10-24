@@ -1,4 +1,4 @@
-@extends('layouts.header_yes2')
+@extends('layouts.header')
 
 @section('content')
 <!DOCTYPE html>

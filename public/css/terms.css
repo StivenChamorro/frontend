@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: 'Happy Monkey', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #FFD166, #F78C6B);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.image-wrapper {
+    display: none;
+    margin-left: 8px;
+    margin-top: 48px;
+}
+
+.terms-image {
+    height: 48rem;
+    width: 100%;
+    border-radius: 12px 0 0 12px;
+}
+
+/* Términos y Condiciones */
+.terms-container {
+    background: linear-gradient(to bottom, #EF476F, #892940);
+    border-radius: 16px;
+    padding: 16px;
+    width: 52rem;
+    height: 52rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.terms-title {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.terms-content {
+    color: white;
+    font-size: 1.125rem;
+    overflow-y: auto;
+    max-height: 30rem;
+    padding: 16px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.section-text {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+/* Checkbox */
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.terms-checkbox {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.terms-label {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Botón Continuar */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.continue-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #FFD166;
+    color: black;
+    border-radius: 24px;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    transition: transform 0.2s ease;
+}
+
+.continue-button:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (min-width: 1024px) {
+    .image-wrapper {
+        display: block;
+    }
+}

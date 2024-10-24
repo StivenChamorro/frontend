@@ -9,8 +9,7 @@
     @vite(['resources/views/layouts/css-layouts/header.css', 'resources/views/layouts/js-layouts/header.js', 'resources/css/app1.css', 'resources/js/target.js',])
     {{-- 'resources/css/app.css' --}}
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <title>WOOPERLAND</title> <!-- Sección para el título dinámico -->
 

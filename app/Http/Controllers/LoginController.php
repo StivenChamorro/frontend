@@ -8,6 +8,6 @@ class LoginController extends Controller
 {
     public function store()
     {
-        return view('login.index');
+        return view('login.login');
     }
 }
