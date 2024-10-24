@@ -1,7 +1,7 @@
-@extends('layouts.header&footer')
+@extends('layouts.header1')
 @section('content')
 {{-- Content --}}
-    <main class="h-full w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
+    <main class="h-[70%] w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
         <div class="w-[90%] h-full flex flex-cols-2 mx-24 mobile:justify-center mobile:mx-8 desktop:pl-32">         
             <div class="desktop:w-1/2 desktop:h-[52rem] bg-gradient-to-b from-[#EF476F] to-[#892940] rounded-2xl p-8 tablet:h-[90%] mobile:h-11/12 desktop:mt-8 desktop:px-14 mobile:h-[90%] mobile:w-[30rem] overflow-y-auto mobile:my-4">  
                 <h1 class="text-center text-white text-5xl p-4 mobile:text-4xl mobile:p-0 hover:scale-110 transition duration-200">Registrate</h1>
@@ -52,7 +52,6 @@
                     <div class="flex justify-center">
                         <button class="w-[12rem] h-12 bg-[#FFD166] text-black rounded-2xl mt-6 text-2xl border border-black shadow-md shadow-black hover:text-white hover:scale-110 transition duration-200">
                             Registrarme
-                        </button>
                     </div>
                 </form>
             </div>
@@ -62,4 +61,6 @@
             </div>
         </div>
     </main>
+    @yield('content') <!-- Aquí se inyectará el contenido de las vistas -->
+@include('layouts.footer')
 @endsection

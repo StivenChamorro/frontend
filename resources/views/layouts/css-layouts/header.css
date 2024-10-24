@@ -400,6 +400,11 @@
     border-radius: 20px;
 }
 
+#img_perfil_actual {
+  width: 55px;
+  height: auto;
+}
+
 .foto_disponible {
     width: 70px;
     height: 70px;
@@ -412,7 +417,7 @@
 }
 
 .contenedor_cambiar_imagen .boton_cancelar {
-    margin-top: 5%;
+    margin-top: auto;
     margin-left: auto;
     width: 40%;
     height: auto;

@@ -4,132 +4,136 @@ body {
 }
 
 /* ESTILOS HEADER DE TIENDA */
-
 .contenedor_header-store {
     position: relative;
     background-color: #B43654;
-    width: 99%;
+    width: auto;
+    height: auto;
+    min-height: 80px;
+    width: 100%;
     height: 80px;
     left: 0;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
 
-.logo_header .logo {
-    width: 120%;
-    flex-grow: 1;
+.titulo_wooperland {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.titulo1 {
+    width: auto;
+    max-width: 200px;
     height: auto;
-    padding-top: 10px;
+    padding: 5px;
+}
+
+.logo1 {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
 }
 
 .input-header {
-    flex-grow: 1;
-    max-width: 60%;
-    display: flex;
-    align-items: center;
     position: relative;
-    left: 10%;
-    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    max-width: 600px;
+    margin: 0 20px;
+    width: auto;
 }
 
 .input-header input {
     display: flex;
-    margin-left: -70px;
-    width: 70%;
     height: 50px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding-left: 7%;
+    padding-right: 40px;
     border-radius: 50px;
     border: none;
     font-family: 'Happy Monkey';
-    padding-left:7%;
     outline: none;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .input-header img {
     position: absolute;
     width: 25px;
     height: 25px;
-    right: 38%;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
 }
 
 .tienda_avatares {
-    background-color: #E87080;
     display: flex;
+    width: 18%;
+    padding: 8px;
+    margin-right: 20px;
     justify-content: space-around;
     border-radius: 18px;
-    margin-right: 10%;
-    width: 45%;
-    padding: 10px;
-}
-
-.boton-avatares {
-    width: auto;
-    height: 100%;
-    background: none;
-    border: none;
-    font-family: 'Happy Monkey';
-    font-size: 16px;
-    font-weight: bold;
-    color: #FFF;
-    cursor: pointer;
-}
-
-.boton-tienda{
-    width: auto;
-    height: 100%;
-    top: 50px;
-    background: none;
-    border: none;
-    font-family: 'Happy Monkey';
-    font-size: 16px;
-    font-weight: bold;
-    color: #FFF;
-    cursor: pointer;
+    background-color: #E87080;
     z-index: 10;
+    flex-shrink: 0;
+}
+
+.boton-avatares, .boton-tienda {
+    width: auto;
+    height: 100%;
+    background: none;
+    border: none;
+    font-family: 'Happy Monkey';
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+    padding: 5px 10px;
+    white-space: nowrap;
 }
 
 .barra_tienda-avatares {
-    margin-inline: 10px;
-    margin-top: 2px;
+    margin: 0 10px;
     display: flex;
     justify-content: space-between;
     width: auto;
     height: auto;
     border-right: 1px solid white;
+    align-self: stretch;
 }
 
 .contenedor_desplegable_header {
-    position: static;
-    margin-left: auto;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 0;
     display: flex;
-    margin-right: 100px;
     align-items: center;
     background-color: #E87080;
     border-radius: 25px;
-    padding: 2px 25px;
+    padding: 5px 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .img_perfil_header {
-    width: 50px;
+    width: auto;
     height: auto;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .img_perfil_header img {
-    width: 97%;
-    height: auto;
+    width: 40px;
+    height: 40px;
     display: block;
-    margin-top: 4px;
-    margin-left: -15px;
+    margin: 0 10px 0 0;
     cursor: pointer;
 }
 
@@ -145,7 +149,6 @@ body {
 a {
     color: #FFFFFF;
     text-decoration: solid;
-
 }
 
 /* ESTILOS IMAGENES AVATARES */
@@ -180,13 +183,25 @@ a {
     height: auto;
     display: inline;
     margin-left: 35%;
-    
+
 }
 
 .active {
     opacity: 1 !important;
     box-shadow: 0 5px 5px rgb(248, 251, 247);
     border-radius: 50%;
+}
+
+.foto_disponible {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    transition: .3s;
+}
+
+#img_perfil_actual {
+    width: 55px;
+    height: auto;
 }
 
 .catalogo_fotos {
@@ -198,13 +213,6 @@ a {
     margin-left: 16px;
     padding: 4px;
     border-radius: 20px;
-}
-
-.foto_disponible {
-    width: 70px;
-    height: 70px;
-    margin: 10px;
-    transition: .3s;
 }
 
 .foto_disponible:hover {
@@ -250,23 +258,24 @@ a {
 
 .contenedor_desplegable_header .menu_perfil_desplegable {
     position: absolute;
-    top: 110%;
-    left: 80%;
+    top: 130%;
+    left: -80%;
     transform: translateX(-30%);
     width: 300px;
-    height: 410%;
+    height: 500%;
     border-radius: 10%;
     font-family: 'Happy Monkey';
     color: white;
     background-color: #B43654;
-    max-height: 0; /* Cerrado inicialmente */
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.8s;
     z-index: 10;
 }
 
 .menu_perfil_desplegable.open-menu {
-    max-height: 600px; /* Cuando está abierto */
+    max-height: 600px;
+    /* Cuando está abierto */
 }
 
 /* Sección de nombre de usuario */
@@ -280,7 +289,8 @@ a {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-right: 15px;/* Espaciado entre la imagen y el texto */
+    margin-right: 15px;
+    margin-top: 0;
 }
 
 .nombre_usuario_desplegable .texto_nombre_usuario_desplegable {
@@ -354,32 +364,54 @@ a {
 }
 
 @media screen and (max-width: 780px) and (min-width: 468px) {
-    .logo_header .logo {
-        width: 230%;
-        display: flex;
-        margin-left: -15%;
-    }
 
-    .input-header input {
+    .input-header .search-input {
         display: none;
+        /* position: absolute;
+        top: 60px;
+        left: 10px;
+        width: calc(100% - 20px);
+        z-index: 30; */
     }
 
-    .input-header img {
+    /* .input-header .search-input.active {
         display: block;
-        margin-right: -230px;
-        margin-top: 10px;
-        cursor: pointer;
     }
 
-    .tienda_avatares {
-        display: inline-flex;
-        margin-top: 10px;
-        margin-right: -45px;
-        width: 100%;
-    }
+    .input-header #search-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 20;
+    } */
 
     .flecha_header {
         display: none;
+    }
+
+    .tienda_avatares{
+        display: flex;
+        margin-left: -8%;
+        margin-bottom: -5%;
+        height: 20px;
+        width: 180px;
+        padding-top: 5px;
+    }
+
+    .barra_tienda-avatares{
+        position: relative;
+        top: 4px;
+    }
+
+    .titulo_wooperland{
+        display: grid;
+        justify-content: space-between;
+    }
+
+    .titulo1{
+        display: flex;
+        width: 112px;
+        height: 13px;
+        margin-top: -9%;
     }
 
     .contenedor_desplegable_header {
@@ -387,30 +419,42 @@ a {
         box-shadow: none;
     }
 
-    .img_perfil_header {
-        display: grid;
-        width: 45%;
-        height: auto;
-        max-width: 50%;
+    .input-header img {
+        display: block;
+        margin-right: -240px;
+        margin-top: 15px;
+        cursor: pointer;
+        z-index: 20;
     }
 
-    .img_perfil_header img {
-        margin-left: 200%; 
-        margin-top: 20px;
-        width: 50px;
+    .img_perfil_header {
+        display: grid;
+        height: auto;
+        max-width: 20%;
+    }
+
+    #img_perfil_actual {
+        position: relative;
+        top: 10px;
+        margin-left: 10%;
+        width: 47px;
     }
 
     .contenedor_desplegable_header .menu_perfil_desplegable {
         height: auto;
-        transform: translateX(-80%);
+        top: 80px;
+        left: 70px;
+        transform: translateX(-100%);
     }
 
     .contenedor_cambiar_imagen {
         position: relative;
+        right: 30px;
         top: 65px;
     }
 
-    .contenedor_header-store{
-        height: 70px;
-    }
+    /* .contenedor_header-store{
+        width: 109%;
+    } */
+
 }

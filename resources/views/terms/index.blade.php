@@ -1,7 +1,7 @@
-@extends('layouts.header&footer')
+@extends('layouts.header1')
 @section('content')
 {{-- Content --}}
-<main class="h-full w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
+<main class="h-[70%] w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
     <div class="h-full flex justify-center items-center desktop:pb-20">
         {{-- Imagen solo visible en pantallas grandes --}}
         <div class="hidden desktop:flex desktop:w-[45rem] desktop:h-[95%] my-12 ml-2 desktop:mt-12">
@@ -50,7 +50,7 @@
             </div>
             <!-- Botón Continuar -->
             <div class="flex justify-center mt-4">
-                <a href="{{ route('add_child') }}">
+                <a href="{{ route('add_child')}}">
                     <button class="w-full p-4 bg-[#FFD166] text-black rounded-3xl text-2xl mobile:text-xl border-2 border-black shadow-md shadow-black hover:text-white">
                         Continuar
                     </button>
@@ -59,4 +59,6 @@
         </div>
     </div>
 </main>
+@yield('content') <!-- Aquí se inyectará el contenido de las vistas -->
+@include('layouts.footer')
 @endsection

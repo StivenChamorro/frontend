@@ -1,11 +1,11 @@
-@extends('layouts.header&footer')
+@extends('layouts.header1')
 @section('content')
 {{-- Content --}}
     <main class="h-full w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
         <div class="h-full flex justify-center items-center desktop:pb-20 desktop:pt-4">
             {{-- Imagen solo visible en pantallas grandes --}}
             <div class="hidden desktop:flex desktop:w-[45rem] desktop:h-[95%] my-12 ml-2  desktop:mt-12">
-                <img src="{{asset('img/login_image.png')}}" class="h-[48rem] w-full rounded-l-lg ">
+                <img src="{{asset('img/login_image.png')}}" class="h-[48rem] w-full rounded-l-lg">
             </div>
             {{-- Formulario centrado en todas las pantallas --}}
             <div class="desktop:w-[52rem] desktop:h-[52rem] bg-gradient-to-b from-[#EF476F] to-[#892940] rounded-2xl p-8 tablet:w-3/4 tablet:h-[70%] mobile:w-11/12 mobile:h-[48rem] mobile:my-6 desktop:px-14">
@@ -50,4 +50,6 @@
             </div>
         </div>
     </main>
+    @yield('content') <!-- Aquí se inyectará el contenido de las vistas -->
+@include('layouts.footer')
 @endsection

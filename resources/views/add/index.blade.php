@@ -1,7 +1,7 @@
-@extends('layouts.header&footer')
+@extends('layouts.header1')
 @section('content')
     {{-- Content --}}
-    <main class="h-full w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
+    <main class="h-90rem w-full bg-gradient-to-b from-[#FFD166] to-[#F78C6B]" style="font-family: 'Happy Monkey'">
         <div class="h-full flex flex-col mobile:flex-row justify-center items-center px-4 tablet:px-0">
             <div class="relative w-1/3 h-full grid grid-rows-3">
                 <!-- Primera fila (Imagen wooper en Avion) -->
@@ -20,7 +20,7 @@
             <div
                 class="desktop:h-[52rem] desktop:w-1/3 bg-gradient-to-b from-[#EF476F] to-[#892940] rounded-2xl p-8 tablet:w-[200rem] tablet:h-[70%] mobile:w-[1200rem] mobile:h-[48rem] mobile:my-6 desktop:px-14">
                 <h1 class="text-center text-white text-2xl mobile:text-3xl tablet:text-4xl p-2 hover:scale-110">Crear Nuevo Perfil</h1>
-                <form action="" class="w-full grid gap-6 px-4 tablet:px-6">
+                <form action="{{ route('home') }}" class="w-full grid gap-6 px-4 tablet:px-6">
                     <!-- Foto de Perfil con ícono de añadir -->
                     <div class="flex flex-col items-center">
                         <div class="relative w-20 h-20 mobile:w-28 mobile:h-28 tablet:w-28 tablet:h-28 rounded-full border-4 border-white overflow-hidden hover:scale-110">
@@ -81,7 +81,7 @@
 
                     <!-- Botón Siguiente -->
                     <div class="flex justify-center w-full">
-                        <a href="#">
+                        <a>
                             <button
                                 class="w-2/3 mobile:w-[10rem] tablet:w-[12rem] p-2 bg-[#FFD166] text-black rounded-3xl text-lg mobile:text-xl tablet:text-xl border-2 border-black shadow-md shadow-black hover:text-white hover:scale-110">
                                 Siguiente
@@ -106,4 +106,6 @@
             </div>
         </div>
     </main>
+    @yield('content') <!-- Aquí se inyectará el contenido de las vistas -->
+@include('layouts.footer')
 @endsection

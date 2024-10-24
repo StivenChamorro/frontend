@@ -6,7 +6,3 @@ btnswitch.classList.toggle('active');
 });
 
 
-const avatar = document.getElementById('avatar');
-const changeAvatar = document.getElementById('changeAvatar');
-
-avatar.addEventListener('click', () => changeAvatar.click());

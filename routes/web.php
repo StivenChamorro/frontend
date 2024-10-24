@@ -27,22 +27,20 @@ Route::get('/', function () {
 })->name('welcome');
 
 
+
 Route::get('home',[HomeController::class,'Home'])->name('home');
 Route::get('header',[HomeController::class,'Header']);
-Route::get('gamedino',[LevelController::class, 'GameDino'])->name('gamedino');
+Route::get('woopergame',[LevelController::class, 'Woopergame'])->name('woopergame');
 
 
 
 Route::get('iniciar_sesion',[LoginController::class,'store'])->name('iniciarsesion');
 Route::get('register',[RegisterController::class,'store'])->name('registro');
 Route::get('add_child',[AddChildController::class,'store'])->name('add_child');
-Route::get('add_child',[AddChildController::class,'store'])->name('add_child');
 Route::get('terms',[TermsController::class,'store'])->name('terminos');
 Route::get('profile',[ProfileController::class,'store'])->name('profile');
 
 //Rutas Tienda (HAIVE VELASCO)
-Route::get('vista_1_store',[StoreController::class,'store_view_1'])->name('view_1_store');
-Route::get('vista_2_store',[StoreController::class,'store_view_2'])->name('vista_2_store');
 Route::get('vista_3_store',[StoreController::class,'store_view_3'])->name('vista_3_store');
 
 //Ruta Logros (HAIVE VELASCO)
@@ -50,8 +48,9 @@ Route::get('vista_1_achievement',[AchievementController::class,'achievement_view
 
 //main
 //Ruta perfil padre(BRAYAN SOLARTE)
-Route::get('perfil_padre',[ProfileFatherController  ::class,'index'])->name('profile_father');
+Route::get('perfil_padre',[ProfileFatherController::class,'index'])->name('profile_father');
 //Ruta usuarios registrados(BRAYAN SOLARTE)
-Route::get('vista_usuarios',[ProfileFatherController  ::class,'index2'])->name('view_2_store_');
+Route::get('vista_usuarios',[ProfileFatherController::class,'index2'])->name('father_users');
+
 
 

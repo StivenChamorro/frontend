@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>@yield('title')</title> <!-- Sección para el título dinámico -->
-    @vite(['resources/views/layouts/css-layouts/footer.css'])
+    @vite(['resources/views/layouts/css-layouts/footer.css','resources/js/profile.js'])
 
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
