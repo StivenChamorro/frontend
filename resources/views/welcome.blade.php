@@ -21,7 +21,11 @@
     </div>
     <ul class="menu">
         <a href="{{route('iniciarsesion')}}"><li>Iniciar Sesión</li></a>
-        <a href="{{route('registro')}}"><li>Registrarse</li></a>
+        <a href="#"><li>Acerca de</li></a>
+        <a href="#"><li>Ayuda</li></a>
+        <a href="#"><li>Contacto</li></a>
+        <a href="#"><li>Terminos y condiciones</li></a>
+        <a href="#"><li>Política de privacidad</li></a>
     </ul>
 </header>
 
