@@ -8,6 +8,6 @@ class AddChildController extends Controller
 {
     public function store()
     {
-        return view('add.index');
+        return view('add.addChild');
     }
 }

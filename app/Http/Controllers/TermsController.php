@@ -28,7 +28,7 @@ class TermsController extends Controller
      */
     public function store(Request $request)
     {
-        return view('terms.index');
+        return view('terms.terms');
     }
 
     /**
