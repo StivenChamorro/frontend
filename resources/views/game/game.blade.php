@@ -1,3 +1,7 @@
+@extends('layouts.header')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +24,10 @@
         GAME OVER
         <button id="retry-button">Retry</button>
     </div>
+    
     <script src="{{asset('js/script_game.js')}}"></script>
+
 </body>
 </html>
+
+@endsection
