@@ -24,13 +24,13 @@
                 
                 <form action="" class="form-grid">
                     <div class="input-group">
-                        <label class="label">Nombre de Usuario:</label>
-                        <input type="text" class="input" placeholder="Ingresar Nombre de Usuario...">
+                        <label class="label">Nombre de Usuario</label>
+                        <input type="text" class="input" placeholder="Usuario">
                     </div>
 
                     <div class="input-group">
-                        <label class="label">Contraseña:</label>
-                        <input type="password" class="input" placeholder="Ingresar Contraseña">
+                        <label class="label">Contraseña</label>
+                        <input type="password" class="input" placeholder="Contraseña">
                     </div>
 
                     <div class="button-container">
@@ -46,7 +46,7 @@
 
                 <div class="google-button-container">
                     <button class="google-button">
-                        <i class="fab fa-google google-icon"></i>
+                        <img src="{{asset('img/img-google.png')}}" alt="" class="google-icon">
                         Continuar con Google
                     </button>
                 </div>

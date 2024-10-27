@@ -130,6 +130,7 @@ p{
     margin: 10px;
     border-radius: 20px;
     transition: 0.5s;
+    cursor: pointer;
 }
 .slider .dots li.active{
     width: 30px;
