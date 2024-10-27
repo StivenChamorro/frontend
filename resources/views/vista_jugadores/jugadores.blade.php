@@ -1,4 +1,4 @@
-@extends('layouts.header&footer')
+@extends('layouts.header1')
 @section('content')
 
 <!DOCTYPE html>
@@ -95,11 +95,12 @@
 
         </div>
     </div>
-    <script src="{{ asset('js/vista_jugadores/crear_jugador.js') }}"></script>
-    <script src="{{ asset('js/vista_jugadores/jugadores.js') }}"></script>
-<script src="{{ asset('js/vista_jugadores/visualizar.js') }}"></script>
-{{-- <script src="{{ asset('js/perfil_padre/foto_perfil.js') }}"></script> --}}
+    <script src="{{asset('js/perfil_padre/perfil_padre_oscuro.js')}}"></script>
+    <script src="{{asset('js/vista_jugadores/crear_jugador.js')}}"></script>
+    <script src="{{asset('js/vista_jugadores/visualizar.js')}}"></script>
+
     </main>
 </body>
+@include('layouts.footer')
 </html>
 @endsection
