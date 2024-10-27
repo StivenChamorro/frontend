@@ -20,7 +20,7 @@
       <h1>Wooperland</h1>
     </div>
     <ul class="menu">
-        <a href="{{route('iniciarsesion')}}"><li>Iniciar Sesión</li></a>
+        <a href="{{route('login')}}"><li>Iniciar Sesión</li></a>
         <a href="#"><li>Acerca de</li></a>
         <a href="#"><li>Ayuda</li></a>
         <a href="#"><li>Contacto</li></a>

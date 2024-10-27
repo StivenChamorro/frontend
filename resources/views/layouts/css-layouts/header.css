@@ -178,7 +178,7 @@
     transform: translateY(-20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     position: absolute;
-    top: 100px;
+    top: 50px;
     right: 1%;
     color: var(--color-text);
     z-index: 10;
@@ -281,6 +281,7 @@
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.3s ease;
+    padding-left: 38%;
   }
   
   .modal2.open {
@@ -338,6 +339,8 @@
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.3s ease;
+    padding-left: 30%;
+    padding-top: 10%;
 }
 
 .modal3.open {
@@ -507,6 +510,12 @@
     outline: none;
 }
 
+.pin-input::-webkit-outer-spin-button,
+.pin-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .pin-input:focus {
     box-shadow: 0 0 0 2px #FFD166;
 }
@@ -656,8 +665,8 @@
     }
   
     .modal {
-      top: 100px;
-      right: 5%;
+      top: 120px;
+      right: -42%;
       width: 75%;
     }
   
@@ -700,7 +709,7 @@
     }
   
     .modal {
-      top: 150px;
+      top: 120px;
       right: 2%;
       width: 300px;
     }

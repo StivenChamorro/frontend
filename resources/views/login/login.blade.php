@@ -40,7 +40,7 @@
 
                 <div>
                     <p class="register-text">¿No tienes cuenta?
-                        <a href="registro.html" class="register-link">Regístrate</a>
+                        <a href="{{route('register')}}" class="register-link">Regístrate</a>
                     </p>
                 </div>
 
