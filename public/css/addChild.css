@@ -3,14 +3,13 @@ body {
     font-family: 'Happy Monkey', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #FFD166, #F78C6B);
 }
 
 .main-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90rem;
+    padding: 3rem;
 }
 
 .content-container {
@@ -56,13 +55,17 @@ body {
 .form {
     display: grid;
     gap: 24px;
-    padding: 0 16px;
+    padding: 16px;
 }
 
 .profile-pic-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 1rem; /* Ajusta el margen superior si es necesario */
 }
+
+/* pendiente */
 
 .profile-pic {
     position: relative;
@@ -71,6 +74,7 @@ body {
     border-radius: 50%;
     border: 4px solid white;
     overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Añade sombra para dar profundidad */
 }
 
 .image {
@@ -81,10 +85,10 @@ body {
 
 .upload-icon {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 2rem;
-    height: 2rem;
+    bottom: -0.2rem; /* Ajuste para sobresalir un poco */
+    right: -0.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
     background-color: #FFD166;
     color: black;
     border-radius: 50%;
@@ -93,27 +97,37 @@ body {
     align-items: center;
     cursor: pointer;
     border: 2px solid black;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3); /* Añade sombra para un efecto de elevación */
+    font-size: 1.2rem; /* Ajusta el tamaño del icono */
+    z-index: 10;
+    transition: transform 0.2s ease; /* Añade un efecto de hover */
 }
+
+.upload-icon:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+    background-color: #F78C6B; /* Color al pasar el ratón */
+}
+
+/* pendiente */
 
 .input-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 .input-field {
-    width: 100%;
-    height: 2.5rem;
+    height: 3rem;
     border-radius: 16px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    padding: 0 16px;
+    padding: 0 13px 0 13px;
     font-size: 1.2rem;
-    transition: transform 0.2s ease;
+    transition: transform 0.1s ease;
     border: 1px solid black;
+    font-family: 'happy monkey', cursive;
 }
 
 .input-field:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 .button-container {
@@ -122,24 +136,20 @@ body {
 }
 
 .submit-button {
-    width: 8rem;
-    height: 2.5rem;
+    width: 10rem;
+    height: 3rem;
     background-color: #FFD166;
     color: black;
-    border-radius: 24px;
-    border: 2px solid black;
+    border-radius: 16px;
+    border: none;
     font-size: 1.2rem;
     transition: transform 0.2s ease;
+    font-family: 'happy monkey', cursive;
+
 }
 
 .submit-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
     color: white;
 }
 
-/* Responsive Styles */
-@media (min-width: 768px) {
-    .image-container {
-        display: block;
-    }
-}

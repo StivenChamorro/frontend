@@ -35,10 +35,10 @@ Route::get('woopergame',[LevelController::class, 'Woopergame'])->name('woopergam
 
 
 
-Route::get('login',[LoginController::class,'store'])->name('iniciarsesion');
-Route::get('register',[RegisterController::class,'store'])->name('registro');
+Route::get('login',[LoginController::class,'store'])->name('login');
+Route::get('register',[RegisterController::class,'store'])->name('register');
 Route::get('add_child',[AddChildController::class,'store'])->name('add_child');
-Route::get('terms',[TermsController::class,'store'])->name('terminos');
+Route::get('terms',[TermsController::class,'store'])->name('terms');
 Route::get('profilefather',[ProfileController::class,'store'])->name('profile');
 
 //Rutas Tienda (HAIVE VELASCO)
