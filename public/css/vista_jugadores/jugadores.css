@@ -545,6 +545,15 @@ footer{
     height: auto;
     top: 95%;
 }
+
+@media  (max-width: 2000px){
+    .agregados{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 250px 250px;
+    }
+}
+
+
 @media  (max-width: 1500px){
     .agregados{
         grid-template-columns: 1fr 1fr 1fr ;
@@ -557,8 +566,8 @@ footer{
 
 @media  (max-width: 1250px){
     aside hr{
-        left: -13%;
-        width: 380px;
+        left: -25%;
+        width: 350px;
         z-index: 4;
     }
     aside h2{
@@ -581,21 +590,20 @@ footer{
     }
     .vistas .camara{
         left: 50%;
-        width: 25px;
-        height: 25px;
-    }
-    .camara img{
-        left: 5%;
         width: 30px;
         height: 30px;
+    }
+    .camara img{
+        width: 25px;
+        height: 25px;
     }
     .agregados{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 250px  250px 250px 250px;
     }
     .menu{
-        left: 10%;
-        top: 350px;
+        left: 20%;
+        top: 220px;
     }
     .menu img{
         left: 0%;
@@ -614,11 +622,29 @@ footer{
     .cerrar p{
         display: none;
     }
-
-
+}
+@media  (max-width: 980px){
+    aside hr{
+        left: -17%;
+        width: 250px;
+        z-index: 4;
+    }
 }
 
 @media  (max-width: 860px){
+    main{
+        height: 130vh;
+    }
+    footer{
+     top: 110%;
+    }
+    aside{
+        height: 100vh;
+    }
+    section{
+        top: 20%;
+        height: 78vh;
+    }
     aside h2{
         z-index: 4;
         left: 15%;
@@ -630,9 +656,11 @@ footer{
         z-index: 4;
     }
     aside .eliminar{
+        top: 13%;
         left: 70%;
         }
     aside .agregar{
+        top: 13%;
             left: 35%;
         }
     .vistas img{
@@ -642,12 +670,19 @@ footer{
     }
     .vistas h3{
         left: 5%;
-        top: 190px;
+        top: 120px;
+        width: 100px;
+    }
+    #avatar {
+        left: 10%;
+        width: 100px;
+        height: 100px;
     }
     .camara {
-        width: 20px;
-        height: 20px;
-        top: 180px;
+        width: 30px;
+        height: 30px;
+        top: 110px;
+        left: 45%;
     }
     .camara img{
         left: 5%;
@@ -656,11 +691,12 @@ footer{
     }
     .agregados{
         left: 15%;
+        margin-top: 50px;
         grid-template-columns: 1fr;
         grid-template-rows: 250px  250px 250px 250px 250px;
     }
     .menu{
-        top: 350px;
+        top: 230px;
         left: 5%;
     }
     .menu img{

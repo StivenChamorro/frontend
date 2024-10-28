@@ -500,16 +500,15 @@ footer{
             top: 7%;
             z-index: 4;
         }
-
         .vistas h3{
-            top: 200px;
+            top: 150px;
             left: 10%;
         }
        .camara{
-            top: 120px;
-            left: 40%;
-            width: 35px;
-            height: 35px;
+            top: 130px;
+            left: 50%;
+            width: 30px;
+            height: 30px;
         }
         .camara img{
             left: 5%;
@@ -525,24 +524,22 @@ footer{
             z-index: 3;
             height: auto;
         }
-     .informacion{
+       .informacion{
         width: 90%;
         top: 0%;
-
-    }
+        }
         .adicional{
-            width: 95%;
+            width: 90%;
             gap: 30px;
             top: 30px;
         }
         .clave {
-            width: 100%;
+            width: 90%;
             top: -4%;
-            
         }
         .menu{
             left: 10%;
-            top: 350px;
+            top: 230px;
         }
         .menu img{
             left: 0%;
@@ -550,8 +547,17 @@ footer{
             height: 40px;
         }
     }
+    @media  (max-width: 1360px){
+        .clave {
+            height: auto;
+        }
+        
+        .clave i{
+            top: 68%;
+        }
+    }
 
-    @media  (max-width: 860px){
+    @media  (max-width: 1000px){
         aside h2{
             z-index: 4;
             left: 15%;
@@ -559,7 +565,7 @@ footer{
         }
         aside hr{
             top: 7%;
-            left: 0%;
+            left: -10%;
             width: 300px;
             z-index: 4;
         }
@@ -577,6 +583,7 @@ footer{
         .vistas h3{
             left: 5%;
             top: 120px;
+            width: 100px;
         }
         .camara {
             width: 30px;
@@ -625,6 +632,9 @@ footer{
             width: 100px;
             height: 38px;
             font-size: 13px;
+        }
+        .clave i{
+            top: 52%;
         }
         .clave{ 
             width: 93%;
