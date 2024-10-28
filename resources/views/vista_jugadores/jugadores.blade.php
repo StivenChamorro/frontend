@@ -52,6 +52,7 @@
         <input type="text" id="titulo" placeholder="Título" />
         <input type="text" id="contexto" placeholder="contexto" />
         <button class="agreg_btn" onclick="agregarTarjeta()">Agregar Tarjeta</button>
+        <a href="{{route('father_users')}}"><button class="back2" aria-label="Cerrar">×</button></a>
     </div>
     <aside>
         <div class="decoracion">

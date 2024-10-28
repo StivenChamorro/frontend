@@ -19,8 +19,10 @@
     <header>
         <div class="contenedor_header-store" >
             <div class="titulo_wooperland">
+                <a href="{{ route('home') }}">
                 <img class="logo1" src="{{asset('imgs/imgs_store-haiver_velasco/logo_wooperland.png')}}" alt="logo-wooperland">
                 <img class="titulo1" src="{{ asset('imgs/imgs_store-haiver_velasco/wooperland_titulo.png') }}" alt="titulo-wooperland">
+               </a>
             </div>
             <div class="input-header">
                 <input type="text" placeholder="example: wooper Superheroe" alt="input_header_wooperland" id="buscador" class="search-input">
