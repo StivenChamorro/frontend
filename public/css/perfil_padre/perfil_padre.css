@@ -189,7 +189,7 @@ z-index: 3;;
     left: 60px;
     gap: 38px;
 }
-.item{
+.item a{
     position: relative;
     display: grid;
     align-items: center;
@@ -198,12 +198,12 @@ z-index: 3;;
     grid-template-rows: 50px;
     left: 25px;
     top: 0%;
-}
+    }
 .item img{
     position: relative;
     width: 40px;
     height: 40px;
-    left: 10px;
+    margin: 0 auto;
     padding: 7px;
     background-color:#696969;
     box-shadow: 0 2px 10px -2px black ;
@@ -211,14 +211,13 @@ z-index: 3;;
 }
 .item p{
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
+    margin: 0 auto;
     width: 100%;
     height: 42px;
     font-size: 20px;
     left: 10%;
 }
+
 #perfil.item img {
     background-color: rgb(209, 43, 107);
 }
@@ -228,9 +227,10 @@ body.dark .decoracion{
 section{
     position: relative;
     top: 10px;
+    margin: 0px;
     width: 100%;
-    padding: 40px;
-    height: 90vh;
+    padding: 0px 80px 0px 80px;
+    height: auto;
     overflow: auto;
     scrollbar-width: none;
 }
@@ -421,8 +421,8 @@ body.dark .clave{
 #botonera {
     position: relative;
     display: flex;
-    gap: 10px; 
-    
+    gap: 10px;
+
 }
 #guardar, #cancelar{
     position: relative;
@@ -433,8 +433,8 @@ body.dark .clave{
 }
 .fa-solid{
     position: absolute;
-    top: 60%;
-    left: 77%;
+    top: 56%;
+    left: 78%;
     cursor: pointer;
 }
 body.dark .clave input{
@@ -485,12 +485,6 @@ body.dark .relleno{
     background-color: #2A2B2A;
     }
 
-footer{
-        position: absolute;
-        width: 94.4%;
-        height: auto;
-        top: 95%;
-    }
 
      @media  (max-width: 1560px){
         aside hr{
@@ -551,7 +545,7 @@ footer{
         .clave {
             height: auto;
         }
-        
+
         .clave i{
             top: 68%;
         }
@@ -622,7 +616,7 @@ footer{
         .usuario img{
             width: 100px;
             height: 100px;
-            
+
         }
         .informacion h2{
             font-size: 17px;
@@ -636,7 +630,7 @@ footer{
         .clave i{
             top: 52%;
         }
-        .clave{ 
+        .clave{
             width: 93%;
             height: 30vh;
             left: -5%;

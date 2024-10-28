@@ -25,22 +25,26 @@
             <div class="menu">
             <div class="item" id="perfil">
                 <a href="{{route('profile_father')}}">
-                <img src="{{ asset('img/vista_jugadores/persona.png') }}" alt="persona"></a>
-                <p>perfil</p>
+                <img src="{{ asset('img/vista_jugadores/persona.png') }}" alt="persona">
+                <p>perfil</p></a>
             </div>
 
             <div class="item" id="jugador">
+                <a href="{{route('father_users')}}">
                 <img src="{{ asset('img/vista_jugadores/jugador.png') }}" alt="jugador">
                 <p>jugadores</p>
+                </a>
             </div>
 
             <div class="item" id="home"><a href="{{route('home')}}">
-                <img src="{{ asset('img/vista_jugadores/home.png') }}" alt="home"></a>
+                <img src="{{ asset('img/vista_jugadores/home.png') }}" alt="home">
                 <p>home</p>
+            </a>
             </div>
             <div class="item"><a href="{{route('welcome')}}">
-                <img src="{{ asset('img/vista_jugadores/cerrar.png') }}" alt="cerrar"></a>
+                <img src="{{ asset('img/vista_jugadores/cerrar.png') }}" alt="cerrar">
                 <p>cerrar sesion</p>
+            </a>
             </div>
         </div>
     </div>
@@ -99,7 +103,7 @@
     <script src="{{asset('js/perfil_padre/perfil_padre_oscuro.js')}}"></script>
     <script src="{{asset('js/vista_jugadores/crear_jugador.js')}}"></script>
     <script src="{{asset('js/vista_jugadores/visualizar.js')}}"></script>
-    <script src="{{asset('js/perfil_padre/todo.js')}}"></script> 
+    <script src="{{asset('js/perfil_padre/todo.js')}}"></script>
     {{-- <script src="{{asset('js/perfil_padre/foto_perfil.js')}}"></script>  --}}
     </main>
 </body>

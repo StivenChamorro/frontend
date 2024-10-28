@@ -7,10 +7,9 @@ body{
   background-color: #282424;
   color: #ffffff;
   padding: 50px;
-  margin-top: 50px;
 }
 
-  
+
   .footer-content {
     display: flex;
     justify-content: space-between;
@@ -18,7 +17,7 @@ body{
     margin: 0 auto;
     padding: 0 20px;
   }
-  
+
   .footer-logo {
     font-family: 'Press Start 2P', cursive;
     font-size: 24px;
@@ -26,55 +25,55 @@ body{
     margin-bottom: 20px;
     text-shadow: 4px 4px #ef476f;
   }
-  
+
   .logo2{
       border-bottom: white solid 1px;
       margin-bottom: 20px;
   }
-  
+
   .social-icons {
     display: flex;
     gap: 10px;
     justify-content: center;
   }
-  
+
   .social-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
   }
-  
+
   .instagram { background: url('img-layouts/instagram.svg') no-repeat center center / cover; }
   .youtube { background: url('img-layouts/youtube.svg') no-repeat center center / cover; }
   .facebook { background: url('img-layouts/facebook.svg') no-repeat center center / cover; }
-  
+
   .footer-right h3 {
     font-size: 18px;
     margin-bottom: 10px;
   }
-  
+
   .legal{
       border-bottom: white solid 1px;
   }
-  
+
   .footer-right ul {
     list-style-type: none;
     padding: 0;
   }
-  
+
   .footer-right ul li {
     margin-bottom: 5px;
   }
-  
+
   .footer-right ul li a {
     color: #ffffff;
     text-decoration: none;
   }
-  
+
   .footer-right ul li a:hover {
     text-decoration: underline;
   }
-  
+
   .footer-bottom {
     text-align: center;
     margin-top: 20px;
@@ -82,7 +81,7 @@ body{
     border-top: 1px solid #ffffff;
     justify-content: center
   }
-  
+
   .footer-bottom p {
     font-size: 14px;
     color: #ffffff;
@@ -94,7 +93,7 @@ body{
         flex-direction: column;
         align-items: center;
     }
-  
+
     .footer-left, .footer-right {
         text-align: center;
         margin-bottom: 20px;
@@ -105,20 +104,20 @@ body{
     .footer-logo {
         font-size: 18px;
     }
-  
+
     .social-icons{
       justify-content: center;
     }
-  
+
     .social-icon {
         width: 30px;
         height: 30px;
     }
-  
+
     .footer-right h3 {
         font-size: 16px;
     }
-  
+
     .footer-bottom p {
         font-size: 12px;
     }
