@@ -423,6 +423,11 @@ body.dark .card img{
     z-index: 9;
     border-radius: 20px;
     box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
+    transition: .5s ease all;
+}
+
+body.dark .agregara.activo{
+    background-color: #31312C;
 }
 .agregara.activo input {
     position: relative;
@@ -446,8 +451,8 @@ body.dark .card img{
     position: absolute;
     width: 130px;
     height: 130px;
-    left: 135px;
-    top: 13%;
+    left: 37%;
+    top: 17%;
     z-index: 1;
     border-radius: 100px;
 }
