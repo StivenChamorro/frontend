@@ -6,18 +6,19 @@ body {
 }
 
 .main-container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 /* Header image and overlay text */
 .header-image {
-    height: 40%;
+    height: 40vh;
     width: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
+    z-index: 1;
 }
 
 .overlay-text {
@@ -39,19 +40,16 @@ body {
 }
 
 /* Gradient section and cards */
-.gradient-section {
-    background: linear-gradient(to bottom, #FFD166, #F78C6B);
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2rem;
-}
-
 .card-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: -5rem auto 0;
+    z-index: 2;
 }
 
 .profile-card, .info-card, .recent-topics-card {
@@ -63,20 +61,19 @@ body {
 }
 
 .profile-image-wrapper {
-    margin-top: -3rem;
-    margin-bottom: 1rem;
+    margin-top: -9rem;
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 2px solid white;
     object-fit: cover;
 }
 
 .profile-name {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,13 +81,12 @@ body {
 
 .profile-info {
     color: gray;
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 /* Edit buttons */
 .edit-icon {
     font-size: 1rem;
-    color: #EF476F;
     cursor: pointer;
     margin-left: 0.5rem;
 }
@@ -144,6 +140,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 .modal-content {
@@ -190,4 +187,80 @@ body {
 
 .hidden {
     display: none;
+}
+
+/* Responsive Design */
+
+/* Small mobile devices (up to 480px) */
+@media screen and (max-width: 480px) {
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-name {
+        font-size: 1.25rem;
+    }
+
+    .profile-info {
+        font-size: 0.875rem;
+    }
+
+    .card-container {
+        gap: 1rem;
+    }
+}
+
+/* Large mobile devices and small tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Large tablets and small desktops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .recent-topics-card {
+        grid-column: span 2;
+    }
+}
+
+/* Large desktops (1025px and above) */
+@media screen and (min-width: 1025px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr 1.5fr;
+        gap: 3rem;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .header-subtitle {
+        font-size: 2.5rem;
+    }
 }

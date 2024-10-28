@@ -18,12 +18,12 @@
 
 <body>
     <header>
+        <a href="{{ route('home') }}">
         <div class="logo-container">
             <img class="img-logo" src="{{ asset('imgs/imagenes_home/logo.png') }}" alt="">
-            <a href="{{ route('home') }}">
                 <div class="logo">WOOPERLAND</div>
-            </a>
         </div>
+        </a>
 
         <nav class="nav-container">
 
@@ -74,7 +74,7 @@
                 <div class="modal-options">
                     <ul>
                         <li>
-                            <a href= "{{ route('profile') }}"> 
+                            <a href= "{{ route('Myprofile')}}"> 
                                 <img src="{{ asset('imgs/imagenes_home/profile-icon.svg') }}" alt=""class="profile-icon"> Tu Perfil
                             </a>
                         </li>
@@ -135,7 +135,7 @@
                         <input type="number" maxlength="1" class="pin-input" data-index="2">
                         <input type="number" maxlength="1" class="pin-input" data-index="3">
                     </div>
-                    <a href=""><button class="accept">Ingresar</button></a>
+                    <a href="{{route('profile_father')}}"><button class="accept">Ingresar</button></a>
                     <button class="back2" aria-label="Cerrar">×</button>
                 </div>
             </div>

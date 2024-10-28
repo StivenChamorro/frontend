@@ -33,9 +33,11 @@
                         <input type="password" class="input" placeholder="Contraseña">
                     </div>
 
+                    
                     <div class="button-container">
-                        <button class="submit-button">Iniciar Sesión</button>
+                        <a href="{{route('home')}}"><button class="submit-button">Iniciar Sesión</button> </a>
                     </div>
+                   
                 </form>
 
                 <div>

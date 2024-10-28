@@ -30,16 +30,12 @@ Route::get('/', function () {
 
 Route::get('home',[HomeController::class,'Home'])->name('home');
 Route::get('header',[HomeController::class,'Header']);
-Route::get('header1',[HomeController::class,'header1']);
 Route::get('woopergame',[LevelController::class, 'Woopergame'])->name('woopergame');
-
-
-
 Route::get('login',[LoginController::class,'store'])->name('login');
 Route::get('register',[RegisterController::class,'store'])->name('register');
 Route::get('add_child',[AddChildController::class,'store'])->name('add_child');
 Route::get('terms',[TermsController::class,'store'])->name('terms');
-Route::get('profilefather',[ProfileController::class,'store'])->name('profile');
+Route::get('profilechildren',[ProfileController::class,'store'])->name('Myprofile');
 
 //Rutas Tienda (HAIVE VELASCO)
 Route::get('vista_3_store',[StoreController::class,'store_view_3'])->name('vista_3_store');
