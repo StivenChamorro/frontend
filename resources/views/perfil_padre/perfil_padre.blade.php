@@ -1,4 +1,4 @@
-@extends('layouts.header&footer')
+@extends('layouts.header1')
 @section('content')
 
 <!DOCTYPE html>
@@ -119,10 +119,13 @@
     </aside>
 
 </main>
+
 </body>
-<script src="{{asset('js/perfil_padre/foto_perfil.js')}}"></script>
 <script src="{{ asset('js/perfil_padre/perfil_padre_oscuro.js') }}"></script>
-<script src="{{ asset('js/perfil_padre/desplegable.js') }}"></script>
-<script src="{{ asset('js/perfil_padre/contraseña.js') }}"></script>
+<script src="{{asset('js/perfil_padre/todo.js')}}"></script> 
+<script src="{{asset('js/perfil_padre/foto_perfil.js')}}"></script> 
+
+@include('layouts.footer')
 </html>
+
 @endsection

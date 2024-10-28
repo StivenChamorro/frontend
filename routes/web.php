@@ -52,6 +52,8 @@ Route::get('vista_1_achievement',[AchievementController::class,'achievement_view
 Route::get('perfil_padre',[ProfileFatherController::class,'index'])->name('profile_father');
 //Ruta usuarios registrados(BRAYAN SOLARTE)
 Route::get('vista_usuarios',[ProfileFatherController::class,'index2'])->name('father_users');
+//Ruta plantilla del nivel de matematicas(BRAYAN SOLARTE)
+Route::get('vista_niveles',[HomeController::class,'nivel1'])->name('view_lelvel');
 
 
 

@@ -37,8 +37,8 @@ header{
     overflow: hidden;
 }
 .fondomatematicas img{
-    width: 1000px;
-    height: 350px;
+    width: 100%;
+    height: auto;
 }
 
 .informacion{
@@ -46,38 +46,89 @@ header{
     font-family: 'Happy Monkey', 'Happy Monkey';
     display: flex;
     align-items: start;
-    justify-content: start;
+    justify-content: center;
     flex-direction: column;
-    width: auto;
-    height: 250px;
+    width: 70%;
+    height: 400px;
+    margin: 0 auto;
     padding: 80px;
+    gap: 20px;
 }
 .informacion h2{
     color: #ff3665;
+    font-size: 24px;
+    font-weight: bold;
+}
+.informacion p{
+    position: relative;
+    font-size: 16px;
+    width: 95%;
+    margin: 0 auto;
 }
 .informacion hr{
     width: 100%;
     height: 1px;
-    border-color: solid black;
+    border-color:  black;
 }
 .nivel{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;
-    height:670px ;
+    width: 100%;
+    height:auto ;
     background-color: #B43654;
 }
-.nivel img{
-    width: 60%;
-    height: 100%;
+.tierra{
+    width: 1303px;
+    height: auto;
     box-shadow: 0 10px 0px -10px black ;
 }
-
+.recorrido{
+    position: absolute;
+    width: 703px;
+    height: auto;
+    left: 27%;
+    z-index: 1;
+}
+.pixel1{
+    position: absolute;
+    top: 58%;
+    left: 27%;
+    width: 157px;
+    height: auto;
+    cursor: pointer;
+    transition: .2s ease all;
+    z-index: 3;
+}
+.nivel1{
+    position: absolute;
+    top: 55%;
+    left: 43%;
+    width: 170px;
+    height: auto;
+    cursor: pointer;
+    z-index: 2;
+}
+.nivel2_bloqueado{
+    position: absolute;
+    top: 20%;
+    left: 43%;
+    width: 170px;
+    height: auto;
+    cursor: pointer;
+    z-index: 2;
+}
+.nivel3_bloqueado{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    width: 170px;
+    height: auto;
+    cursor: pointer;
+    z-index: 2;
+}
 .relleno{
     width: auto;
     height: 200px;
 }
-
-

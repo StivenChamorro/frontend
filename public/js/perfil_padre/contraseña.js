@@ -30,8 +30,8 @@
 
     document.getElementById('cambiar').addEventListener('click', function() {
         // Mostrar botones de guardar y cancelar
-        document.getElementById('guardar').style.display = 'inline-block';
-        document.getElementById('cancelar').style.display = 'inline-block';
+        document.getElementById('guardar').style.display = 'block';
+        document.getElementById('cancelar').style.display = 'block';
         this.style.display = 'none';  // Ocultar el botón cambiar
 
         // Habilitar campos para edición
@@ -54,7 +54,7 @@
         // Ocultar botones de guardar y cancelar
         this.style.display = 'none';
         document.getElementById('cancelar').style.display = 'none';
-        document.getElementById('cambiar').style.display = 'inline-block'; // Mostrar el botón cambiar nuevamente
+        document.getElementById('cambiar').style.display = 'block'; // Mostrar el botón cambiar nuevamente
         document.getElementById('clave').classList.remove('activo');
     });
 
@@ -66,7 +66,7 @@
         // Ocultar botones de guardar y cancelar
         document.getElementById('guardar').style.display = 'none';
         this.style.display = 'none';
-        document.getElementById('cambiar').style.display = 'inline-block'; // Mostrar el botón cambiar nuevamente
+        document.getElementById('cambiar').style.display = 'block'; // Mostrar el botón cambiar nuevamente
 
         // Deshabilitar los campos
         document.getElementById('nombre').setAttribute('disabled', true);

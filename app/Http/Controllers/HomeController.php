@@ -17,6 +17,11 @@ class HomeController extends Controller
     function header1(){
         return view('layouts.header1');
     }
+
+    public function nivel1()
+    {
+        return view('layouts.nivel1');
+    }
 }
 
 
