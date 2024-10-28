@@ -425,6 +425,17 @@ body.dark .card img{
     box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
     transition: .5s ease all;
 }
+.agregara.activo .back2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: none;
+    background-color: #FFCE5E;
+  }
 
 body.dark .agregara.activo{
     background-color: #31312C;
