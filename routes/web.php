@@ -29,7 +29,7 @@ Route::get('/', function () {
 
 
 Route::get('home',[HomeController::class,'Home'])->name('home');
-Route::get('header',[HomeController::class,'Header']);
+Route::get('header1',[HomeController::class,'Header']);
 Route::get('woopergame',[LevelController::class, 'Woopergame'])->name('woopergame');
 Route::get('login',[LoginController::class,'store'])->name('login');
 Route::get('register',[RegisterController::class,'store'])->name('register');

@@ -11,11 +11,11 @@ class HomeController extends Controller
     }
 
     function Header(){
-        return view('layouts.header');
+        return view('layouts.header1');
     }
 
-    function header1(){
-        return view('layouts.header1');
+    function Footer(){
+        return view('layouts.footer');
     }
 
     public function nivel1()
