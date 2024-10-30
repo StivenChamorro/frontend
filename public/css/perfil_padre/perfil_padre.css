@@ -129,7 +129,7 @@ span img{
 .vistas{
     position: absolute;
     width: 25%;
-    height: 110vh;
+    height: 90vh;
 }
 .vistas h3{
     position: relative;
@@ -163,7 +163,7 @@ span img{
     width: 35px;
     height: 35px;
     padding: 6px;
-    left: 40%;
+    left: 42%;
     top: 130px;
     border: 1px solid black;
     background-color: rgb(209, 43, 107);
@@ -174,8 +174,8 @@ span img{
 }
 .camara img{
 position: relative;
-width: 21px;
-height: 21px;
+width: 22px;
+height: 22px;
 z-index: 3;;
 }
 .menu{
@@ -199,26 +199,35 @@ z-index: 3;;
     left: 25px;
     top: 0%;
     }
+.img{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: 7px;
+        background-color:#696969;
+        box-shadow: 0 2px 10px -2px black ;
+        border-radius: 100%;
+    }
 .item img{
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     margin: 0 auto;
-    padding: 7px;
-    background-color:#696969;
-    box-shadow: 0 2px 10px -2px black ;
-    border-radius: 100px;
 }
 .item p{
     position: relative;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     width: 100%;
     height: 42px;
     font-size: 20px;
     left: 10%;
 }
-
-#perfil.item img {
+#perfil.item .img {
     background-color: rgb(209, 43, 107);
 }
 body.dark .decoracion{
@@ -226,11 +235,9 @@ body.dark .decoracion{
 }
 section{
     position: relative;
-    top: 10px;
-    margin: 0px;
     width: 100%;
     padding: 0px 80px 0px 80px;
-    height: auto;
+    height: 77vh;
     overflow: auto;
     scrollbar-width: none;
 }
@@ -239,9 +246,9 @@ section{
     justify-content: center;
     position: relative;
     width: 90%;
-    height: 77vh;
+    height: auto;
     gap: 70px;
-    margin: 30px;
+    margin: 10px;
 }
 .informacion.activo img{
     display: block;
@@ -249,7 +256,7 @@ section{
     top: -30px;
 }
 .informacion.activo {
-    grid-template-rows: 40px 130px 35px 35px 5px 5px 35px 35px 5px 5px 35px 35px 5px 5px 35px 35px 5px 5px 50px;
+    grid-template-rows: 40px 100px 35px 35px 5px 5px 35px 35px 5px 5px 35px 35px 5px 5px 35px 35px 5px 5px 50px;
 }
 .informacion img{
     display: none;
@@ -290,7 +297,7 @@ section{
 .informacion{
     position: relative;
     display: grid;
-    grid-template-rows: 40px 130px 35px 35px 5px 35px 35px 5px 35px 35px 5px 35px 35px 40px;
+    grid-template-rows: 40px 100px 35px 35px 5px 35px 35px 5px 35px 35px 5px 35px 35px 40px;
     width: 90%;
     height: 65vh;
     border-radius: 40px;
@@ -325,7 +332,7 @@ body.dark .informacion.activo input{
     position: relative;
     font-size: 22px;
     width: 260px;
-    margin: 10px auto;
+    margin: 0px auto;
 }
 .informacion p{
     position: relative;
@@ -359,7 +366,7 @@ body.dark .informacion hr{
 .adicional{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     position: relative;
     width: 100%;
     height: 90vh;
@@ -370,7 +377,6 @@ body.dark .informacion hr{
     flex-direction: column;
     position: relative;
     width: auto;
-    left: 40px;
     height: 28vh;
     background-color:rgb(224, 171, 36);
     border-radius: 40px;
@@ -389,11 +395,9 @@ body.dark .clave{
     }
 .clave h3{
     position: relative;
-    display: flex;
-    align-items: center;
-    left: 30%;
-    width: 60%;
-    height: auto;
+    width: 260px;
+    height: 30px;
+    margin: 0px auto;
     font-size: 22px;
 }
 .clave h4{
@@ -408,8 +412,9 @@ body.dark .clave{
 .clave input{
     position: relative;
     width: 80%;
-    height: 35px;
+    height: 20px;
     top: 30%;
+    padding: 10px;
     border-radius: 8px;
     background-color:rgb(224, 171, 36);
     font-family: 'Happy Monkey', 'Happy Monkey';
@@ -433,7 +438,7 @@ body.dark .clave{
 }
 .fa-solid{
     position: absolute;
-    top: 56%;
+    top: 49%;
     left: 78%;
     cursor: pointer;
 }
@@ -476,7 +481,6 @@ body.dark .clave button{
     position: relative;
     width: 100%;
     height: 34vh;
-    left: 40px;
     background-color:rgb(224, 171, 36);
     border-radius: 40px;
     z-index: 2;
@@ -486,89 +490,46 @@ body.dark .relleno{
     }
 
 
-     @media  (max-width: 1560px){
+     @media  (max-width: 1440px){
         aside hr{
             position: relative;
-            left: -22%;
+            left: -24%;
             width: 35%;
             top: 7%;
             z-index: 4;
         }
         .vistas h3{
             top: 150px;
-            left: 10%;
+            left: 13%;
         }
        .camara{
-            top: 130px;
             left: 50%;
-            width: 30px;
-            height: 30px;
-        }
-        .camara img{
-            left: 5%;
-            width: 25px;
-            height: 25px;
-        }
+       }
         .decoracion{
             height: 500px;
             top: -100px;
-        }
-        .perfil{
-            width: 90%;
-            z-index: 3;
-            height: auto;
-        }
-       .informacion{
-        width: 90%;
-        top: 0%;
-        }
-        .adicional{
-            width: 90%;
-            gap: 30px;
-            top: 30px;
-        }
-        .clave {
-            width: 90%;
-            top: -4%;
         }
         .menu{
             left: 10%;
             top: 230px;
         }
-        .menu img{
-            left: 0%;
-            width: 40px;
-            height: 40px;
-        }
-    }
-    @media  (max-width: 1360px){
-        .clave {
-            height: auto;
-        }
-
         .clave i{
-            top: 68%;
+            top: 53%;
+            left: 80%;
         }
     }
-
-    @media  (max-width: 1000px){
+    @media  (max-width: 1024px){
         aside h2{
             z-index: 4;
-            left: 15%;
+            left: 10%;
             font-size: 35px;
         }
         aside hr{
             top: 7%;
-            left: -10%;
+            left: -18%;
             width: 300px;
             z-index: 4;
         }
-        section{
-            display: grid;
-            grid-template-columns: 1fr ;
-            height: auto;
-            width: 90%;
-            }
         #avatar {
             left: 10%;
             width: 100px;
@@ -583,23 +544,12 @@ body.dark .relleno{
             width: 30px;
             height: 30px;
             top: 110px;
-            left: 45%;
+            left: 40%;
         }
         .camara img{
             left: 5%;
             width: 20px;
             height: 20px;
-        }
-        .perfil{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-            height: 100vh;
-            width: 90%;
-        }
-        .informacion{
-            width: 85%;
-            height: 80vh;
         }
         .informacion p{
             font-size: 13px;
@@ -613,13 +563,19 @@ body.dark .relleno{
             width: 20px;
             height: 20px;
         }
+        .usuario{
+            height: 90px;
+        }
         .usuario img{
-            width: 100px;
-            height: 100px;
-
+            width: 80px;
+            height: 80px;
         }
         .informacion h2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 17px;
+            margin: 0px;
         }
         .informacion button{
             top: -3%;
@@ -627,47 +583,142 @@ body.dark .relleno{
             height: 38px;
             font-size: 13px;
         }
-        .clave i{
-            top: 52%;
-        }
         .clave{
-            width: 93%;
-            height: 30vh;
-            left: -5%;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 30px 150px 50px;
+
+        }
+         .formulario{
+                display: grid;
+                grid-template-columns: 70%;
+                grid-template-rows: 30px 40px 30px 40px;
+        }
+        .clave i{
+            top: 61%;
+            left: 70%;
+        }
+        .clave input{
+            width: 200px;
         }
         .clave h4{
             font-size: 13px;
+            left: 0%;
+            top: 10px;
         }
         .clave h3{
-            font-size: 15px;
+            font-size: 17px;
+        }
+
+        .clave button{
+            width: 100px;
+            height: 38px;
+        }
+        .clave p{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 37px;
+            margin: 0px;
+        }
+
+        .menu .item p{
+            display: none;
+        }
+    }
+    @media(max-width: 768px){
+        .perfil{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            height: 50vh;
+            z-index: 3;
+        }
+        .usuario h2{
+            justify-content: start;
+            left: 10%;
+        }
+        .usuario img{
+            width: 100px;
+            height: 100px;
         }
         .relleno{
             display: none;
         }
-        .clave button{
-            width: 100px;
-            height: 38px;
-            font-size: 13px;
+        .formulario{
+            display: grid;
+            grid-template-columns: 35% 65%;
+            grid-template-rows: 66px 66px;
+        }
+        .formulario h4{
+            left: 20%;
+        }
+        .formulario input{
+            width: 250px;
+        }
+        .clave i{
+            top: 53%;
+            left: 80%;
+        }
+    }
+    @media(max-width: 425px){
+        main{
+            width: 100%;
+            height: 130vh;
+        }
+        .vistas{
+            width: 100%;
+            height: 30%;
+        }
+        #avatar{
+            left: 35%;
+            top: 20px;
+            width: 130px;
+            height: 130px;
+        }
+        .vistas .camara{
+            top: 120px;
+            left: 58%;
+            width: 40px;
+            height: 40px;
+        }
+        .camara img{
+            width: 25px;
+            height: 25px;
+        }
+        .vistas h3{
+            left: 27%;
+            top:140px ;
+            width: 140px;
         }
         .menu{
-            top: 230px;
-            left: 5%;
+            position: absolute;
+            display: grid;
+            grid-template-columns: 60px 60px 60px 70px;
+            grid-template-rows: 90px;
+            top: 25vh;
+            gap: 20px;
         }
-        .menu img{
-            left: 0%;
-            width: 40px;
-            height: 40px;
+        .item{
+            width: 60px;
+            height: 60px;
+            left: 0px;
         }
-        .menu .item p{
-            display: none;
+        .item a{
+            grid-template-columns: 60px;
+            grid-template-rows: 60px;
         }
-        .cerrar img {
-            top: -200px;
-            left: 5%;
-            width: 40px;
-            height: 40px;
-           }
-           .cerrar p{
-               display: none;
-           }
+        .item .img{
+            left: 0px;
+        }
+        aside{
+            width: 100%;
+            top: 30%;
+        }
+        aside hr{
+            width: 200px;
+            left: -10%;
+        }
+        
+
     }
