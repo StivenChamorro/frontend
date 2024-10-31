@@ -25,12 +25,12 @@
                 <form action="" class="form-grid">
                     <div class="input-group">
                         <label class="label">Nombre de Usuario</label>
-                        <input type="text" class="input" placeholder="Usuario">
+                        <input type="text" class="input" placeholder="  Usuario">
                     </div>
 
                     <div class="input-group">
                         <label class="label">Contraseña</label>
-                        <input type="password" class="input" placeholder="Contraseña">
+                        <input type="password" class="input" placeholder="  Contraseña">
                     </div>
 
                     

@@ -8,6 +8,6 @@ class RegisterController extends Controller
 {
     public function store()
     {
-        return view('register.register');
+        return view('register');
     }
 }
