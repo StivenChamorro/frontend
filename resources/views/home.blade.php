@@ -1,22 +1,14 @@
 @extends('layouts.header')
 
+@section('custom_css')
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/home.css')}}">
+
+@endsection
+
 @section('content')
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-
-    <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="{{ asset('css/homestyle/style.css')}}">
-
-    <link rel="icon" href="{{ asset('iconWooper.ico') }}" type="image/x-icon">
-
-</head>
 <body>
 
     <section class="hero">
@@ -150,7 +142,6 @@
     @include('layouts.footer')
 
 </body>
-</html>
 
 @endsection
 

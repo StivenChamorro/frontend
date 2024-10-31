@@ -14,7 +14,6 @@ body {
   margin: 0;
   min-height: 100vh;
 }
-
 header {
   background-color: var(--color-primary);
   color: var(--color-text);
@@ -99,6 +98,7 @@ header a{
   align-items: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  padding: 5px 10px;
 }
 
 .button-profile:hover,
@@ -555,6 +555,16 @@ height: auto;
 
 /* Estilos responsivos */
 @media screen and (max-width: 600px) {
+  .logo-container{
+    gap: 1rem;
+  }
+  .logo{
+    font-size: small;
+  }
+  .img-logo{
+    width: 3rem;
+    height: 3rem;
+  }
   .nav-button {
     font-size: 14px;
     padding: 8px 15px;
