@@ -1,18 +1,16 @@
 @extends('layouts.header')
 
-@section('content')
+@section('custom_css')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/game/game.css')}}">
-    <title>Wooper Game</title>
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{asset('css/game/game.css')}}">
+
+@endsection
+
+
+@section('content')
 <body>
+    <div class="container1">
     <div class="contenedor">
         <div class="suelo"></div>
         <div class="dino dino-corriendo"></div>
@@ -24,10 +22,10 @@
         GAME OVER
         <button id="retry-button">Retry</button>
     </div>
+    </div>
     
     <script src="{{asset('js/script_game.js')}}"></script>
 
 </body>
-</html>
 
 @endsection

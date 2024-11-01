@@ -5,12 +5,26 @@
 
 body {
     height: 100vh;
+    background: linear-gradient(180deg, #FFD166 50.13%, #F78D6B 90%); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B43654;
+    margin-bottom: 5rem;
+  }
+
 .contenedor {
+    border-left: 60px solid #8E243D;
+    border-right: 60px solid #8E243D;
+    border-radius: 16px;
     width: 920px;
     height: 500px;
-    margin: 15vh auto 0 auto;
     
     position: relative;
 

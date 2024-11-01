@@ -1,16 +1,14 @@
 @extends('layouts.header')
+
+@section('custom_css')
+
+<link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
+@vite(['resources/views/layouts/css-layouts/nivel1.css', 'resources/js/animate.js'])
+
+@endsection
+   
 @section('content')
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matemáticas para Niños</title>
-    <script src="https://kit.fontawesome.com/58965c32f8.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    @vite(['resources/views/layouts/css-layouts/nivel1.css', 'resources/js/animate.js'])
-</head>
 <body>
     <section class="hero">
         <div class="fondomatematicas">
@@ -29,10 +27,10 @@
 
     <section id="nivel" class="nivel">
         <div id="quiz-container" class="quiz-container">
-            <header>
+            <header class="header-quiz">
                 <div class="question-counter">1 de 10</div>
                 <button class="pause-button" aria-label="Pausar">
-                    <img src="{{ asset('imgs/icon-pause.svg') }}" alt="" class="pause-icon" />
+                    <img src="{{ asset('img/niveles/icon-pause.png') }}" alt="" class="pause-icon" />
                 </button>
             </header>
             <main>
@@ -53,7 +51,7 @@
                 <div class="container-button">
                     <button class="help-button" aria-label="Ayuda">?</button>
                     <button class="audio-button" aria-label="Audio">
-                        <img class="audio-img" src="{{ asset('imgs/audio-icon.svg') }}" alt="" />
+                        <img class="audio-img" src="{{asset('img/niveles/audio-icon.png')}}" alt="" />
                     </button>
                 </div>
                 <div class="timer">Tiempo: 00:00</div>
@@ -65,8 +63,8 @@
     <div class="relleno"></div>
 
     <script src="{{ asset('js/nivel1.js') }}"></script>
-    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 </body>
-</html>
+
 @include('layouts.footer')
+
 @endsection
