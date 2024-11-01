@@ -68,12 +68,12 @@ body, html {
 .input {
     height: 2.5rem;
     width: 100%;
-    border-radius: 0.5rem;
+    border-radius: 16px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0 0rem;
     font-size: 1rem;
     font-family: 'Happy Monkey', cursive;
-    border: 1px solid black;
+    border: none;
     transition: transform 0.2s;
 }
 
@@ -92,7 +92,7 @@ body, html {
     padding: 0.8rem;
     background-color: #FFD166;
     color: black;
-    border-radius: 0.5rem;
+    border-radius: 16px;
     font-size: 1rem;
     border: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -141,7 +141,7 @@ body, html {
     height: 2.5rem;
     background-color: white;
     color: black;
-    border-radius: 0.5rem;
+    border-radius:16px;
     font-size: 1rem;
     font-family: 'Happy Monkey', cursive;
     border: none;

@@ -107,13 +107,14 @@ const questions = [
     }
 ];
 
-
-
 let currentQuestionIndex = 0;
 let selectedAnswer = null;
 let score = 0;
 let timerInterval;
 let startTime;
+
+let correctAnswersCount = 0;
+let incorrectAnswersCount = 0;
 
 // Función para reproducir texto en audio
 function playAudio(text) {
@@ -160,15 +161,18 @@ function selectAnswer(button) {
     const question = questions[currentQuestionIndex];
     const isCorrect = selectedAnswer === question.correctAnswer;
 
-    button.classList.add(isCorrect ? 'bg-green-500' : 'bg-red-500');
-    document.querySelector('.question-bubble').classList.add(isCorrect ? 'bg-green-200' : 'bg-red-200');
-
+    // Contar respuestas correctas e incorrectas
     if (isCorrect) {
+        correctAnswersCount++;
         score += question.score;
+    } else {
+        incorrectAnswersCount++;
     }
 
+    // Desactivar los botones de respuesta
     document.querySelectorAll('.answer-button').forEach(btn => btn.disabled = true);
 
+    // Mostrar el botón de siguiente pregunta o finalizar el quiz
     if (currentQuestionIndex < questions.length - 1) {
         document.querySelector('.next-button').style.display = 'block';
     } else {
@@ -198,25 +202,28 @@ function stopTimer() {
 }
 
 
-
-// Function to end the quiz
+// Function to end the quiz with correct and incorrect answers count
 function endQuiz() {
     stopTimer();
     const quizContainer = document.querySelector('.quiz-container');
     const finalTime = document.querySelector('.timer').textContent.slice(7); // Remove "Tiempo: " prefix
     quizContainer.innerHTML = `
-        <h2>Quiz Terminado</h2>
-        <p>Tu puntuación final es: ${score} / ${questions.length * 100}</p>
-        <p>Tiempo total: ${finalTime}</p>
-        <button class="restart-button">Reiniciar Quiz</button>
-    `;
+        <div class="quiz-end-screen">
+            <h2 class="quiz-end-title">Quiz Terminado</h2>
+            <p class="quiz-score">Tu puntuación final es: ${score} / ${questions.length * 100}</p>
+            <p class="quiz-time">Tiempo total: ${finalTime}</p>
+            <p class="quiz-results">Respuestas correctas: ${correctAnswersCount} | Respuestas incorrectas: ${incorrectAnswersCount}</p>
+            <button class="restart-button">Reiniciar Quiz</button>
+        </div>`;
     document.querySelector('.restart-button').addEventListener('click', restartQuiz);
 }
 
-// Function to restart the quiz
+// Function to restart the quiz and reset counters
 function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;
+    correctAnswersCount = 0;
+    incorrectAnswersCount = 0;
     shuffleArray(questions);
     const quizContainer = document.querySelector('.quiz-container');
     quizContainer.innerHTML = `
@@ -251,7 +258,6 @@ function restartQuiz() {
     `;
     initializeQuiz();
 }
-
 
 
 // Function to initialize the quiz
@@ -290,3 +296,5 @@ window.addEventListener('load', () => {
     shuffleArray(questions);
     initializeQuiz();
 });
+
+
