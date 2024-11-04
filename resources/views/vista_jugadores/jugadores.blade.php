@@ -16,37 +16,49 @@
 <body>
     <main id="principal">
     <div class="vistas">
-        <h3>John Smith</h2>
+        <h3>John Smith</h3>
             <input type="file" id="inputFoto" accept="image/*" />
             <button class="camara" onclick="cargarFoto()">
                 <img src="{{ asset('img/perfil_padre/camara.png') }}" alt="camara">
             </button>
             <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
             <div class="menu">
-            <div class="item" id="perfil">
-                <a href="{{route('profile_father')}}">
-                <img src="{{ asset('img/vista_jugadores/persona.png') }}" alt="persona">
-                <p>perfil</p></a>
-            </div>
+                <div class="item" id="perfil">
+                    <a href="{{route('profile_father')}}">
+                        <div class="img">
+                    <img src="{{ asset('img/vista_jugadores/persona.png') }}" alt="persona">
+                        </div>
+                    <p>perfil</p>
+                    </a>
+                </div>
 
-            <div class="item" id="jugador">
-                <a href="{{route('father_users')}}">
-                <img src="{{ asset('img/vista_jugadores/jugador.png') }}" alt="jugador">
-                <p>jugadores</p>
+                <div class="item" id="jugador">
+                    <a href="{{route('father_users')}}">
+                    <div class="img">
+                    <img src="{{ asset('img/vista_jugadores/jugador.png') }}" alt="jugador">
+                    </div>
+                    <p>jugadores</p>
                 </a>
-            </div>
+                </div>
 
-            <div class="item" id="home"><a href="{{route('home')}}">
-                <img src="{{ asset('img/vista_jugadores/home.png') }}" alt="home">
-                <p>home</p>
-            </a>
+                <div class="item" id="home"><a href="{{route('home')}}">
+                    <div class="img">
+                    <img src="{{ asset('img/vista_jugadores/home.png') }}" alt="home">
+                    </div>
+                    <p>home</p>
+                </a>
+                </div>
+
+                <div class="item">
+                    <a href="{{route('welcome')}}">
+                        <div class="img">
+                    <img src="{{ asset('img/perfil_padre/cerrar.png') }}" alt="cerrar">
+                        </div>
+                    <p>cerrar sesion</p>
+                </a>
+                </div>
+
             </div>
-            <div class="item"><a href="{{route('welcome')}}">
-                <img src="{{ asset('img/vista_jugadores/cerrar.png') }}" alt="cerrar">
-                <p>cerrar sesion</p>
-            </a>
-            </div>
-        </div>
     </div>
     <div class="agregara" id="agregara">
         <h1>Agregar jugador</h1>

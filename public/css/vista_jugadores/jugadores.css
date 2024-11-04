@@ -223,7 +223,7 @@ span img{
     width: 35px;
     height: 35px;
     padding: 6px;
-    left: 40%;
+    left: 42%;
     top: 130px;
     border: 1px solid black;
     background-color: rgb(209, 43, 107);
@@ -234,8 +234,8 @@ span img{
 }
 .camara img{
 position: relative;
-width: 21px;
-height: 21px;
+width: 22px;
+height: 22px;
 z-index: 3;;
 }
 .menu{
@@ -259,6 +259,18 @@ z-index: 3;;
     left: 25px;
     top: 0%;
     }
+.img{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    background-color:#696969;
+    box-shadow: 0 2px 10px -2px black ;
+    border-radius: 100%;
+}
 .item img{
     position: relative;
     width: 40px;
@@ -271,7 +283,9 @@ z-index: 3;;
 }
 .item p{
     position: relative;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     width: 100%;
     height: 42px;
     font-size: 20px;
@@ -564,13 +578,21 @@ box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
 }
 
 
-@media  (max-width: 1500px){
+@media  (max-width: 1440px){
     .agregados{
         grid-template-columns: 1fr 1fr 1fr ;
         grid-template-rows: 250px  250px 250px;
     }
+    .camara{
+        left: 50%;
+   }
+   .vistas h3{
+    top: 150px;
+    left: 13%;
+}
     .menu{
         left: 10%;
+        top: 230px;
     }
 }
 
@@ -595,33 +617,24 @@ box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
         width: 120px;
         height: 120px;
     }
-    .vistas h3{
-        left: 10%;
-    }
-    .vistas .camara{
+    .camara{
         left: 50%;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
     }
     .camara img{
-        width: 25px;
-        height: 25px;
+        left: 5%;
+        width: 20px;
+        height: 20px;
     }
     .agregados{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 250px  250px 250px 250px;
     }
-    .menu{
-        left: 20%;
-        top: 220px;
-    }
     .menu img{
         left: 0%;
         width: 40px;
         height: 40px;
-    }
-    .menu .item p{
-        display: none;
     }
     .cerrar img {
         top: -200px;
@@ -633,37 +646,51 @@ box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
         display: none;
     }
 }
-@media  (max-width: 980px){
-    aside hr{
-        left: -17%;
-        width: 250px;
-        z-index: 4;
-    }
-}
-
-@media  (max-width: 860px){
+@media  (max-width: 1024px){
     main{
-        height: 130vh;
-    }
-    footer{
-     top: 110%;
+        height: 110vh;
     }
     aside{
         height: 100vh;
     }
-    section{
-        top: 20%;
-        height: 78vh;
-    }
     aside h2{
         z-index: 4;
-        left: 15%;
+        left: 10%;
         font-size: 35px;
     }
     aside hr{
-        left: 0%;
+        top: 7%;
+        left: -18%;
         width: 300px;
         z-index: 4;
+    }
+    #avatar {
+        left: 10%;
+        width: 100px;
+        height: 100px;
+    }
+    .vistas h3{
+        left: 5%;
+        top: 120px;
+        width: 100px;
+    }
+    .camara {
+        width: 30px;
+        height: 30px;
+        top: 110px;
+        left: 40%;
+    }
+    .camara img{
+        left: 5%;
+        width: 20px;
+        height: 20px;
+    }
+    .menu .item p{
+        display: none;
+    }
+    section{
+        top: 20%;
+        height: 78vh;
     }
     aside .eliminar{
         top: 13%;
@@ -673,6 +700,22 @@ box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
         top: 13%;
             left: 35%;
         }
+}
+
+@media  (max-width: 768px){
+    footer{
+     top: 110%;
+    }
+    aside h2{
+        z-index: 4;
+        left: 15%;
+        font-size: 35px;
+    }
+    aside hr{
+        left: -5%;
+        width: 300px;
+        z-index: 4;
+    }
     .vistas img{
         left: 10%;
         width: 100px;
@@ -726,6 +769,88 @@ box-shadow: 0 2px 10px -2px rgb(110, 110, 110) ;
        .cerrar p{
            display: none;
        }
+}
+@media(max-width: 425px){
+    main{
+        width: 100%;
+        height: 140vh;
+    }
+    section{
+        padding: 0px;
+        left: 20px;
+    }
+    .switch{
+        left: 75%;
+    }
+    .vistas{
+        width: 100%;
+        height: 25%;
+    }
+    #avatar{
+        left: 35%;
+        top: 20px;
+        width: 130px;
+        height: 130px;
+    }
+    .vistas .camara{
+        top: 120px;
+        left: 58%;
+        width: 40px;
+        height: 40px;
+    }
+    .camara img{
+        width: 25px;
+        height: 25px;
+    }
+    .vistas h3{
+        left: 27%;
+        top:140px ;
+        width: 140px;
+    }
+    .menu{
+        position: absolute;
+        display: grid;
+        grid-template-columns: 60px 60px 60px 70px;
+        grid-template-rows: 90px;
+        top: 23vh;
+        gap: 20px;
+    }
+    .item{
+        width: 60px;
+        height: 60px;
+        left: 0px;
+    }
+    .item a{
+        grid-template-columns: 60px;
+        grid-template-rows: 60px;
+    }
+    .item .img{
+        left: 0px;
+    }
+    aside{
+        width: 100%;
+        top: 27%;
+    }
+    aside h2{
+        left: 10px;
+    }
+    aside hr{
+        width: 250px;
+        left: -10%;
+        top: 6%;
+    }
+    .agregados{
+        padding: 20px;
+        left: 15px;
+    }
+    aside .eliminar{
+        top: 13%;
+        left: 60%;
+        }
+    aside .agregar{
+        top: 13%;
+            left: 7%;
+        }
 }
 
 

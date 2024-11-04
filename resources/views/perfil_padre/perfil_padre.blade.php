@@ -15,7 +15,7 @@
 <body>
     <main>
     <div class="vistas">
-        <h3>John Smith</h2>
+        <h3>John Smith</h3>
             <input type="file" id="inputFoto" accept="image/*" />
             <button class="camara" onclick="cargarFoto()">
                 <img src="{{ asset('img/perfil_padre/camara.png') }}" alt="camara">

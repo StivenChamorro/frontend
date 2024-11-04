@@ -519,7 +519,7 @@ body.dark .relleno{
         }
     }
     @media  (max-width: 1024px){
-        aside h2{
+        aside h3{
             z-index: 4;
             left: 10%;
             font-size: 35px;
@@ -621,7 +621,6 @@ body.dark .relleno{
             height: 37px;
             margin: 0px;
         }
-
         .menu .item p{
             display: none;
         }

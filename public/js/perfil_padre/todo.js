@@ -108,6 +108,7 @@ const UserProfileManager = {
                 });
 
                 this.innerText = 'Guardar';
+
             } else {
                 const inputs = document.querySelectorAll('.inputEditar');
                 inputs.forEach((input, index) => {
@@ -134,7 +135,7 @@ const UserProfileManager = {
                     lapices[index].style.display = 'none'; // Ocultar lápiz después de guardar
                 });
 
-                this.innerText = 'Editar';
+                this.innerText = 'Guardar';
             }
         });
     }
