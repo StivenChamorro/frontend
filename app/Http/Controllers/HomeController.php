@@ -14,8 +14,8 @@ class HomeController extends Controller
         return view('layouts.header');
     }
 
-    function header1(){
-        return view('layouts.header1');
+    function Footer(){
+        return view('layouts.footer');
     }
 
     public function nivel1()
