@@ -107,7 +107,7 @@ const UserProfileManager = {
                     lapices[index].style.display = 'block'; // Mostrar lápiz
                 });
 
-                this.innerText = 'Guardar';
+                document.getElementById('editar').innerText = 'Guardar';
 
             } else {
                 const inputs = document.querySelectorAll('.inputEditar');
@@ -135,7 +135,7 @@ const UserProfileManager = {
                     lapices[index].style.display = 'none'; // Ocultar lápiz después de guardar
                 });
 
-                this.innerText = 'Guardar';
+                document.getElementById('editar').innerText = 'Editar';
             }
         });
     }
