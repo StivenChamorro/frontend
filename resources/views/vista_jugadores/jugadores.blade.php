@@ -61,15 +61,20 @@
             </div>
     </div>
     <div class="agregara" id="agregara">
-        <h1>Agregar jugador</h1>
-
+        <h1>Administrar Tarjetas</h1>
         <input type="file" id="inputImagen" accept="image/*" />
         <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
-        <input type="text" id="titulo" placeholder="Título" />
-        <input type="text" id="contexto" placeholder="contexto" />
-        <button class="agreg_btn" onclick="agregarTarjeta()">Agregar Tarjeta</button>
+        <input type="text" id="campo1" placeholder="Campo 1" />
+        <input type="text" id="campo2" placeholder="Campo 2" />
+        <input type="text" id="campo3" placeholder="Campo 3" />
+        <input type="text" id="campo4" placeholder="Campo 4" />
+        <input type="text" id="campo5" placeholder="Campo 5" />
+        <input type="text" id="campo6" placeholder="Campo 6" />
+        <button onclick="agregarTarjeta()">Agregar Tarjeta</button>
+    
         <a href="{{route('father_users')}}"><button class="back2" aria-label="Cerrar">×</button></a>
     </div>
+    
     <aside>
         <div class="decoracion">
         </div>
@@ -113,7 +118,7 @@
         </div>
     </div>
     <script src="{{asset('js/perfil_padre/perfil_padre_oscuro.js')}}"></script>
-    <script src="{{asset('js/vista_jugadores/crear_jugador.js')}}"></script>
+    <script src="{{asset('js/vista_jugadores/crear_jugadores.js')}}"></script>
     <script src="{{asset('js/vista_jugadores/visualizar.js')}}"></script>
     <script src="{{asset('js/perfil_padre/todo.js')}}"></script>
     {{-- <script src="{{asset('js/perfil_padre/foto_perfil.js')}}"></script>  --}}
