@@ -71,10 +71,10 @@
         <input type="text" id="campo5" placeholder="Campo 5" />
         <input type="text" id="campo6" placeholder="Campo 6" />
         <button id="botonagregar" onclick="agregarTarjeta()">Agregar Tarjeta</button>
-    
-        <button onclick="ocultarformulario()" class="back2" aria-label="Cerrar">×</button>
+
+        <button id="cerrar" onclick="ocultarformulario()" class="back2" aria-label="Cerrar">×</button>
     </div>
-    
+
     <aside>
         <div class="decoracion">
         </div>
