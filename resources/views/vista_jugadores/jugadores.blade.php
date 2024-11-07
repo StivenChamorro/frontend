@@ -70,9 +70,9 @@
         <input type="text" id="campo4" placeholder="Campo 4" />
         <input type="text" id="campo5" placeholder="Campo 5" />
         <input type="text" id="campo6" placeholder="Campo 6" />
-        <button onclick="agregarTarjeta()">Agregar Tarjeta</button>
+        <button id="botonagregar" onclick="agregarTarjeta()">Agregar Tarjeta</button>
     
-        <a href="{{route('father_users')}}"><button class="back2" aria-label="Cerrar">×</button></a>
+        <button onclick="ocultarformulario()" class="back2" aria-label="Cerrar">×</button>
     </div>
     
     <aside>
@@ -86,37 +86,13 @@
         </button>
 
         <button id="agregar" class="agregar">Agregar Jugador</button>
-        <button id="eliminar" class="eliminar">Eliminar Jugador</button>
+        <button id="eliminarSeleccionadosBtn" class="eliminar" onclick="activarModoEliminar()">Eliminar Jugador</button>
         <section>
 
     <div id="agregados" style="margin-top: 20px;" class="agregados"></div>
 
     </section>
     </aside>
-    <div class="registro">
-        <div class="nino">
-            <img src="{{ asset('img/vista_jugadores/wooper_mamado.png') }}" alt="wooper_mamado">
-            <div class="info">
-            <p>Nombres</p>
-            <p>Nicolas</p>
-            <p>apellidos</p>
-            <p>Smith Pines</p>
-            <p>Edad</p>
-            <p>8 años</p>
-            <p>relacion</p>
-            <p>hijo</p>
-            <p>genero</p>
-            <p>niño</p>
-            <p>Nickname</p>
-            <p>Nick</p>
-        </div>
-        </div>
-        <div class="grafico">
-            <img src="{{ asset('img/vista_jugadores/grafica.png') }}" alt="grafica">
-            <p>promedio de horas 1.98 horas</p>
-
-        </div>
-    </div>
     <script src="{{asset('js/perfil_padre/perfil_padre_oscuro.js')}}"></script>
     <script src="{{asset('js/vista_jugadores/crear_jugadores.js')}}"></script>
     <script src="{{asset('js/vista_jugadores/visualizar.js')}}"></script>

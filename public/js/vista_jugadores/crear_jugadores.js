@@ -59,20 +59,38 @@ function agregarTarjeta() {
         alert("Por favor, completa todos los campos.");
     }
 }
+function ocultarformulario() {
+    const formulario = document.getElementById('agregara');
 
+    formulario.addEventListener('click', function() {
+        formulario.classList.toggle("activo");
+
+    });
+}
 function mostrarDetalles(index) {
     const tarjeta = tarjetas[index];
     let detallesHtml = `
+    <div class="nino">
+       <div class="img">
         <img src="${tarjeta.imagen}" alt="${tarjeta.titulo}" />
-        <p>Campo 1: ${tarjeta.campo1}</p>
-        <p>Campo 2: ${tarjeta.campo2}</p>
-        <p>Campo 3: ${tarjeta.campo3}</p>
-        <p>Campo 4: ${tarjeta.campo4}</p>
-        <p>Campo 5: ${tarjeta.campo5}</p>
-        <p>Campo 6: ${tarjeta.campo6}</p>
+           </div>
+           <div class="informtion">
+        <p>Nombres : ${tarjeta.campo1}</p>
+        <p>Apellidos : ${tarjeta.campo2}</p>
+        <p>Edad : ${tarjeta.campo3}</p>
+        <p>Relacion : ${tarjeta.campo4}</p>
+        <p>Genero : ${tarjeta.campo5}</p>
+        <p>Nickname : ${tarjeta.campo6}</p>
+           </div>
+           </div>
+           <div class="grafico">
+            <img src="img/vista_jugadores/grafica.png" alt="grafica">
+            <p>promedio de horas 1.98 horas</p>
+           </div>
         <button onclick="editarTarjeta(${index})">Editar</button>
         <button onclick="eliminarTarjeta(${index})">Eliminar</button>
         <button onclick="ocultarDetalles()">Cerrar</button>
+
     `;
     const detallesDiv = document.createElement('div');
     detallesDiv.className = 'details';
@@ -132,6 +150,46 @@ function editarTarjeta(index) {
             }
         };
         inputImagen.click(); // Simular clic en el input para abrir el selector de archivos
+    }
+}
+function activarModoEliminar() {
+    const galeria = document.getElementById('agregados');
+    galeria.innerHTML = ''; // Vaciar galería para volver a llenarla con checkboxes
+
+    tarjetas.forEach((tarjeta, index) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        card.innerHTML = `
+            <img src="${tarjeta.imagen}" alt="${tarjeta.titulo}" />
+            <h3>${tarjeta.campo1}</h3>
+            <p>${tarjeta.campo2}</p>
+            <input type="checkbox" class="checkbox" data-index="${index}">
+            <img class="icono-basura" src="img/vista_jugadores/eliminar1.png" />
+        `;
+
+        galeria.appendChild(card);
+    });
+
+    // Añadir un botón para eliminar las tarjetas seleccionadas
+    const removeSelectedBtn = document.createElement('button');
+    removeSelectedBtn.className = 'btn-eliminar';
+    removeSelectedBtn.textContent = 'Confirmar Eliminación';
+    removeSelectedBtn.onclick = eliminarTarjetasSeleccionadas;
+    galeria.appendChild(removeSelectedBtn);
+}
+
+function eliminarTarjetasSeleccionadas() {
+    const checkboxes = document.querySelectorAll('.checkbox:checked');
+    
+    if (confirm("¿Estás seguro de que deseas eliminar las tarjetas seleccionadas?")) {
+        checkboxes.forEach(checkbox => {
+            const index = checkbox.getAttribute('data-index');
+            tarjetas.splice(index, 1); // Eliminar tarjeta del array
+        });
+
+        localStorage.setItem('tarjetas', JSON.stringify(tarjetas)); // Guardar en localStorage
+        mostrarTarjetas(); // Volver a mostrar las tarjetas
     }
 }
 
