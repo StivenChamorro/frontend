@@ -16,48 +16,65 @@
 <body>
     <main id="principal">
     <div class="vistas">
-        <h3>John Smith</h2>
+        <h3>John Smith</h3>
             <input type="file" id="inputFoto" accept="image/*" />
             <button class="camara" onclick="cargarFoto()">
                 <img src="{{ asset('img/perfil_padre/camara.png') }}" alt="camara">
             </button>
             <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
             <div class="menu">
-            <div class="item" id="perfil">
-                <a href="{{route('profile_father')}}">
-                <img src="{{ asset('img/vista_jugadores/persona.png') }}" alt="persona">
-                <p>perfil</p></a>
-            </div>
+                <div class="item" id="perfil">
+                    <a href="{{route('profile_father')}}">
+                        <div class="img">
+                    <img src="{{ asset('img/vista_jugadores/persona.png') }}" alt="persona">
+                        </div>
+                    <p>perfil</p>
+                    </a>
+                </div>
 
-            <div class="item" id="jugador">
-                <a href="{{route('father_users')}}">
-                <img src="{{ asset('img/vista_jugadores/jugador.png') }}" alt="jugador">
-                <p>jugadores</p>
+                <div class="item" id="jugador">
+                    <a href="{{route('father_users')}}">
+                    <div class="img">
+                    <img src="{{ asset('img/vista_jugadores/jugador.png') }}" alt="jugador">
+                    </div>
+                    <p>jugadores</p>
                 </a>
-            </div>
+                </div>
 
-            <div class="item" id="home"><a href="{{route('home')}}">
-                <img src="{{ asset('img/vista_jugadores/home.png') }}" alt="home">
-                <p>home</p>
-            </a>
+                <div class="item" id="home"><a href="{{route('home')}}">
+                    <div class="img">
+                    <img src="{{ asset('img/vista_jugadores/home.png') }}" alt="home">
+                    </div>
+                    <p>home</p>
+                </a>
+                </div>
+
+                <div class="item">
+                    <a href="{{route('welcome')}}">
+                        <div class="img">
+                    <img src="{{ asset('img/perfil_padre/cerrar.png') }}" alt="cerrar">
+                        </div>
+                    <p>cerrar sesion</p>
+                </a>
+                </div>
+
             </div>
-            <div class="item"><a href="{{route('welcome')}}">
-                <img src="{{ asset('img/vista_jugadores/cerrar.png') }}" alt="cerrar">
-                <p>cerrar sesion</p>
-            </a>
-            </div>
-        </div>
     </div>
     <div class="agregara" id="agregara">
-        <h1>Agregar jugador</h1>
-
+        <h1>Administrar Tarjetas</h1>
         <input type="file" id="inputImagen" accept="image/*" />
         <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
-        <input type="text" id="titulo" placeholder="Título" />
-        <input type="text" id="contexto" placeholder="contexto" />
-        <button class="agreg_btn" onclick="agregarTarjeta()">Agregar Tarjeta</button>
-        <a href="{{route('father_users')}}"><button class="back2" aria-label="Cerrar">×</button></a>
+        <input type="text" id="campo1" placeholder="Campo 1" />
+        <input type="text" id="campo2" placeholder="Campo 2" />
+        <input type="text" id="campo3" placeholder="Campo 3" />
+        <input type="text" id="campo4" placeholder="Campo 4" />
+        <input type="text" id="campo5" placeholder="Campo 5" />
+        <input type="text" id="campo6" placeholder="Campo 6" />
+        <button id="botonagregar" onclick="agregarTarjeta()">Agregar Tarjeta</button>
+
+        <button id="cerrar" onclick="ocultarformulario()" class="back2" aria-label="Cerrar">×</button>
     </div>
+
     <aside>
         <div class="decoracion">
         </div>
@@ -69,39 +86,15 @@
         </button>
 
         <button id="agregar" class="agregar">Agregar Jugador</button>
-        <button id="eliminar" class="eliminar">Eliminar Jugador</button>
+        <button id="eliminarSeleccionadosBtn" class="eliminar" onclick="activarModoEliminar()">Eliminar Jugador</button>
         <section>
 
     <div id="agregados" style="margin-top: 20px;" class="agregados"></div>
 
     </section>
     </aside>
-    <div class="registro">
-        <div class="nino">
-            <img src="{{ asset('img/vista_jugadores/wooper_mamado.png') }}" alt="wooper_mamado">
-            <div class="info">
-            <p>Nombres</p>
-            <p>Nicolas</p>
-            <p>apellidos</p>
-            <p>Smith Pines</p>
-            <p>Edad</p>
-            <p>8 años</p>
-            <p>relacion</p>
-            <p>hijo</p>
-            <p>genero</p>
-            <p>niño</p>
-            <p>Nickname</p>
-            <p>Nick</p>
-        </div>
-        </div>
-        <div class="grafico">
-            <img src="{{ asset('img/vista_jugadores/grafica.png') }}" alt="grafica">
-            <p>promedio de horas 1.98 horas</p>
-
-        </div>
-    </div>
     <script src="{{asset('js/perfil_padre/perfil_padre_oscuro.js')}}"></script>
-    <script src="{{asset('js/vista_jugadores/crear_jugador.js')}}"></script>
+    <script src="{{asset('js/vista_jugadores/crear_jugadores.js')}}"></script>
     <script src="{{asset('js/vista_jugadores/visualizar.js')}}"></script>
     <script src="{{asset('js/perfil_padre/todo.js')}}"></script>
     {{-- <script src="{{asset('js/perfil_padre/foto_perfil.js')}}"></script>  --}}

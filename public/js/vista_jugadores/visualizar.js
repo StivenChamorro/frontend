@@ -28,4 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.toggle('ok');
         });
 
+        const boton = document.getElementById('cerrar');
+
+        boton.addEventListener('click', function() {
+                agregarDesplegado.classList.toggle("activo");
+        });
+
+
 });
+
