@@ -20,22 +20,23 @@
             <div class="form-container">
                 <h1 class="form-title">INICIAR SESIÓN</h1>
                 
-                <form action="" class="form-grid">
+                <form id="loginFrom" action="" class="form-grid">
                     <div class="input-group">
                         <label class="label">Nombre de Usuario</label>
-                        <input type="text" class="input" placeholder="  Usuario">
+                        <input id="email"  class="input" placeholder="  Usuario">
                     </div>
 
                     <div class="input-group">
                         <label class="label">Contraseña</label>
-                        <input type="password" class="input" placeholder="  Contraseña">
+                        <input id="password" type="password" class="input" placeholder="  Contraseña">
                     </div>
 
                     
                     <div class="button-container">
-                        <a href="{{route('home')}}"><button class="submit-button">Iniciar Sesión</button> </a>
+                        <button type="button" class="submit-button" id="loginButton" >Iniciar Sesión</button> 
                     </div>
                    
+                    <script src="{{asset('js/login.js')}}"></script>
                 </form>
 
                 <div>

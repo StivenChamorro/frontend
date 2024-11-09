@@ -22,6 +22,8 @@ use App\Http\Controllers\ProfileFatherController;
 
 use Illuminate\Support\Facades\Route;
 
+use function Ramsey\Uuid\v1;
+
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
@@ -51,5 +53,6 @@ Route::get('vista_usuarios',[ProfileFatherController::class,'index2'])->name('fa
 //Ruta plantilla del nivel de matematicas(BRAYAN SOLARTE)
 Route::get('vista_niveles',[HomeController::class,'nivel1'])->name('view_lelvel');
 
-
-
+Route::get('question', function () {
+    return view('VIEWS_ADMIN.questions.create');
+});

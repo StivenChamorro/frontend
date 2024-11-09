@@ -1,93 +1,63 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Cargar datos almacenados
-    const storedName = localStorage.getItem('profileName');
-    const storedInfo = localStorage.getItem('profileInfo');
-    const storedImage = localStorage.getItem('profileImage');
-
-    if (storedName) {
-        document.getElementById('profile-name').innerText = storedName;
-        document.getElementById('header-name').innerText = storedName;
-    }
-    if (storedInfo) {
-        document.getElementById('info-text').innerText = storedInfo;
-    }
-    if (storedImage) {
-        document.getElementById('profile-image').src = storedImage;
-    }
-
-    // Funciones para el modal de nombre
-    const nameModal = document.getElementById('name-modal');
     const editNameBtn = document.getElementById('edit-name-btn');
-    const nameForm = document.getElementById('name-form');
-    const cancelNameBtn = document.getElementById('cancel-name-btn');
-
-    editNameBtn.addEventListener('click', function() {
-        nameModal.classList.remove('hidden');
-        document.getElementById('name-input').value = document.getElementById('profile-name').innerText;
-    });
-
-    cancelNameBtn.addEventListener('click', function() {
-        nameModal.classList.add('hidden');
-    });
-
-    nameForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const newName = document.getElementById('name-input').value;
-        document.getElementById('profile-name').innerText = newName;
-        document.getElementById('header-name').innerText = newName;
-        localStorage.setItem('profileName', newName);
-        nameModal.classList.add('hidden');
-    });
-
-    // Funciones para el modal de información
-    const infoModal = document.getElementById('info-modal');
     const editInfoBtn = document.getElementById('edit-info-btn');
-    const infoForm = document.getElementById('info-form');
-    const cancelInfoBtn = document.getElementById('cancel-info-btn');
-
-    editInfoBtn.addEventListener('click', function() {
-        infoModal.classList.remove('hidden');
-        document.getElementById('info-input').value = document.getElementById('info-text').innerText;
-    });
-
-    cancelInfoBtn.addEventListener('click', function() {
-        infoModal.classList.add('hidden');
-    });
-
-    infoForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const newInfo = document.getElementById('info-input').value;
-        document.getElementById('info-text').innerText = newInfo;
-        localStorage.setItem('profileInfo', newInfo);
-        infoModal.classList.add('hidden');
-    });
-
-    // Funciones para el modal de imagen
-    const imageModal = document.getElementById('image-modal');
     const changeImageBtn = document.getElementById('change-image-btn');
-    const imageForm = document.getElementById('image-form');
+    const nameModal = document.getElementById('name-modal');
+    const infoModal = document.getElementById('info-modal');
+    const imageModal = document.getElementById('image-modal');
+    const cancelNameBtn = document.getElementById('cancel-name-btn');
+    const cancelInfoBtn = document.getElementById('cancel-info-btn');
     const cancelImageBtn = document.getElementById('cancel-image-btn');
 
-    changeImageBtn.addEventListener('click', function() {
-        imageModal.classList.remove('hidden');
+    function openModal(modal) {
+        modal.style.display = 'block';
+    }
+
+    function closeModal(modal) {
+        modal.style.display = 'none';
+    }
+
+    editNameBtn.addEventListener('click', () => openModal(nameModal));
+    editInfoBtn.addEventListener('click', () => openModal(infoModal));
+    changeImageBtn.addEventListener('click', () => openModal(imageModal));
+
+    cancelNameBtn.addEventListener('click', () => closeModal(nameModal));
+    cancelInfoBtn.addEventListener('click', () => closeModal(infoModal));
+    cancelImageBtn.addEventListener('click', () => closeModal(imageModal));
+
+    // Cerrar modales al hacer clic fuera de ellos
+    window.addEventListener('click', function(event) {
+        if (event.target === nameModal) closeModal(nameModal);
+        if (event.target === infoModal) closeModal(infoModal);
+        if (event.target === imageModal) closeModal(imageModal);
     });
 
-    cancelImageBtn.addEventListener('click', function() {
-        imageModal.classList.add('hidden');
-    });
-
-    imageForm.addEventListener('submit', function(e) {
+    // Manejar envío de formularios
+    document.getElementById('name-form').addEventListener('submit', function(e) {
         e.preventDefault();
-        const file = document.getElementById('image-input').files[0];
-        if (file) {
+        const newName = document.getElementById('name-input').value;
+        document.getElementById('profile-name').textContent = newName;
+        document.getElementById('header-name').textContent = newName;
+        closeModal(nameModal);
+    });
+
+    document.getElementById('info-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const newInfo = document.getElementById('info-input').value;
+        document.getElementById('info-text').textContent = newInfo;
+        closeModal(infoModal);
+    });
+
+    document.getElementById('image-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const newImage = document.getElementById('image-input').files[0];
+        if (newImage) {
             const reader = new FileReader();
-            reader.onloadend = function() {
-                const imageDataUrl = reader.result;
-                document.getElementById('profile-image').src = imageDataUrl;
-                localStorage.setItem('profileImage', imageDataUrl);
+            reader.onload = function(e) {
+                document.getElementById('profile-image').src = e.target.result;
             };
-            reader.readAsDataURL(file);
+            reader.readAsDataURL(newImage);
         }
-        imageModal.classList.add('hidden');
+        closeModal(imageModal);
     });
 });

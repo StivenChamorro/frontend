@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Runner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Los estilos anteriores se mantienen igual */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Press Start 2P', cursive;
+            color: #fff;
+        }
+        
+        #gameContainer {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            border: 4px solid #fff;
+            overflow: hidden;
+        }
+        
+        #startScreen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+        }
+        
+        #gameOverScreen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        .button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background: #fff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+        }
+        
+        .button:hover {
+            background: #aaa;
+        }
+        
+        #score {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+        }
+        
+        #ship {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        
+        .obstacle {
+            position: absolute;
+            background: #ff0000;
+            width: 25px;
+            height: 25px;
+        }
+        
+        h1 {
+            color: #fff;
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 
+                4px 4px 0 #ff0000,
+                8px 8px 0 #880000;
+        }
+
+        #gameOverScreen h1 {
+            text-shadow: 
+                4px 4px 0 #ff0000,
+                8px 8px 0 #880000;
+        }
+        
+        .score-text {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        /* Nuevo: Controles de audio */
+        #audioControls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .audioButton {
+            background: none;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 5px;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 12px;
+        }
+
+        .audioButton:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="audioControls">
+            <button class="audioButton" onclick="toggleMusic()">MUSIC: ON</button>
+        </div>
+        <div id="startScreen">
+            <h1>SPACE RUNNER</h1>
+            <button class="button" onclick="startGame()">JUGAR</button>
+        </div>
+        <div id="gameOverScreen">
+            <h1>GAME OVER</h1>
+            <div class="score-text">SCORE: <span id="finalScore">0</span></div>
+            <button class="button" onclick="restartGame()">REINTENTAR</button>
+        </div>
+        <div id="score">0</div>
+        <div id="ship"></div>
+    </div>
+
+    <script>
+        // Crear elementos de audio
+        const bgMusic = new Audio("/public/sound/sound_gamedino/Cubik.mp3");
+        bgMusic.loop = true;
+        
+        const scoreSound = new Audio('data:audio/wav;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAADAAAGhgBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVWqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr///////////////////////////////////////////8AAAA5TEFNRTMuOTlyAc0AAAAAAAAAABSAJAOkQgAAgAAABobXt9CWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+        
+        const crashSound = new Audio('data:audio/wav;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAADAAAGhgBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVWqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr///////////////////////////////////////////8AAAA5TEFNRTMuOTlyAc0AAAAAAAAAABSAJAOkQgAAgAAABobXyW9yAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+
+        let isMusicPlaying = true;
+        
+        function toggleMusic() {
+            const musicButton = document.querySelector('.audioButton');
+            if (isMusicPlaying) {
+                bgMusic.pause();
+                musicButton.textContent = 'MUSIC: OFF';
+            } else {
+                bgMusic.play();
+                musicButton.textContent = 'MUSIC: ON';
+            }
+            isMusicPlaying = !isMusicPlaying;
+        }
+
+        const gameContainer = document.getElementById('gameContainer');
+        const ship = document.getElementById('ship');
+        const scoreElement = document.getElementById('score');
+        const startScreen = document.getElementById('startScreen');
+        const gameOverScreen = document.getElementById('gameOverScreen');
+        const finalScoreElement = document.getElementById('finalScore');
+        
+        let gameRunning = false;
+        let score = 0;
+        let shipY = 300;
+        let obstacles = [];
+        let obstacleSpeed = 4;
+        let obstacleInterval = 1500;
+        let gameLoop;
+        let obstacleGenerator;
+        
+        gameContainer.addEventListener('mousemove', (e) => {
+            if (gameRunning) {
+                const rect = gameContainer.getBoundingClientRect();
+                const y = e.clientY - rect.top;
+                shipY = Math.max(15, Math.min(570, y));
+                ship.style.top = (shipY - 15) + 'px';
+            }
+        });
+        
+        function startGame() {
+            if (isMusicPlaying) {
+                bgMusic.currentTime = 0;
+                bgMusic.play();
+            }
+            
+            gameRunning = true;
+            score = 0;
+            shipY = 300;
+            obstacles = [];
+            obstacleSpeed = 4;
+            obstacleInterval = 1500;
+            
+            startScreen.style.display = 'none';
+            gameOverScreen.style.display = 'none';
+            scoreElement.textContent = '0';
+            ship.style.top = '280px';
+            ship.style.left = '50px';
+            
+            document.querySelectorAll('.obstacle').forEach(obs => obs.remove());
+            
+            gameLoop = setInterval(updateGame, 16);
+            obstacleGenerator = setInterval(createObstacle, obstacleInterval);
+        }
+        
+        function createObstacle() {
+            const createDouble = Math.random() < 0.3;
+            
+            function createSingleObstacle() {
+                const obstacle = document.createElement('div');
+                obstacle.className = 'obstacle';
+                obstacle.style.left = '800px';
+                obstacle.style.top = Math.random() * (570) + 'px';
+                gameContainer.appendChild(obstacle);
+                obstacles.push(obstacle);
+            }
+            
+            createSingleObstacle();
+            if (createDouble) {
+                setTimeout(() => createSingleObstacle(), obstacleInterval / 3);
+            }
+            
+            if (score > 0 && score % 10 === 0) {
+                obstacleSpeed += 0.7;
+                if (obstacleInterval > 800) {
+                    clearInterval(obstacleGenerator);
+                    obstacleInterval -= 150;
+                    obstacleGenerator = setInterval(createObstacle, obstacleInterval);
+                }
+            }
+        }
+        
+        function updateGame() {
+            if (!gameRunning) return;
+            
+            obstacles.forEach((obstacle, index) => {
+                const x = obstacle.offsetLeft - obstacleSpeed;
+                obstacle.style.left = x + 'px';
+                
+                if (checkCollision(obstacle)) {
+                    crashSound.play();
+                    gameOver();
+                    return;
+                }
+                
+                if (x < -30) {
+                    obstacle.remove();
+                    obstacles.splice(index, 1);
+                    score++;
+                    scoreElement.textContent = score;
+                    scoreSound.currentTime = 0;
+                    scoreSound.play();
+                }
+            });
+        }
+        
+        function checkCollision(obstacle) {
+            const shipRect = ship.getBoundingClientRect();
+            const obstacleRect = obstacle.getBoundingClientRect();
+            
+            return !(shipRect.right < obstacleRect.left || 
+                    shipRect.left > obstacleRect.right || 
+                    shipRect.bottom < obstacleRect.top || 
+                    shipRect.top > obstacleRect.bottom);
+        }
+        
+        function gameOver() {
+            gameRunning = false;
+            clearInterval(gameLoop);
+            clearInterval(obstacleGenerator);
+            gameOverScreen.style.display = 'flex';
+            finalScoreElement.textContent = score;
+            bgMusic.pause();
+            bgMusic.currentTime = 0;
+        }
+        
+        function restartGame() {
+            startGame();
+        }
+    </script>
+</body>
+</html>

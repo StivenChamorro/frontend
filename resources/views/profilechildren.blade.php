@@ -59,11 +59,11 @@
     </main>
 
     <!-- Modal de edición de nombre -->
-    <div id="name-modal" class="modal hidden">
-        <div class="modal-content">
-            <h2 class="modal-title">Editar nombre</h2>
-            <form id="name-form" class="form">
-                <input id="name-input" class="input-field" type="text" placeholder="Escribe el nuevo nombre" required />
+    <div id="name-modal" class="modal-pc hidden">
+        <div class="modal-content-pc">
+            <h2 class="modal-title-pc">Editar nombre</h2>
+            <form id="name-form" class="form-pc">
+                <input id="name-input" class="input-field" type="text" placeholder="Escribe el nuevo nombre" required>
                 <button type="submit" class="submit-btn">Guardar nombre</button>
                 <button type="button" class="cancel-btn" id="cancel-name-btn">Cancelar</button>
             </form>
@@ -71,10 +71,10 @@
     </div>
 
     <!-- Modal de edición de información -->
-    <div id="info-modal" class="modal hidden">
-        <div class="modal-content">
-            <h2 class="modal-title">Editar información</h2>
-            <form id="info-form" class="form">
+    <div id="info-modal" class="modal-pc hidden">
+        <div class="modal-content-pc">
+            <h2 class="modal-title-pc">Editar información</h2>
+            <form id="info-form" class="form-pc">
                 <textarea id="info-input" class="textarea-field" rows="4" placeholder="Escribe tu información aquí" required></textarea>
                 <button type="submit" class="submit-btn">Guardar información</button>
                 <button type="button" class="cancel-btn" id="cancel-info-btn">Cancelar</button>
@@ -83,22 +83,19 @@
     </div>
 
     <!-- Modal de cambio de imagen -->
-    <div id="image-modal" class="modal hidden">
-        <div class="modal-content">
-            <h2 class="modal-title">Cambiar foto de perfil</h2>
-            <form id="image-form" class="form">
-                <input type="file" id="image-input" accept="image/*" class="input-field" />
+    <div id="image-modal" class="modal-pc hidden">
+        <div class="modal-content-pc">
+            <h2 class="modal-title-pc">Cambiar foto de perfil</h2>
+            <form id="image-form" class="form-pc">
+                <input type="file" id="image-input" accept="image/*" class="input-field">
                 <button type="submit" class="submit-btn">Guardar imagen</button>
                 <button type="button" class="cancel-btn" id="cancel-image-btn">Cancelar</button>
             </form>
         </div>
     </div>
 
-    <script src="{{asset('js/profilechildren.js')}}"></script>
-
     @include('layouts.footer')
-
-    @endsection
+@endsection
 
     
 

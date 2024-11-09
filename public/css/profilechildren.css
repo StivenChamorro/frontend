@@ -2,7 +2,8 @@ body {
     font-family: 'Happy Monkey', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, #FFD166 50.13%, #F78D6B 90%); 
+    background: linear-gradient(180deg, #FFD166 50.13%, #F78D6B 90%);
+    font-family: 'happy monkey', cursive; 
 }
 
 .main-container {
@@ -135,17 +136,17 @@ body {
 }
 
 /* Modals */
-.modal {
+.modal-pc {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 100;
 }
 
-.modal-content {
+.modal-content-pc {
     background-color: white;
     border-radius: 8px;
     padding: 1.5rem;
@@ -153,18 +154,18 @@ body {
     max-width: 500px;
 }
 
-.modal-title {
+.modal-title-pc {
     font-size: 1.25rem;
     margin-bottom: 1rem;
 }
 
-.form {
+.form-pc {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.input-field, .textarea-field {
+.input-field-modal, .textarea-field {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid gray;
