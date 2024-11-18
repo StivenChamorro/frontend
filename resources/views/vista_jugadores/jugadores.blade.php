@@ -64,15 +64,31 @@
         <h1>Administrar Tarjetas</h1>
         <input type="file" id="inputImagen" accept="image/*" />
         <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
-        <input type="text" id="campo1" placeholder="Campo 1" />
-        <input type="text" id="campo2" placeholder="Campo 2" />
-        <input type="text" id="campo3" placeholder="Campo 3" />
-        <input type="text" id="campo4" placeholder="Campo 4" />
-        <input type="text" id="campo5" placeholder="Campo 5" />
-        <input type="text" id="campo6" placeholder="Campo 6" />
+        <input type="text" id="campo1" placeholder="Nombre" />
+        <input type="text" id="campo2" placeholder="Apellido" />
+        <input type="text" id="campo3" placeholder="Edad" />
+        <input type="text" id="campo4" placeholder="Relacion con el niño" />
+        <input type="text" id="campo5" placeholder="Genero" />
+        <input type="text" id="campo6" placeholder="Nickname" />
         <button id="botonagregar" onclick="agregarTarjeta()">Agregar Tarjeta</button>
     
         <button onclick="ocultarformulario()" class="back2" aria-label="Cerrar">×</button>
+    </div>
+
+    <div id="formularioEdicion" style="display: none;">
+        <h2>Editar Tarjeta</h2>
+        <div class="edit">
+            <input type="file" id="editarInputImagen" accept="image/*" />
+            <img src="{{ asset('img/perfil_padre/foto_usuario.png') }}"  alt="avatar" id="avatar">
+        <input type="text" id="editarCampo1" placeholder="Nombre" />
+        <input type="text" id="editarCampo2" placeholder="Apellido" />
+        <input type="text" id="editarCampo3" placeholder="Edad" />
+        <input type="text" id="editarCampo4" placeholder="Relacion con el niño" />
+        <input type="text" id="editarCampo5" placeholder="Genero" />
+        <input type="text" id="editarCampo6" placeholder="Nickname" />
+        </div>
+        <button onclick="guardarEdicion()">Guardar Cambios</button>
+        <button onclick="ocultarFormularioEdicion()">Cancelar</button>
     </div>
     
     <aside>

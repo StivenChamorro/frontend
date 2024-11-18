@@ -108,49 +108,65 @@ function ocultarDetalles() {
 
 function editarTarjeta(index) {
     const tarjeta = tarjetas[index];
+
+    // Llenar el formulario con los datos de la tarjeta
+    document.getElementById('editarCampo1').value = tarjeta.campo1;
+    document.getElementById('editarCampo2').value = tarjeta.campo2;
+    document.getElementById('editarCampo3').value = tarjeta.campo3;
+    document.getElementById('editarCampo4').value = tarjeta.campo4;
+    document.getElementById('editarCampo5').value = tarjeta.campo5;
+    document.getElementById('editarCampo6').value = tarjeta.campo6;
     
-    const nuevoCampo1 = prompt("Introduce el nuevo Campo 1", tarjeta.campo1);
-    const nuevoCampo2 = prompt("Introduce el nuevo Campo 2", tarjeta.campo2);
-    const nuevoCampo3 = prompt("Introduce el nuevo Campo 3", tarjeta.campo3);
-    const nuevoCampo4 = prompt("Introduce el nuevo Campo 4", tarjeta.campo4);
-    const nuevoCampo5 = prompt("Introduce el nuevo Campo 5", tarjeta.campo5);
-    const nuevoCampo6 = prompt("Introduce el nuevo Campo 6", tarjeta.campo6);
-    const inputImagen = document.createElement('input');
-    inputImagen.type = 'file';
-    inputImagen.accept = 'image/*';
+    // Guardar el índice actual de la tarjeta que se está editando
+    document.getElementById('formularioEdicion').setAttribute('data-index', index);
     
-    if (nuevoTitulo !== null) { 
-        inputImagen.onchange = function() {
-            if (inputImagen.files && inputImagen.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    
-                    tarjeta.imagen = e.target.result; 
-                    tarjeta.campo1 = nuevoCampo1;
-                    tarjeta.campo2 = nuevoCampo2;
-                    tarjeta.campo3 = nuevoCampo3;
-                    tarjeta.campo4 = nuevoCampo4;
-                    tarjeta.campo5 = nuevoCampo5;
-                    tarjeta.campo6 = nuevoCampo6;
-                    
-                    localStorage.setItem('tarjetas', JSON.stringify(tarjetas)); 
-                    mostrarTarjetas();
-                };
-                reader.readAsDataURL(inputImagen.files[0]);
-            } else {
-                
-                tarjeta.campo1 = nuevoCampo1;
-                tarjeta.campo2 = nuevoCampo2;
-                tarjeta.campo3 = nuevoCampo3;
-                tarjeta.campo4 = nuevoCampo4;
-                tarjeta.campo5 = nuevoCampo5;
-                tarjeta.campo6 = nuevoCampo6;
-                localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
-                mostrarTarjetas();
-            }
+    // Mostrar el formulario
+    document.getElementById('formularioEdicion').style.display = 'block';
+}
+
+function guardarEdicion() {
+    const index = document.getElementById('formularioEdicion').getAttribute('data-index');
+    const tarjeta = tarjetas[index];
+
+    // Obtener los nuevos valores de los campos
+    tarjeta.campo1 = document.getElementById('editarCampo1').value;
+    tarjeta.campo2 = document.getElementById('editarCampo2').value;
+    tarjeta.campo3 = document.getElementById('editarCampo3').value;
+    tarjeta.campo4 = document.getElementById('editarCampo4').value;
+    tarjeta.campo5 = document.getElementById('editarCampo5').value;
+    tarjeta.campo6 = document.getElementById('editarCampo6').value;
+
+    const inputImagen = document.getElementById('editarInputImagen');
+    if (inputImagen.files && inputImagen.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            tarjeta.imagen = e.target.result; // Actualizar solo la imagen
+            localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
+            mostrarTarjetas();
         };
-        inputImagen.click(); // Simular clic en el input para abrir el selector de archivos
+        reader.readAsDataURL(inputImagen.files[0]);
+    } else {
+        localStorage.setItem('tarjetas', JSON.stringify(tarjetas));
+        mostrarTarjetas(); // Actualizar la vista
     }
+    
+    ocultarFormularioEdicion(); // Ocultar formulario después de guardar
+}
+
+function ocultarFormularioEdicion() {
+    // Ocultar el formulario de edición
+    document.getElementById('formularioEdicion').style.display = 'none';
+
+    // Limpiar los campos del formulario
+    document.getElementById('editarCampo1').value = '';
+    document.getElementById('editarCampo2').value = '';
+    document.getElementById('editarCampo3').value = '';
+    document.getElementById('editarCampo4').value = '';
+    document.getElementById('editarCampo5').value = '';
+    document.getElementById('editarCampo6').value = '';
+    
+    // Limpiar el campo de imagen
+    document.getElementById('editarInputImagen').value = '';
 }
 function activarModoEliminar() {
     const galeria = document.getElementById('agregados');
