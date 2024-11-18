@@ -71,8 +71,8 @@
         <input type="text" id="campo5" placeholder="Genero" />
         <input type="text" id="campo6" placeholder="Nickname" />
         <button id="botonagregar" onclick="agregarTarjeta()">Agregar Tarjeta</button>
-    
-        <button onclick="ocultarformulario()" class="back2" aria-label="Cerrar">×</button>
+
+        <button id="cerrar" onclick="ocultarformulario()" class="back2" aria-label="Cerrar">×</button>
     </div>
 
     <div id="formularioEdicion" style="display: none;">
