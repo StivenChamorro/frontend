@@ -40,9 +40,6 @@ Route::get('profilechildren',[ProfileController::class,'store'])->name('Myprofil
 //Rutas Tienda (HAIVE VELASCO)
 Route::get('vista_3_store',[StoreController::class,'store_view_3'])->name('vista_3_store');
 
-//Ruta Logros (HAIVE VELASCO)
-Route::get('vista_1_achievement',[AchievementController::class,'achievement_view_1'])->name('vista_1_achievement');
-
 //main
 //Ruta perfil padre(BRAYAN SOLARTE)
 Route::get('perfil_padre',[ProfileFatherController::class,'index'])->name('profile_father');
